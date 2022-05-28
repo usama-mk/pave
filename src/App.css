@@ -8,3 +8,10 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.homeBottomBG{
+  background-image: url(/src/assets/images/homeBottomBG.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
