@@ -7,13 +7,13 @@ import mouse from '../../assets/images/mouse.png'
 const NavItem=({name, selected})=>{
     return(
         <div>
-            <div className={`${selected?'bg-[black] ':'bg-[#B1B1B1]'} mb-3 w-[40px] h-[20px] `} ></div>
-            <h5 className={`${selected?'font-bold text-[black] ':'font-normal text-[#B1B1B1]'} text-[14px] text-[] mr-5`} >{name}</h5>
+            <div className={`${selected?'bg-[black] ':'bg-[#B1B1B1]'} ${name==='Case Study'?'w-[75px]':name.length>5?'w-[55px]':'w-[43px]'} mb-3  h-[10px] `} ></div>
+            <h5 className={`${selected?'font-bold text-[black] ':'font-normal text-[#B1B1B1]'} text-[14px] text-[] ${name==='Case Study'?'mr-0':'mr-5'}`} >{name}</h5>
         </div>
     )
 }
 
-function Home() {
+function Home({home}) {
   return (
     <div className='flex flex-col items-center ' >
         {/* top */}
@@ -78,13 +78,16 @@ function Home() {
             {/* bottom nav */}
             <div className="mobileNav fixed bottom-0 left-0 mt-[100%] bg-[#EFEFEF] w-[100vw] p-5 
              ">
-                <div className='bg-[#B1B1B1] w-[90vw] h-[20px] ' >
+                <div className='bg-[#B1B1B1] w-[90vw] h-[10px] mt-[45px] ' >
 
                 </div>
-               <div className='flex mt-[-20px]' >
-               <NavItem name="Home" selected={true} />
+               <div className='flex mt-[-10px]' >
+               <NavItem name="Home" selected={home} />
                <NavItem name="About" selected={false} />
-               <NavItem name="Home" selected={true} />
+               <NavItem name="Services" selected={false} />
+               <NavItem name="Projects" selected={false} />
+               <NavItem name="Learn" selected={false} />
+               <NavItem name="Case Study" selected={false} />
 
                </div>
             </div>
