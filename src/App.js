@@ -10,6 +10,7 @@ function App() {
   const [projects, setProjects]= useState(false)
   const [learn, setLearn]= useState(false)
   const [caseStudy, setCaseStudy]= useState(false)
+  
   return (
     <div className="App bg-[#EFEFEF]">
     <Routes>
