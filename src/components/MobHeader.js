@@ -4,7 +4,7 @@ import mobile_logo from '../assets/images/mobile_logo.png'
 
 function MobHeader() {
   return (
-    <div className="topHeader pt-[70px] pb-[10px] flex justify-between w-[100%] bg-[#EFEFEF] opacity-80 h-fit">
+    <div className="topHeader pt-[20px] pb-[10px] flex justify-between w-[100%] bg-[#EFEFEF] opacity-80 h-fit">
     <div className="logoCont flex">
         <img src={mobile_logo} className='object-contain w-[52px] h-[53px] '  alt="" />
         <h3 className='uppercase font-bold text-left text-sm mt-[-5px] ml-[10px] leading-4 ' >pave <br />

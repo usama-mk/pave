@@ -4,14 +4,40 @@
 
 .homeTopBG{
   background-image: url(/src/assets/images/homeTopBG.png);
-  background-size: cover;
+  /* background-size: contain; */
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 90vw;
 }
 
 .homeBottomBG{
   background-image: url(/src/assets/images/homeBottomBG.png);
-  background-size: cover;
+  background-size: 60vw;
+  object-fit: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.MobHomeTwoBG{
+  background-image: url(/src/assets/images/mobP2BGBig.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  height: 100vh;
+  /* background-size: 115vw; */
+  background-color: #410D7F;
+}
+
+.soText{
+  text-shadow: -1.3px 0 #FD4938, 0 1.3px #FD4938, 1.3px 0 #FD4938, 0 -1.3px #FD4938;
+  /* font-family: sans; */
+}
+
+.cont{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.sec{
+  scroll-snap-align: start;
 }

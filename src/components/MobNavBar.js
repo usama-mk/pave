@@ -5,8 +5,8 @@ import { goToAbout, goToCaseStudy, goToHome, goToLearn, goToProjects, goToServic
 const NavItem=({name, selected, handleNav})=>{
     return(
         <div>
-            <div className={`${selected?'bg-[black] ':'bg-[#B1B1B1]'} ${name==='Case Study'?'w-[75px]':name.length>5?'w-[55px]':'w-[43px]'} mb-3  h-[10px] `} ></div>
-            <h5 onClick={handleNav} className={`${selected?'font-bold text-[black] ':'font-normal text-[#B1B1B1]'} text-[14px] ${name==='Case Study'?'mr-0':'mr-5'}`} >{name}</h5>
+            <div className={`${selected?'bg-[black] ':'bg-[#B1B1B1]'} ${name==='Case Study'?'w-[69px]':name.length>5?'w-[48px]':'w-[36px]'} mb-3  h-[10px] `} ></div>
+            <h5 onClick={handleNav} className={`${selected?'font-bold text-[black] ':'font-normal text-[#B1B1B1]'} text-[12px] ${name==='Case Study'?'mr-0':'mr-5'}`} >{name}</h5>
         </div>
     )
 }
