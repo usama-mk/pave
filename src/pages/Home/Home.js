@@ -22,7 +22,7 @@ function Home() {
         <img className="w-[336px] h-[170px]  " src={homeTopBG} alt="" />
       {/* top */}
       {/*  homeTopBG */}
-      <div className="homeTop absolute top-0 h-[356px] w-[336px]   flex justify-center ">
+      <div className="homeTop absolute top-0 h-[356px] w-[100vw]  flex justify-center ">
         {/* header start */}
         <MobHeader />
         {/* header ends */}
