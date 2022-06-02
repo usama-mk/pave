@@ -33,6 +33,16 @@
   /* font-family: sans; */
 }
 
+.mobHomeThreeBG{
+  background-image: url(/src/assets/images/mobHomeThreeBG-2.png);
+  background-size: 90vh;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* background-size: 115vw; */
+  background-color: #410D7F;
+}
+
 .cont{
   scroll-snap-type: y mandatory;
   overflow-y: scroll;

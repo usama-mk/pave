@@ -9,6 +9,7 @@ import WorkButton from "../../components/WorkButton";
 import PlayVideoButton from "../../components/PlayVideoButton";
 import { useNavigate } from "react-router-dom";
 import MobHomeTwo from "./MobHomeTwo";
+import MobHomeThree from "./MobHomeThree";
 
 function Home() {
   const dispatch = useDispatch();
@@ -73,6 +74,7 @@ function Home() {
       </div>
       {/* bottom ends */}
       <MobHomeTwo />
+      <MobHomeThree/>
     </div>
   );
 }

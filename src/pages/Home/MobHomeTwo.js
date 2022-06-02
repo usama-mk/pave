@@ -7,7 +7,7 @@ import WorkButton from '../../components/WorkButton'
 function MobHomeTwo() {
   return (
     <div className=' h-[100vh] w-[100vw] sec ' >
-       <div className='MobHomeTwoBG' >
+       <div className='MobHomeTwoBG h-[90vh]' >
        
         <div className=' flex flex-col items-center justify-center h-[100vh] ' >
            <h1 className='text-[70px] font-bold leading-[66px] text-[#410D7F] soText' >A-Z Service <br />
