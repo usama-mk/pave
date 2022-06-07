@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import mouse from "../../assets/images/mouse.png";
 import homeBottomBG from "../../assets/images/homeBottomBG.png";
 import homeTopBG from "../../assets/images/homeTopBG.png";
@@ -17,19 +17,9 @@ function Home() {
   const handleWorkWithUs = () => {
     navigate("/a-z");
   };
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () =>{
-    console.log(offsetY);
-     setOffsetY(window.pageYOffset)
-     navigate('/a-z')
-    };
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, [offsetY]);
   return (
-    <div onScroll={handleScroll}  className=" flex flex-col items-center sec h-full overflow-scroll ">
+    <div className=" flex flex-col items-center max-h-[100vh] sec ">
         <img className="w-[336px] h-[170px]  " src={homeTopBG} alt="" />
       {/* top */}
       {/*  homeTopBG */}
@@ -41,7 +31,7 @@ function Home() {
       {/* top ends */}
 
       {/* award win start */}
-      <div className="homeMid z ">
+      <div className="homeMid">
         <div className="awardCont mt-3">
           <h1 className=" font-bold text-center text-[85px] leading-[65px]">
             Award <br /> Winning
@@ -74,24 +64,17 @@ function Home() {
         <img src={mouse} width={20} className="object-contain" alt="" />
       </div>
       {/* mouse cont ends */}
-<img  className=' w-[336px] h-full ' src={homeBottomBG} alt="" />
+<img  className=' w-[336px] h-full' src={homeBottomBG} alt="" />
       {/* bottom start */}
       {/* homeBottomBG */}
-      <div className="homeBottom  w-[321px] h-[348px]">
+      <div className="homeBottom  w-[321px] h-[348px] ">
         {/* bottom nav */}
         <MobNavBar />
         {/* bottom nav ends */}
       </div>
-      <div className="justscroll text-[white]  invisible  " >
-        <span>scroll</span>
-        <h2>scroll</h2>
-        <h2>scroll</h2>
-        <h2>scroll</h2>
-        <h2>scroll</h2>
-      </div>
       {/* bottom ends */}
-      {/* <MobHomeTwo /> */}
-      {/* <MobHomeThree/> */}
+      <MobHomeTwo />
+      <MobHomeThree/>
     </div>
   );
 }

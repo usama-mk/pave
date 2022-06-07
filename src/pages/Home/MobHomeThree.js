@@ -9,7 +9,7 @@ import WorkButton from '../../components/WorkButton'
 
 function MobHomeThree() {
   return (
-    <div className=' h-[100vh] w-[100vw] sec  ' >
+    <div className=' h-[100vh] w-[100vw] sec ' >
        <div className='bg-[#FD4C3C] h-[40%] ' >
        <div className='flex' >
        <img src={rings} className='object-contain mt-28 mr-12 ml-[-60px]' alt="" />
