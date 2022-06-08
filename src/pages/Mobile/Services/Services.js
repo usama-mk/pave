@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import MobHeader from '../../../components/MobHeader'
 import MobNavBar from '../../../components/MobNavBar'
 import ServiceItem from '../../../components/ServiceItem'
 import WorkButton from '../../../components/WorkButton'
+import { goToServices } from '../../../store/actions/navOptionsActions'
 
 
 
 
 function Services() {
+    const dispatch= useDispatch()
+   useEffect(()=>{
+    dispatch(goToServices())
+   },[])
   return (
     <div className='flex flex-col h-[100vh] sec' >
         <div className="  w-[100vw]  flex justify-center mb-12 ">
@@ -29,7 +35,7 @@ function Services() {
       <ServiceItem title={`Web/App Design & Development`}  />
       </div>
 
-      <MobNavBar/>
+      <MobNavBar />
       </div>
 
     </div>

@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MobHeader from '../../../components/MobHeader'
 import WorkButton from '../../../components/WorkButton'
 import PlayVideoButton from '../../../components/PlayVideoButton'
 import FAQs from '../../../components/FAQs'
 import MobNavBar from '../../../components/MobNavBar'
 import ExperiencesMob from './ExperiencesMob'
+import { useDispatch } from 'react-redux'
+import { goToAbout } from '../../../store/actions/navOptionsActions'
 
 function About() {
+  const dispatch= useDispatch()
+  useEffect(()=>{
+   dispatch(goToAbout())
+  },[])
   return (
     <div className='flex flex-col items-center h-[100vh] sec ' >
         <div className="  w-[100vw]  flex justify-center mb-12 ">
