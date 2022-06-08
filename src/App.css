@@ -53,3 +53,20 @@
   scroll-snap-align: start;
   height: 100vh;
 }
+
+/* width */
+.csb::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+.csb::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 1px;
+}
+
+/* Handle */
+.csb::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 1px;
+}
