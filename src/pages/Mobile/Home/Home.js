@@ -1,15 +1,17 @@
 import React from "react";
-import mouse from "../../assets/images/mouse.png";
-import homeBottomBG from "../../assets/images/homeBottomBG.png";
-import homeTopBG from "../../assets/images/homeTopBG.png";
+import mouse from "../../../assets/images/mouse.png";
+import homeBottomBG from "../../../assets/images/homeBottomBG.png";
+import homeTopBG from "../../../assets/images/homeTopBG.png";
 import { useDispatch, useSelector } from "react-redux";
-import MobNavBar from "../../components/MobNavBar";
-import MobHeader from "../../components/MobHeader";
-import WorkButton from "../../components/WorkButton";
-import PlayVideoButton from "../../components/PlayVideoButton";
+
+
+import WorkButton from "../../../components/WorkButton";
+import PlayVideoButton from "../../../components/PlayVideoButton";
 import { useNavigate } from "react-router-dom";
 import MobHomeTwo from "./MobHomeTwo";
 import MobHomeThree from "./MobHomeThree";
+import MobHeader from "../../../components/MobHeader";
+import MobNavBar from "../../../components/MobNavBar";
 
 function Home() {
   const dispatch = useDispatch();

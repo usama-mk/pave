@@ -1,19 +1,19 @@
 import React from 'react'
-import MobHeader from '../../components/MobHeader'
-import WorkButton from '../../components/WorkButton'
-import PlayVideoButton from '../../components/PlayVideoButton'
-import FAQs from '../../components/FAQs'
-import MobNavBar from '../../components/MobNavBar'
+import MobHeader from '../../../components/MobHeader'
+import WorkButton from '../../../components/WorkButton'
+import PlayVideoButton from '../../../components/PlayVideoButton'
+import FAQs from '../../../components/FAQs'
+import MobNavBar from '../../../components/MobNavBar'
 import ExperiencesMob from './ExperiencesMob'
 
-function CreateValue() {
+function About() {
   return (
     <div className='flex flex-col items-center h-[100vh] sec ' >
         <div className="  w-[100vw]  flex justify-center mb-12 ">
         <MobHeader />
       </div>
 
-      <div className="page4Content px-5">
+      <div className="px-5">
       <h2 className='text-[22px] font-bold leading-[29px] text-left ml-8 mr-8' >
       We create value for your 
 business by creating value 
@@ -68,4 +68,4 @@ agency in Southern California”
   )
 }
 
-export default CreateValue
+export default About

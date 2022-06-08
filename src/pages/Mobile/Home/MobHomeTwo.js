@@ -1,8 +1,8 @@
 import React from 'react'
-import MobHeader from '../../components/MobHeader'
-import MobNavBar from '../../components/MobNavBar'
-import PlayVideoButton from '../../components/PlayVideoButton'
-import WorkButton from '../../components/WorkButton'
+import MobNavBar from '../../../components/MobNavBar'
+
+import PlayVideoButton from '../../../components/PlayVideoButton'
+import WorkButton from '../../../components/WorkButton'
 
 function MobHomeTwo() {
   return (

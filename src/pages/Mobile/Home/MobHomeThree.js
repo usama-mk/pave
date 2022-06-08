@@ -1,11 +1,10 @@
 import React from 'react'
-import MobHeader from '../../components/MobHeader'
-import MobNavBar from '../../components/MobNavBar'
-import PlayVideoButton from '../../components/PlayVideoButton'
-import homeThreeMovies from "../../assets/images/homeThreeMovies.png";
-import straight_arrow from "../../assets/images/straight_arrow.png";
-import rings from "../../assets/images/rings.png";
-import WorkButton from '../../components/WorkButton'
+import PlayVideoButton from '../../../components/PlayVideoButton'
+import homeThreeMovies from "../../../assets/images/homeThreeMovies.png";
+import straight_arrow from "../../../assets/images/straight_arrow.png";
+import rings from "../../../assets/images/rings.png";
+import WorkButton from '../../../components/WorkButton'
+import MobNavBar from '../../../components/MobNavBar';
 
 function MobHomeThree() {
   return (

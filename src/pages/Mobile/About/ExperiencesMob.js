@@ -1,6 +1,6 @@
 import React from 'react'
-import FAQs from '../../components/FAQs'
-import MobHeader from '../../components/MobHeader'
+import FAQs from '../../../components/FAQs'
+import MobHeader from '../../../components/MobHeader'
 
 function ExperiencesMob() {
     const NumbersItem=({subTitle, value})=>{

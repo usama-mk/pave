@@ -1,9 +1,8 @@
 import './App.css';
-import { Routes, Route, Link } from "react-router-dom";
-import Home from './pages/Home/Home';
-import { useState } from 'react';
-import MobHomeTwo from './pages/Home/MobHomeTwo';
-import CreateValue from './pages/CreateValue/CreateValue';
+import { Routes, Route } from "react-router-dom";
+import Home from './pages/Mobile/Home/Home';
+import About from './pages/Mobile/About/About';
+import Services from './pages/Mobile/Services/Services';
 
 function App() {
 
@@ -11,7 +10,8 @@ function App() {
     <div className="App bg-[#EFEFEF] cont">
     <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<CreateValue />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
     </div>
   );
