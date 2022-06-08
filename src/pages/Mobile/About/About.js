@@ -15,7 +15,7 @@ function About() {
   },[])
   return (
     <div className='flex flex-col items-center h-[100vh] sec ' >
-        <div className="  w-[100vw]  flex justify-center mb-12 ">
+        <div className="  w-[100vw]  flex justify-center mb-6 ">
         <MobHeader />
       </div>
 

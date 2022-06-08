@@ -36,12 +36,12 @@ function ExperiencesMob() {
         {/* numbers */}
         <div className='mt-8 ml-8' >
         <h2 className='text-[25px] font-bold text-[#410D81] text-left leading-[35px] ' >Numbers</h2>
-       <div className="flex space-x-8 mt-8 ">
+       <div className="flex space-x-8 mt-4 ">
        <NumbersItem value={`1400+`} subTitle={`Lifetime Projects`} />
        <NumbersItem value={`4M`} subTitle={`Users Impacted`} />
        </div>
 
-       <div className="flex space-x-8 mt-8">
+       <div className="flex space-x-8 mt-4">
        <NumbersItem value={`740+`} subTitle={`Monthly Subscriptions`} />
        <NumbersItem value={`93%`} subTitle={`Client Satisfaction Rate
 `} />
