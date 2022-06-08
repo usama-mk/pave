@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { goToAbout, goToCaseStudy, goToHome, goToLearn, goToProjects, goToServices } from '../store/actions/navOptionsActions'
 
 const NavItem=({name, selected, handleNav})=>{
@@ -13,6 +14,7 @@ const NavItem=({name, selected, handleNav})=>{
 
 function MobNavBar() {
     const dispatch= useDispatch()
+    const navigate= useNavigate()
     const home= useSelector(state=> state.navOptions.home)
     const about= useSelector(state=> state.navOptions.about)
     const services= useSelector(state=> state.navOptions.services)
@@ -24,21 +26,27 @@ function MobNavBar() {
     const handleNav=(address)=>{
         if(address==="home"){
             dispatch(goToHome())
+            navigate(`/`)
         }
         else if(address==="about"){
              dispatch(goToAbout())
+             navigate(`/${address}`)
         }
         else if(address==="services"){
             dispatch(goToServices())
+            navigate(`/${address}`)
        }
        else if(address==="projects"){
         dispatch(goToProjects())
+        navigate(`/${address}`)
    }
         else if(address==="learn"){
             dispatch(goToLearn())
+            navigate(`/${address}`)
         }
         else if(address==="caseStudy"){
             dispatch(goToCaseStudy())
+            navigate(`/${address}`)
         }
     }
   return (

@@ -33,7 +33,7 @@ function MobHomeThree() {
   {/* btns start */}
 <div className="homeMidButtons mt-5 flex justify-center">
             {/* btn 1 */}
-        <WorkButton textColor={'#FEB92B'} bg={'#410D7F'} />
+        <WorkButton text={"Work With Us"} textColor={'#FEB92B'} bg={'#410D7F'} />
         {/* btn1 ends */}
 
         {/* btn 2 */}

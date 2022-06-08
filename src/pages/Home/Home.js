@@ -49,6 +49,7 @@ function Home() {
             handleWorkWithUs={handleWorkWithUs}
             textColor={"black"}
             bg={"white"}
+            text={"Work With Us"}
           />
           {/* btn1 ends */}
 
