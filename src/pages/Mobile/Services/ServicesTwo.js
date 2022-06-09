@@ -3,7 +3,6 @@ import MobHeader from '../../../components/MobHeader'
 import MobNavBar from '../../../components/MobNavBar'
 import Recaptcha from '../../../components/Recaptcha'
 import WorkButton from '../../../components/WorkButton'
-import ServicesThree from './ServicesThree'
 
 const Input=({label, value, onChange, placeholder, type})=>{
 return(
@@ -11,7 +10,7 @@ return(
         <label className='text-[11px] font-bold ' >{label}</label>
         <br />
         <div className='leading-[23px] ' >
-        <input className='bg-transparent leading-[43px] border-b-2 border-[#707070] placeholder:text-[11px]  w-[100%] focus:outline-none ' type={type} value={value} onChange={(e)=> onChange(e.target.value)} placeholder={placeholder} />
+        <input className='bg-transparent leading-[30px] border-b-2 border-[#707070] placeholder:text-[11px]  w-[100%] focus:outline-none ' type={type} value={value} onChange={(e)=> onChange(e.target.value)} placeholder={placeholder} />
         </div>
     </div>
 )
@@ -57,7 +56,6 @@ function ServicesTwo() {
       </div>
 
       </div>
-      <ServicesThree/>
 
       </div>
 

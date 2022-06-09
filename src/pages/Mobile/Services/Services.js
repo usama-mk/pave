@@ -5,6 +5,11 @@ import MobNavBar from '../../../components/MobNavBar'
 import ServiceItem from '../../../components/ServiceItem'
 import WorkButton from '../../../components/WorkButton'
 import { goToServices } from '../../../store/actions/navOptionsActions'
+import ServicesFive from './ServicesFive'
+import ServicesFour from './ServicesFour'
+import ServicesSeven from './ServicesSeven'
+import ServicesSix from './ServicesSix'
+import ServicesThree from './ServicesThree'
 import ServicesTwo from './ServicesTwo'
 
 
@@ -42,6 +47,11 @@ function Services() {
 
       </div>
       <ServicesTwo/>
+      <ServicesThree/>
+      <ServicesFour/>
+      <ServicesFive/>
+      <ServicesSix/>
+      <ServicesSeven/>
 
       </div>
 
