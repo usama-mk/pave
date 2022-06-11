@@ -55,7 +55,7 @@ function MobNavBar({showNavBar}) {
                 <div className='bg-[#B1B1B1]  h-[10px] mt-[10px] ' >
 
                 </div>
-               <div className='flex mt-[-10px]' >
+               <div className='flex justify-around mt-[-10px]' >
                <NavItem handleNav={()=> handleNav('home')} name="Home" selected={home} />
                <NavItem handleNav={()=> handleNav('about')} name="About" selected={about} />
                <NavItem handleNav={()=> handleNav('services')} name="Services" selected={services} />

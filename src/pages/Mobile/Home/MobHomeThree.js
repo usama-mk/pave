@@ -1,36 +1,117 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PlayVideoButton from '../../../components/PlayVideoButton'
 import homeThreeMovies from "../../../assets/images/homeThreeMovies.png";
 import straight_arrow from "../../../assets/images/straight_arrow.png";
 import rings from "../../../assets/images/rings.png";
 import WorkButton from '../../../components/WorkButton'
 import MobNavBar from '../../../components/MobNavBar';
+import MobHeader from '../../../components/MobHeader';
+import { useNavigate } from 'react-router-dom';
 
 function MobHomeThree() {
-  return (
-    <div className=' h-[100vh] w-[100vw] sec ' >
-       <div className='bg-[#FD4C3C] h-[40%] ' >
-       <div className='flex' >
-       <img src={rings} className='object-contain mt-28 mr-12 ml-[-60px]' alt="" />
+  const [showHeading, setShowHeading] = useState(false);
+  const [isHomeTwo, setIsHomeTwo] = useState(false);
+  const [showSubHeading, setSubShowHeading] = useState(false);
+  const [showButtons, setShowButtons] = useState(false);
+  const [showNavBar, setShowNavBar] = useState(false);
+  const navigate = useNavigate();
 
-<img src={homeThreeMovies} className='object-cover mt-[-70px]'  alt="" />
+  const handleWorkWithUs = () => {
+    navigate("/a-z");
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowNavBar(true);
+    }, 1500);
+    setTimeout(() => {
+      setShowHeading(true);
+      setShowNavBar(true);
+    }, 1500);
+    setTimeout(() => {
+      setSubShowHeading(true);
+    }, 2000);
+    setTimeout(() => {
+      setShowButtons(true);
+    }, 2800);
+  }, []);
+  const handleOnHomeClick = () => {
+    setIsHomeTwo(true);
+    setTimeout(() => {
+      navigate("/performance");
+    }, 2000);
+  };
+
+  return (
+    <div className=' h-[100vh] w-[100vw]  bg-[#410D7F] ' >
+       <div className="homeTop absolute top-0 z-10 h-[356px] w-[100vw]  flex justify-center ">
+          <MobHeader />
+        </div>
+       <div className='bg-[#FD4C3C] h-[50%] animate__animated animate__fadeInDownBig ' >
+       <div className={`
+      
+
+       flex justify-center items-center `} >
+       <img src={rings} className={`
+        ${
+          showHeading && !isHomeTwo
+            ? "visible animate__animated animate__fadeInDownBig":'invisible'}
+       object-contain mt-28 mr-8 ml-[-10px] `} alt="" />
+
+<img src={homeThreeMovies} className={`
+ ${
+  showButtons && !isHomeTwo
+    ? "visible animate__animated animate__fadeInDownBig":'invisible'}
+object-cover mt-[-70px] max-h-52 `}  alt="" />
        </div>
-           <h1 className='text-[60px] mt-[30px] font-bold leading-[66px] text-[white] ' >Performance 
+           <h1 className={`
+           ${
+            showHeading && !isHomeTwo
+              ? "visible animate__animated animate__fadeIn"
+              : isHomeTwo
+              ? "visible animate__animated animate__fadeOut"
+              : "invisible"
+          }
+           text-[60px] font-bold leading-[66px] text-[white] `} >Performance 
            </h1>
        </div>
        
-        <div className='h-[60%] bg-[#410D7F] ' >
-        <div className=' flex flex-col items-center  h-[100vh] ' >
-           <h1 className='text-[70px] font-bold leading-[66px] text-[white] ' >
+        <div className=' bg-[#410D7F] ' >
+        <div className=' flex flex-col items-center justify-center ' >
+           <h1 className={`
+            ${
+              showHeading && !isHomeTwo
+                ? "visible animate__animated animate__fadeIn"
+                : isHomeTwo
+                ? "visible animate__animated animate__fadeOut"
+                : "invisible"
+            }
+           text-[70px] font-bold leading-[66px] text-[white] `} >
            Based
            </h1>
-           <h4 className='text-[16px] mt-5 font-medium leading-[25px] text-white  ' >Marketing agency that focuses on your
+           <h4 className={`
+            ${
+              showSubHeading && !isHomeTwo
+                ? "visible animate__animated animate__fadeInUp"
+                : isHomeTwo
+                ? "visible animate__animated animate__fadeOut"
+                : "invisible"
+            }
+           text-[16px] mt-5 font-medium leading-[25px] text-white  `} >Marketing agency that focuses on your
  <br />
  ROI and metrics that matter for <br /> your brand & business
 </h4>
 
   {/* btns start */}
-<div className="homeMidButtons mt-5 flex justify-center">
+<div className={`
+${
+  showButtons && !isHomeTwo
+    ? "visible animate__animated animate__fadeIn"
+    : isHomeTwo
+    ? "visible animate__animated animate__fadeOut"
+    : "invisible"
+}
+homeMidButtons mt-5 flex justify-center`}>
             {/* btn 1 */}
         <WorkButton text={"Work With Us"} textColor={'#FEB92B'} bg={'#410D7F'} />
         {/* btn1 ends */}
@@ -45,7 +126,11 @@ function MobHomeThree() {
       </div>
       {/* bottom image */}
       <div>
-      <img src={homeThreeMovies} className='object-cover ml-[-40%] mt-[-50px] '  alt="" />
+      <img src={homeThreeMovies} className={`
+       ${
+        showSubHeading && !isHomeTwo
+          ? "visible animate__animated animate__fadeInUpBig":'invisible'}
+      object-cover ml-[-40%] mt-[-50px] `}  alt="" />
       </div>
       {/* bottom image end */}
         </div>

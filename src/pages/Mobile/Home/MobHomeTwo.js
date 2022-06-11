@@ -6,6 +6,9 @@ import WorkButton from "../../../components/WorkButton";
 import A1 from "../../../assets/images/A1.png";
 import A2 from "../../../assets/images/A2.png";
 import A3 from "../../../assets/images/A3.png";
+import A4 from "../../../assets/images/A4.png";
+import A5 from "../../../assets/images/A5.png";
+import A6 from "../../../assets/images/A6.png";
 import { useNavigate } from "react-router-dom";
 import MobHeader from "../../../components/MobHeader";
 
@@ -36,13 +39,20 @@ function MobHomeTwo() {
       setShowButtons(true);
     }, 2800);
   }, []);
+  const handleOnHomeClick = () => {
+    setIsHomeTwo(true);
+    setTimeout(() => {
+      navigate("/performance");
+    }, 2000);
+  };
+
   return (
-    <div className=" h-[100vh] w-[100vw] ">
+    <div     onClick={handleOnHomeClick} className=" h-[100vh] w-[100vw] ">
       <div className=" bg-[#410D7F]">
         <div className="homeTop absolute top-0 z-10 h-[356px] w-[100vw]  flex justify-center ">
           <MobHeader />
         </div>
-        <div className={` flex animate__animated animate__fadeInDownBig `}>
+        <div className={` ${isHomeTwo ? "animate__animated animate__fadeOutUpBig " : ""} flex justify-center animate__animated animate__fadeInDownBig `}>
           <img src={A1} className="object-contain mt-16 ml-[-15px]" alt="" />
           <img src={A2} className="object-contain mx-10 mt-[-30px]" alt="" />
           <img src={A3} className="object-contain mt-16 mr-[-15px]" alt="" />
@@ -104,10 +114,10 @@ homeMidButtons mt-5 flex justify-center `}
           {/* btns end */}
         </div>
 
-        <div className={` flex animate__animated animate__fadeInUpBig `}>
-          <img src={A1} className="object-contain mt-16 ml-[-15px]" alt="" />
-          <img src={A2} className="object-contain mx-10 mt-[-30px]" alt="" />
-          <img src={A3} className="object-contain mt-16 mr-[-15px]" alt="" />
+        <div className={`  ${isHomeTwo ? "animate__animated animate__fadeOutDownBig " : ""} flex justify-center animate__animated animate__fadeInUpBig `}>
+          <img src={A4} className="object-contain mt-16 ml-[-15px]" alt="" />
+          <img src={A5} className="object-contain mx-10 mt-[-30px]" alt="" />
+          <img src={A6} className="object-contain mt-16 mr-[-15px]" alt="" />
         </div>
       </div>
 
