@@ -12,7 +12,7 @@ const NavItem=({name, selected, handleNav})=>{
     )
 }
 
-function MobNavBar() {
+function MobNavBar({showNavBar}) {
     const dispatch= useDispatch()
     const navigate= useNavigate()
     const home= useSelector(state=> state.navOptions.home)
@@ -50,9 +50,9 @@ function MobNavBar() {
         }
     }
   return (
-    <div className="mobileNav fixed bottom-0 left-0 mt-[100%] bg-[#EFEFEF] w-[100vw] p-5 
-             ">
-                <div className='bg-[#B1B1B1] w-[90vw] h-[10px] mt-[10px] ' >
+    <div className={`${showNavBar? 'visible animate__animated animate__fadeInUpBig' :'invisible'}mobileNav  pt-4 pb-2 bg-[#EFEFEF] 
+             `}>
+                <div className='bg-[#B1B1B1]  h-[10px] mt-[10px] ' >
 
                 </div>
                <div className='flex mt-[-10px]' >
