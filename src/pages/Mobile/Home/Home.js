@@ -15,9 +15,16 @@ import MobHomeTwo from "./MobHomeTwo";
 import MobHomeThree from "./MobHomeThree";
 import MobHeader from "../../../components/MobHeader";
 import MobNavBar from "../../../components/MobNavBar";
-import { useSprings, animated } from '@react-spring/web'
-import { useDrag } from '@use-gesture/react'
-import clamp from 'lodash.clamp'
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css/bundle";
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Mousewheel, Pagination } from "swiper";
 import "animate.css";
 
 
@@ -62,7 +69,7 @@ function Home1() {
       onClick={handleOnHomeClick}
       className={`${
         isHomeTwo ? "transitionH2Bg bg-[#410D7F]" : ""
-      }  flex flex-col items-center overflow-x-clip  `}
+      }  flex flex-col items-center overflow-x-clip sec max-h-[100vh] `}
     >
       <img
         className={`
@@ -160,7 +167,7 @@ function Home1() {
           showNavBar
             ? "visible animate__animated animate__fadeInUpBig"
             : "invisible"
-        }     flex justify-center `}
+        }     flex justify-center w-[321px] h-[348px] `}
       >
         
        
@@ -177,62 +184,36 @@ function Home1() {
 
 
 
-
-function Viewpager() {
+function Home() {
   const [homeTwoDisplay, setHomeTwoDisplay]= useState(false)
   const [homeThreeDisplay, setHomeThreeDisplay]= useState(false)
-  const pages = [
-    <Home1/>,
-   <MobHomeTwo homeTwoDisplay={homeTwoDisplay} />,
-    <MobHomeThree homeThreeDisplay={homeThreeDisplay} />,
-    'https://images.pexels.com/photos/351265/pexels-photo-351265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    'https://images.pexels.com/photos/924675/pexels-photo-924675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-  ]
-  const index = useRef(0)
-  const width = window.innerWidth
-
-  const [props, api] = useSprings(pages.length, i => ({
-    x: i * width,
-    scale: 1,
-    display: 'block',
-  }))
-  const bind = useDrag(({ active, movement: [mx], direction: [xDir], cancel }) => {
-    if (active && Math.abs(mx) > width / 2) {
-      index.current = clamp(index.current + (xDir > 0 ? -1 : 1), 0, pages.length - 1)
-     if(index.current==1){
-      setHomeTwoDisplay(true)
-     }
-     if(index.current==2){
-      setHomeThreeDisplay(true)
-     }
-      cancel()
-    }
-    api.start(i => {
-      if (i < index.current - 1 || i > index.current + 1) return { display: 'none' }
-      const x = (i - index.current) * width + (active ? mx : 0)
-      const scale = active ? 1 - Math.abs(mx) / width / 2 : 1
-      return { x, scale, display: 'block' }
-    })
-  })
   return (
-    <div className='wrapper'>
-      {props.map(({ x, display, scale }, i) => (
-        <animated.div className='page' {...bind()} key={i} style={{ display, x }}>
-          {/* <animated.div style={{ scale, backgroundImage: `url(${pages[i]})` }}/> */}
-          <animated.div style={{ scale }}>
-            {pages[i]}
-            
-            </animated.div> 
-        </animated.div>
-      ))}
-    </div>
-  )
-}
-function Home() {
-  return (
-    <div className="flex items-center justify-center h-[100%]">
-      <Viewpager />
-    </div>
+    <Swiper
+        direction={"vertical"}
+        slidesPerView={1}
+        spaceBetween={30}
+        mousewheel={true}
+        pagination={{
+          clickable: true,
+        }}
+        onSlideChange={(swiper)=> {
+            if(swiper.activeIndex===1){
+                setHomeTwoDisplay(true)
+            }
+            else if(swiper.activeIndex===2){
+                setHomeThreeDisplay(true)
+            }
+        }}
+         
+        // onScroll={()=> setHomeTwoDisplay(true)}
+        modules={[Mousewheel, Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide ><Home1 /></SwiperSlide>
+        <SwiperSlide > {homeTwoDisplay?<MobHomeTwo homeTwoDisplay={homeTwoDisplay}/>:'loading..'} </SwiperSlide>
+        <SwiperSlide> {homeThreeDisplay?<MobHomeThree homeThreeDisplay={homeThreeDisplay} />:'loading..'} </SwiperSlide>
+         
+      </Swiper>
   )
 }
 
