@@ -23,6 +23,24 @@ function MobHomeTwo() {
   const handleWorkWithUs = () => {
     navigate("/a-z");
   };
+  const [offsetY, setOffsetY] = useState(window.scrollY);
+  const handleScroll = () =>{
+    console.log(offsetY);
+     setOffsetY(window.scrollY)
+     if( window.scrollY < offsetY){
+      handleOnHomeClick('')
+
+     }
+     else if(offsetY>0){
+      handleOnHomeClick('home3')
+     }
+    };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    console.log(window.scrollY)
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [offsetY]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -39,15 +57,15 @@ function MobHomeTwo() {
       setShowButtons(true);
     }, 2800);
   }, []);
-  const handleOnHomeClick = () => {
+  const handleOnHomeClick = (address) => {
     setIsHomeTwo(true);
     setTimeout(() => {
-      navigate("/performance");
+      navigate(`/${address}`);
     }, 2000);
   };
 
   return (
-    <div     onClick={handleOnHomeClick} className=" h-[100vh] w-[100vw] ">
+    <div     onClick={()=> handleOnHomeClick('/home3')} className="  w-[100vw] overflow-y-auto overflow-x-hidden ">
       <div className=" bg-[#410D7F]">
         <div className="homeTop absolute top-0 z-10 h-[356px] w-[100vw]  flex justify-center ">
           <MobHeader />
@@ -57,7 +75,7 @@ function MobHomeTwo() {
           <img src={A2} className="object-contain mx-10 mt-[-30px]" alt="" />
           <img src={A3} className="object-contain mt-16 mr-[-15px]" alt="" />
         </div>
-        <div className=" flex flex-col items-center justify-center flex-1 ">
+        <div className=" flex flex-col items-center justify-center h-[40vh] ">
           <h1
             className={`
            ${
@@ -119,9 +137,22 @@ homeMidButtons mt-5 flex justify-center `}
           <img src={A5} className="object-contain mx-10 mt-[-30px]" alt="" />
           <img src={A6} className="object-contain mt-16 mr-[-15px]" alt="" />
         </div>
+        
       </div>
 
-      <MobNavBar />
+      
+      <div
+        className={`${
+          showNavBar
+            ? "visible animate__animated animate__fadeInUpBig"
+            : "invisible"
+        }     flex justify-center `}
+      >
+        
+       
+      <MobNavBar showNavBar={showNavBar} />
+        
+      </div>
     </div>
   );
 }

@@ -38,12 +38,12 @@ function MobHomeThree() {
   const handleOnHomeClick = () => {
     setIsHomeTwo(true);
     setTimeout(() => {
-      navigate("/performance");
+      navigate("/");
     }, 2000);
   };
 
   return (
-    <div className=' h-[100vh] w-[100vw]  bg-[#410D7F] ' >
+    <div onClick={handleOnHomeClick} className=' h-[100vh] w-[100vw]  bg-[#410D7F] sec' >
        <div className="homeTop absolute top-0 z-10 h-[356px] w-[100vw]  flex justify-center ">
           <MobHeader />
         </div>
@@ -64,6 +64,8 @@ function MobHomeThree() {
     ? "visible animate__animated animate__fadeInDownBig":'invisible'}
 object-cover mt-[-70px] max-h-52 `}  alt="" />
        </div>
+           
+           <div className='flex justify-center items-end' >
            <h1 className={`
            ${
             showHeading && !isHomeTwo
@@ -72,8 +74,9 @@ object-cover mt-[-70px] max-h-52 `}  alt="" />
               ? "visible animate__animated animate__fadeOut"
               : "invisible"
           }
-           text-[60px] font-bold leading-[66px] text-[white] `} >Performance 
+           text-[60px] font-bold leading-[66px] text-[white] text-center pt-5  `} >Performance 
            </h1>
+           </div>
        </div>
        
         <div className=' bg-[#410D7F] ' >

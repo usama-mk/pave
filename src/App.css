@@ -46,14 +46,14 @@
 }
 
 .cont{
-  /* scroll-snap-type: y none;
-  overflow-y: scroll; */
-  /* height: 100vh; */
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
 .sec{
   scroll-snap-align: start;
-  /* height: 100vh; */
+  height: 100vh;
 }
 
 /* width */

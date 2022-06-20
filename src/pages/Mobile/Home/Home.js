@@ -28,6 +28,21 @@ function Home() {
     navigate("/a-z");
   };
 
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () =>{
+    console.log(window.scrollY);
+     setOffsetY(window.scrollY)
+     if(offsetY>10){
+      handleOnHomeClick()
+     }
+    };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    console.log(window.scrollY)
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [offsetY]);
+
   useEffect(() => {
     setTimeout(() => {
       setShowNavBar(true);
@@ -47,7 +62,7 @@ function Home() {
   const handleOnHomeClick = () => {
     setIsHomeTwo(true);
     setTimeout(() => {
-      navigate("/check");
+      navigate("/home2");
     }, 2000);
   };
 
@@ -56,7 +71,7 @@ function Home() {
       onClick={handleOnHomeClick}
       className={`${
         isHomeTwo ? "transitionH2Bg bg-[#410D7F]" : ""
-      }  flex flex-col items-center  sec  `}
+      }  flex flex-col items-center overflow-y-auto  `}
     >
       <img
         className={`
