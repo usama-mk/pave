@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import MobNavBar from "../../../components/MobNavBar";
 
 import PlayVideoButton from "../../../components/PlayVideoButton";
@@ -12,7 +12,7 @@ import A6 from "../../../assets/images/A6.png";
 import { useNavigate } from "react-router-dom";
 import MobHeader from "../../../components/MobHeader";
 
-function MobHomeTwo() {
+function MobHomeTwo({homeTwoDisplay}) {
   const [showHeading, setShowHeading] = useState(false);
   const [isHomeTwo, setIsHomeTwo] = useState(false);
   const [showSubHeading, setSubShowHeading] = useState(false);
@@ -23,24 +23,10 @@ function MobHomeTwo() {
   const handleWorkWithUs = () => {
     navigate("/a-z");
   };
-  const [offsetY, setOffsetY] = useState(window.scrollY);
-  const handleScroll = () =>{
-    console.log(offsetY);
-     setOffsetY(window.scrollY)
-     if( window.scrollY < offsetY){
-      handleOnHomeClick('')
 
-     }
-     else if(offsetY>0){
-      handleOnHomeClick('home3')
-     }
-    };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    console.log(window.scrollY)
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [offsetY]);
+  const ref = useRef(null);
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -56,16 +42,18 @@ function MobHomeTwo() {
     setTimeout(() => {
       setShowButtons(true);
     }, 2800);
-  }, []);
+  }, [homeTwoDisplay]);
   const handleOnHomeClick = (address) => {
     setIsHomeTwo(true);
     setTimeout(() => {
       navigate(`/${address}`);
     }, 2000);
   };
+if(homeTwoDisplay){
+
 
   return (
-    <div     onClick={()=> handleOnHomeClick('/home3')} className="  w-[100vw] overflow-y-auto overflow-x-hidden ">
+    <div ref={ref} autoFocus    onClick={()=> handleOnHomeClick('/home3')} className="  w-[100vw] overflow-x-clip ">
       <div className=" bg-[#410D7F]">
         <div className="homeTop absolute top-0 z-10 h-[356px] w-[100vw]  flex justify-center ">
           <MobHeader />
@@ -155,6 +143,7 @@ homeMidButtons mt-5 flex justify-center `}
       </div>
     </div>
   );
+      }
 }
 
 export default MobHomeTwo;

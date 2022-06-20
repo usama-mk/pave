@@ -8,7 +8,7 @@ import MobNavBar from '../../../components/MobNavBar';
 import MobHeader from '../../../components/MobHeader';
 import { useNavigate } from 'react-router-dom';
 
-function MobHomeThree() {
+function MobHomeThree({homeThreeDisplay}) {
   const [showHeading, setShowHeading] = useState(false);
   const [isHomeTwo, setIsHomeTwo] = useState(false);
   const [showSubHeading, setSubShowHeading] = useState(false);
@@ -34,16 +34,18 @@ function MobHomeThree() {
     setTimeout(() => {
       setShowButtons(true);
     }, 2800);
-  }, []);
+  }, [homeThreeDisplay]);
   const handleOnHomeClick = () => {
     setIsHomeTwo(true);
     setTimeout(() => {
       navigate("/");
     }, 2000);
   };
+if(homeThreeDisplay){
+
 
   return (
-    <div onClick={handleOnHomeClick} className=' h-[100vh] w-[100vw]  bg-[#410D7F] sec' >
+    <div onClick={handleOnHomeClick} className=' h-[100vh] w-[100vw]  bg-[#410D7F] overflow-x-clip sec' >
        <div className="homeTop absolute top-0 z-10 h-[356px] w-[100vw]  flex justify-center ">
           <MobHeader />
         </div>
@@ -146,6 +148,7 @@ homeMidButtons mt-5 flex justify-center`}>
        
     </div>
   )
+       }
 }
 
 export default MobHomeThree

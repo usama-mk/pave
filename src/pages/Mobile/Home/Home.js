@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import mouse from "../../../assets/images/mouse.png";
 import homeBottomBG from "../../../assets/images/homeBottomBG.png";
 import homeTopBG from "../../../assets/images/homeTopBG.png";
@@ -6,6 +6,7 @@ import A1 from "../../../assets/images/A1.png";
 import A2 from "../../../assets/images/A2.png";
 import A3 from "../../../assets/images/A3.png";
 import { useDispatch, useSelector } from "react-redux";
+import '../../../App.css'
 
 import WorkButton from "../../../components/WorkButton";
 import PlayVideoButton from "../../../components/PlayVideoButton";
@@ -14,9 +15,13 @@ import MobHomeTwo from "./MobHomeTwo";
 import MobHomeThree from "./MobHomeThree";
 import MobHeader from "../../../components/MobHeader";
 import MobNavBar from "../../../components/MobNavBar";
+import { useSprings, animated } from '@react-spring/web'
+import { useDrag } from '@use-gesture/react'
+import clamp from 'lodash.clamp'
 import "animate.css";
 
-function Home() {
+
+function Home1() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [showHeading, setShowHeading] = useState(false);
@@ -28,20 +33,6 @@ function Home() {
     navigate("/a-z");
   };
 
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () =>{
-    console.log(window.scrollY);
-     setOffsetY(window.scrollY)
-     if(offsetY>10){
-      handleOnHomeClick()
-     }
-    };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    console.log(window.scrollY)
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [offsetY]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -71,7 +62,7 @@ function Home() {
       onClick={handleOnHomeClick}
       className={`${
         isHomeTwo ? "transitionH2Bg bg-[#410D7F]" : ""
-      }  flex flex-col items-center overflow-y-auto  `}
+      }  flex flex-col items-center overflow-x-clip  `}
     >
       <img
         className={`
@@ -182,6 +173,67 @@ function Home() {
       <MobHomeThree/> */}
     </div>
   );
+}
+
+
+
+
+function Viewpager() {
+  const [homeTwoDisplay, setHomeTwoDisplay]= useState(false)
+  const [homeThreeDisplay, setHomeThreeDisplay]= useState(false)
+  const pages = [
+    <Home1/>,
+   <MobHomeTwo homeTwoDisplay={homeTwoDisplay} />,
+    <MobHomeThree homeThreeDisplay={homeThreeDisplay} />,
+    'https://images.pexels.com/photos/351265/pexels-photo-351265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    'https://images.pexels.com/photos/924675/pexels-photo-924675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  ]
+  const index = useRef(0)
+  const width = window.innerWidth
+
+  const [props, api] = useSprings(pages.length, i => ({
+    x: i * width,
+    scale: 1,
+    display: 'block',
+  }))
+  const bind = useDrag(({ active, movement: [mx], direction: [xDir], cancel }) => {
+    if (active && Math.abs(mx) > width / 2) {
+      index.current = clamp(index.current + (xDir > 0 ? -1 : 1), 0, pages.length - 1)
+     if(index.current==1){
+      setHomeTwoDisplay(true)
+     }
+     if(index.current==2){
+      setHomeThreeDisplay(true)
+     }
+      cancel()
+    }
+    api.start(i => {
+      if (i < index.current - 1 || i > index.current + 1) return { display: 'none' }
+      const x = (i - index.current) * width + (active ? mx : 0)
+      const scale = active ? 1 - Math.abs(mx) / width / 2 : 1
+      return { x, scale, display: 'block' }
+    })
+  })
+  return (
+    <div className='wrapper'>
+      {props.map(({ x, display, scale }, i) => (
+        <animated.div className='page' {...bind()} key={i} style={{ display, x }}>
+          {/* <animated.div style={{ scale, backgroundImage: `url(${pages[i]})` }}/> */}
+          <animated.div style={{ scale }}>
+            {pages[i]}
+            
+            </animated.div> 
+        </animated.div>
+      ))}
+    </div>
+  )
+}
+function Home() {
+  return (
+    <div className="flex items-center justify-center h-[100%]">
+      <Viewpager />
+    </div>
+  )
 }
 
 export default Home;
