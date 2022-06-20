@@ -161,19 +161,19 @@ function Home1() {
       {/* bottom start */}
       {/* homeBottomBG */}
 
-
       <div
         className={`${
           showNavBar
             ? "visible animate__animated animate__fadeInUpBig"
             : "invisible"
-        }     flex justify-center w-[321px] h-[348px] `}
+        }     flex justify-center w-[100vw]  `}
       >
         
        
       <MobNavBar showNavBar={showNavBar} />
         
       </div>
+     
 
       {/* bottom ends */}
       {/* <MobHomeTwo />

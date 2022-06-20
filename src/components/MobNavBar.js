@@ -50,7 +50,7 @@ function MobNavBar({showNavBar}) {
         }
     }
   return (
-    <div className={`${showNavBar? 'visible animate__animated animate__fadeInUpBig' :'invisible'}mobileNav  pt-4 pb-2 bg-[#EFEFEF] 
+    <div className={`${showNavBar? 'visible animate__animated animate__fadeInUpBig' :'invisible'}mobileNav   pb-4 w-full bg-[#EFEFEF] 
              `}>
                 <div className='bg-[#B1B1B1]  h-[10px] mt-[10px] ' >
 
