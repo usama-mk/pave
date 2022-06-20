@@ -69,7 +69,7 @@ function Home1() {
       onClick={handleOnHomeClick}
       className={`${
         isHomeTwo ? "transitionH2Bg bg-[#410D7F]" : ""
-      }  flex flex-col items-center overflow-x-clip sec max-h-[100vh] `}
+      }  flex flex-col items-center overflow-x-clip sec max-h-[100vh]  `}
     >
       <img
         className={`
@@ -158,15 +158,13 @@ function Home1() {
         src={homeBottomBG}
         alt=""
       />
-      {/* bottom start */}
-      {/* homeBottomBG */}
-
+      
       <div
         className={`${
           showNavBar
             ? "visible animate__animated animate__fadeInUpBig"
             : "invisible"
-        }     flex justify-center w-[100vw]  `}
+        }     flex justify-center w-[100vw] absolute bottom-12  `}
       >
         
        
