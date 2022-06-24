@@ -53,7 +53,7 @@ if(homeTwoDisplay){
 
 
   return (
-    <div ref={ref} autoFocus    onClick={()=> handleOnHomeClick('/home3')} className="  w-[100vw] overflow-x-clip ">
+    <div ref={ref} autoFocus    onClick={()=> handleOnHomeClick('/home3')} className="  w-[100vw] overflow-x-clip  ">
       <div className=" bg-[#410D7F]">
         <div className="homeTop absolute top-0 z-10 h-[356px] w-[100vw]  flex justify-center ">
           <MobHeader />
@@ -134,7 +134,7 @@ homeMidButtons mt-5 flex justify-center `}
           showNavBar
             ? "visible animate__animated animate__fadeInUpBig"
             : "invisible"
-        }     flex justify-center w-[100%]  absolute bottom-12 `}
+        }     flex justify-center w-[100%]  absolute bottom-0 `}
       >
         
        

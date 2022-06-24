@@ -24,7 +24,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Mousewheel, Pagination } from "swiper";
+import { EffectCube, FreeMode, Mousewheel, Pagination, Scrollbar } from "swiper";
 import "animate.css";
 
 
@@ -69,7 +69,7 @@ function Home1() {
       onClick={handleOnHomeClick}
       className={`${
         isHomeTwo ? "transitionH2Bg bg-[#410D7F]" : ""
-      }  flex flex-col items-center overflow-x-clip sec max-h-[100vh]  `}
+      }  flex flex-col items-center overflow-x-clip bg-[#EFEFEF] w-[100%]   `}
     >
       <img
         className={`
@@ -90,6 +90,7 @@ function Home1() {
 
       {/* award win start */}
       <div className="homeMid">
+     
         <div className="awardCont mt-3">
           <h1
             className={` ${
@@ -98,7 +99,7 @@ function Home1() {
                 : isHomeTwo
                 ? "visible animate__animated animate__fadeOut"
                 : "invisible"
-            } font-bold text-center text-[85px] leading-[65px] `}
+            } font-bold font-sans text-center text-[85px] leading-[65px] `}
           >
             Award <br /> Winning
           </h1>
@@ -109,13 +110,25 @@ function Home1() {
                 : isHomeTwo
                 ? "visible animate__animated animate__fadeOut"
                 : "invisible"
-            } text-lg text-center mt-6 leading-[20px] `}
+            } text-lg font-sans text-center mt-6 leading-[20px] `}
           >
             Creative agency that provides{" "}
             <span className="font-bold">a full</span>
             <br /> range of marketing services{" "}
           </h5>
         </div>
+        {/* <div style={{height: '340px', overflowY:'scroll'}} >
+       <div style={{height: '40px', overflowY:'scroll'}}>
+       hi <br />
+        hi <br />
+        hi <br />
+        hi <br />
+        hi <br />
+        hi <br />
+        hi <br />
+        hi <br />
+       </div>
+        </div> */}
         {/* buttons */}
         <div
           className={`${
@@ -158,13 +171,15 @@ function Home1() {
         src={homeBottomBG}
         alt=""
       />
+     
+        
       
       <div
         className={`${
           showNavBar
             ? "visible animate__animated animate__fadeInUpBig"
             : "invisible"
-        }     flex justify-center w-[100vw] absolute bottom-12  `}
+        }     flex justify-center w-[100vw] absolute bottom-0 `}
       >
         
        
@@ -172,6 +187,7 @@ function Home1() {
         
       </div>
      
+        
 
       {/* bottom ends */}
       {/* <MobHomeTwo />
@@ -186,14 +202,30 @@ function Home() {
   const [homeTwoDisplay, setHomeTwoDisplay]= useState(false)
   const [homeThreeDisplay, setHomeThreeDisplay]= useState(false)
   return (
+    
     <Swiper
-        direction={"vertical"}
+        direction={"horizontal"}
         slidesPerView={1}
         spaceBetween={30}
-        mousewheel={true}
-        pagination={{
-          clickable: true,
-        }}
+        
+        // mousewheel={true}
+        pagination={false}
+        // pagination={{
+        //   clickable: true,
+        // }}
+      zoom={true}
+      effect={"cube"}
+      grabCursor={true}
+      cubeEffect={{
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      }}
+        
+        // freeModeSticky={ false}
+        // freeMode={true}
+        
         onSlideChange={(swiper)=> {
             if(swiper.activeIndex===1){
                 setHomeTwoDisplay(true)
@@ -204,14 +236,16 @@ function Home() {
         }}
          
         // onScroll={()=> setHomeTwoDisplay(true)}
-        modules={[Mousewheel, Pagination]}
+        modules={[Mousewheel, Pagination, Scrollbar, EffectCube ]}
         className="mySwiper"
       >
-        <SwiperSlide ><Home1 /></SwiperSlide>
+        <SwiperSlide  ><Home1 /></SwiperSlide>
         <SwiperSlide > {homeTwoDisplay?<MobHomeTwo homeTwoDisplay={homeTwoDisplay}/>:'loading..'} </SwiperSlide>
         <SwiperSlide> {homeThreeDisplay?<MobHomeThree homeThreeDisplay={homeThreeDisplay} />:'loading..'} </SwiperSlide>
          
       </Swiper>
+     
+      
   )
 }
 

@@ -49,7 +49,7 @@ if(homeThreeDisplay){
        <div className="homeTop absolute top-0 z-10 h-[356px] w-[100vw]  flex justify-center ">
           <MobHeader />
         </div>
-       <div className='bg-[#FD4C3C] h-[50%] animate__animated animate__fadeInDownBig ' >
+       <div className='bg-[#FD4C3C] h-[40%] flex flex-col justify-between  animate__animated animate__fadeInDownBig ' >
        <div className={`
       
 
@@ -67,7 +67,7 @@ if(homeThreeDisplay){
 object-cover mt-[-70px] max-h-52 `}  alt="" />
        </div>
            
-           <div className='flex justify-center items-end' >
+           <div className='flex justify-center items-end   ' >
            <h1 className={`
            ${
             showHeading && !isHomeTwo
@@ -76,7 +76,7 @@ object-cover mt-[-70px] max-h-52 `}  alt="" />
               ? "visible animate__animated animate__fadeOut"
               : "invisible"
           }
-           text-[60px] font-bold leading-[66px] text-[white] text-center pt-5  `} >Performance 
+           text-[60px] font-bold leading-[66px] text-[white] text-center `} >Performance 
            </h1>
            </div>
        </div>
@@ -149,7 +149,7 @@ homeMidButtons mt-5 flex justify-center`}>
           showNavBar
             ? "visible animate__animated animate__fadeInUpBig"
             : "invisible"
-        }     flex justify-center w-[100%] absolute bottom-12 `}
+        }     flex justify-center w-[100%] absolute bottom-0 `}
       >
         
        
