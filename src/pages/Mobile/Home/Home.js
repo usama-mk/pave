@@ -69,7 +69,7 @@ function Home1() {
       onClick={handleOnHomeClick}
       className={`${
         isHomeTwo ? "transitionH2Bg bg-[#410D7F]" : ""
-      }  flex flex-col items-center overflow-x-clip bg-[#EFEFEF] w-[100%]   `}
+      }  flex flex-col items-center overflow-x-clip bg-[#EFEFEF] w-[100%] max-h-[93vh] home1    `}
     >
       <img
         className={`
@@ -161,13 +161,13 @@ function Home1() {
           isHomeTwo ? "animate__animated animate__fadeOut" : ""
         } mouseCont flex justify-center my-3`}
       >
-        <img src={mouse} width={20} className="object-contain" alt="" />
+        <img src={`https://clipex.com.au/wp-content/uploads/2020/05/swipe-1.gif`} width={60} className="object-contain mr-5" alt="" />
       </div>
       {/* mouse cont ends */}
       <img
         className={` ${
           isHomeTwo ? "animate__animated animate__fadeOutDownBig " : ""
-        } w-[336px] h-full animate__animated animate__fadeInUpBig`}
+        } w-[336px] animate__animated animate__fadeInUpBig`}
         src={homeBottomBG}
         alt=""
       />
@@ -179,7 +179,7 @@ function Home1() {
           showNavBar
             ? "visible animate__animated animate__fadeInUpBig"
             : "invisible"
-        }     flex justify-center w-[100vw] absolute bottom-0 `}
+        }     flex justify-center w-[100vw] fixed bottom-0 left-0  `}
       >
         
        
@@ -209,7 +209,11 @@ function Home() {
         spaceBetween={30}
         
         // mousewheel={true}
-        pagination={false}
+        pagination={{
+          clickable: true,
+          
+          
+        }}
         // pagination={{
         //   clickable: true,
         // }}

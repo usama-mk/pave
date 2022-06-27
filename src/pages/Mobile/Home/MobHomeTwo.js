@@ -53,7 +53,7 @@ if(homeTwoDisplay){
 
 
   return (
-    <div ref={ref} autoFocus    onClick={()=> handleOnHomeClick('/home3')} className="  w-[100vw] overflow-x-clip  ">
+    <div ref={ref} autoFocus    onClick={()=> handleOnHomeClick('/home3')} className="  w-[100vw] overflow-x-clip max-h-[93vh]  ">
       <div className=" bg-[#410D7F]">
         <div className="homeTop absolute top-0 z-10 h-[356px] w-[100vw]  flex justify-center ">
           <MobHeader />

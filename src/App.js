@@ -9,7 +9,7 @@ import MobHomeThree from './pages/Mobile/Home/MobHomeThree';
 function App() {
 
   return (
-    <div className="App bg-[#EFEFEF] cont ">
+    <div className="App bg-[#EFEFEF]  ">
     <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

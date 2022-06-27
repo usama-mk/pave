@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PlayVideoButton from '../../../components/PlayVideoButton'
-import homeThreeMovies from "../../../assets/images/homeThreeMovies.png";
+import homeThreeMovies from "../../../assets/images/homeThreeMovies1.png";
+// import homeThreeMovies from "../../../assets/images/homeThreeMovies.png";
 import straight_arrow from "../../../assets/images/straight_arrow.png";
 import rings from "../../../assets/images/rings.png";
 import WorkButton from '../../../components/WorkButton'
@@ -45,7 +46,7 @@ if(homeThreeDisplay){
 
 
   return (
-    <div onClick={handleOnHomeClick} className=' h-[100vh] w-[100vw]  bg-[#410D7F] overflow-x-clip sec' >
+    <div onClick={handleOnHomeClick} className=' max-h-[93vh] w-[100vw]  bg-[#410D7F] overflow-x-clip sec' >
        <div className="homeTop absolute top-0 z-10 h-[356px] w-[100vw]  flex justify-center ">
           <MobHeader />
         </div>
