@@ -179,7 +179,7 @@ function Home1() {
           showNavBar
             ? "visible animate__animated animate__fadeInUpBig"
             : "invisible"
-        }     flex justify-center w-[100vw] fixed bottom-0 left-0  `}
+        }     flex justify-center w-[100vw] fixed bottom-0 left-0 z-30  `}
       >
         
        

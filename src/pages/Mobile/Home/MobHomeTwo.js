@@ -134,7 +134,7 @@ homeMidButtons mt-5 flex justify-center `}
           showNavBar
             ? "visible animate__animated animate__fadeInUpBig"
             : "invisible"
-        }     flex justify-center w-[100%]  absolute bottom-0 `}
+        }     flex justify-center w-[100%]  fixed bottom-0 left-0 z-30 `}
       >
         
        
