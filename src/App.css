@@ -176,7 +176,7 @@ transform-origin: center;
 
 
 .cssanimation, .cssanimation span {
-  animation-duration: 1s; 
+  animation-duration: 1.5s; 
   /* delay in display on ios */
   animation-fill-mode: both;
 }
@@ -202,33 +202,35 @@ transform-origin: center;
 
 
 /* try */
-/* @-webkit-keyframes slideInUpz {
-  from {
-    -webkit-transform: translate2d(0, 100%);
-    transform: translate2d(0, 100%);
-    visibility: visible;
-  }
 
-  to {
-    -webkit-transform: translate2d(0, 0);
-    transform: translate2d(0, 0);
-  }
-}
 @keyframes slideInUpz {
   from {
-    -webkit-transform: translate2d(0, 100%);
-    transform: translate2d(0, 100%);
+   transform: translate3d(0, 100%);
+    transform: translate3d(0, 100%);
     visibility: visible;
   }
 
   to {
-    -webkit-transform: translate2d(0, 0);
-    transform: translate2d(0, 0);
+    transform: translate3d(0, 0);
+     
+  }
+}
+
+@-webkit-keyframes slideInUpz {
+  from {
+    -webkit-transform: translate3d(0, 100%);
+    -webkit-transform: translate3d(0, 100%);
+    -webkit-visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0);
+    
   }
 }
 .slideInUpz {
   -webkit-animation-name: slideInUpz;
   animation-name: slideInUpz;
   
-} */
+}
 /* try css bundle animate.css */
