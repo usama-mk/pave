@@ -50,7 +50,7 @@ if(homeThreeDisplay){
        <div className="homeTop absolute top-0 visible z-10 h-[356px] w-[100vw]  flex justify-center ">
           <MobHeader />
         </div>
-       <div className='bg-[#FD4C3C] h-[40%] flex flex-col justify-between  cssanimation sequence  fadeInBottom' >
+       <div className='bg-[#FD4C3C] h-[40%] flex flex-col justify-between  cssanimation sequence  fadeInDownBigz' >
        <div className={`
       
 
@@ -72,7 +72,7 @@ object-cover mt-[-70px] max-h-52 `}  alt="" />
            <h1 className={`
            ${
             showHeading && !isHomeTwo
-              ? "visible cssanimation sequence slideInUpz  "
+              ? "visible cssanimation sequence fadeInBottom  "
               : isHomeTwo
               ? "visible animate__animated  fadeOut"
               : "invisible"
@@ -112,7 +112,7 @@ object-cover mt-[-70px] max-h-52 `}  alt="" />
 <div className={`
 ${
   showButtons && !isHomeTwo
-    ? "visible cssanimation sequence slideInUpz"
+    ? "visible cssanimation sequence fadeInBottom"
     : isHomeTwo
     ? "visible animate__animated animate__fadeOut"
     : "invisible"
@@ -135,7 +135,7 @@ homeMidButtons mt-5 flex justify-center`}>
       <img src={homeThreeMovies} className={`
        ${
         showSubHeading && !isHomeTwo
-          ? "visible cssanimation sequence slideInUpz":'invisible'}
+          ? "visible cssanimation sequence fadeInBottom":'invisible'}
       object-cover ml-[-40%] mt-[-50px] `}  alt="" />
       </div>
       {/* bottom image end */}
@@ -148,7 +148,7 @@ homeMidButtons mt-5 flex justify-center`}>
          <div
         className={`${
           showNavBar
-            ? "visible cssanimation sequence slideInUpz"
+            ? "visible cssanimation sequence fadeInBottom"
             : "invisible"
         }     flex justify-center w-[100%] fixed bottom-0 left-0 z-30 `}
       >

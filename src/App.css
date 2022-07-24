@@ -205,26 +205,26 @@ transform-origin: center;
 
 @keyframes slideInUpz {
   from {
-   transform: translate3d(0, 100%);
-    transform: translate3d(0, 100%);
+   transform: translate2d(0, 100%);
+    transform: translate2d(0, 100%);
     visibility: visible;
   }
 
   to {
-    transform: translate3d(0, 0);
+    transform: translate2d(0, 0);
      
   }
 }
 
 @-webkit-keyframes slideInUpz {
   from {
-    -webkit-transform: translate3d(0, 100%);
-    -webkit-transform: translate3d(0, 100%);
+    -webkit-transform: translate2d(0, 100%);
+    -webkit-transform: translate2d(0, 100%);
     -webkit-visibility: visible;
   }
 
   to {
-    -webkit-transform: translate3d(0, 0);
+    -webkit-transform: translate2d(0, 0);
     
   }
 }
@@ -233,4 +233,37 @@ transform-origin: center;
   animation-name: slideInUpz;
   
 }
+/* 
+@keyframes fadeInDownBigz {
+  from {
+    opacity: 0;
+    
+    transform: translate3d(0, -2000px);
+  }
+
+  to {
+    opacity: 1;
+    
+    transform: translate3d(0, 0);
+  }
+}
+
+
+@-webkit-keyframes fadeInDownBigz {
+  from {
+    -webkit-opacity: 0;
+     
+    -webkit-transform: translate3d(0, -2000px);
+  }
+
+  to {
+    -webkit-opacity: 1;
+    -webkit-transform: translate3d(0, 0);
+     
+  }
+}
+.fadeInDownBigz {
+  -webkit-animation-name: fadeInDownBigz;
+  animation-name: fadeInDownBigz;
+} */
 /* try css bundle animate.css */
