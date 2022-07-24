@@ -58,7 +58,7 @@ if(homeTwoDisplay){
         <div className="homeTop absolute top-0 z-10 h-[356px] w-[100vw]  flex justify-center ">
           <MobHeader />
         </div>
-        <div className={` ${isHomeTwo ? "animate__animated animate__fadeOutUpBig " : ""} flex justify-center animate__animated animate__fadeInDownBig `}>
+        <div className={` ${isHomeTwo ? "animate__animated animate__fadeOutUpBig " : ""} flex justify-center animate__animated animate__fadeIn`}>
           <img src={A1} className="object-contain mt-16 ml-[-15px]" alt="" />
           <img src={A2} className="object-contain mx-10 mt-[-30px]" alt="" />
           <img src={A3} className="object-contain mt-16 mr-[-15px]" alt="" />
@@ -82,7 +82,7 @@ if(homeTwoDisplay){
             className={`
            ${
              showSubHeading && !isHomeTwo
-               ? "visible animate__animated animate__fadeInUp"
+               ? "visible animate__animated animate__fadeIn"
                : isHomeTwo
                ? "visible animate__animated animate__fadeOut"
                : "invisible"
@@ -120,7 +120,7 @@ homeMidButtons mt-5 flex justify-center `}
           {/* btns end */}
         </div>
 
-        <div className={`  ${isHomeTwo ? "animate__animated animate__fadeOutDownBig " : ""} flex justify-center animate__animated animate__fadeInUpBig `}>
+        <div style={{}} className={`  ${isHomeTwo ? " animate__fadeOutDownBig " : ""} flex justify-center animate__animated animate__fadeInUpBig `}>
           <img src={A4} className="object-contain mt-16 ml-[-15px]" alt="" />
           <img src={A5} className="object-contain mx-10 mt-[-30px]" alt="" />
           <img src={A6} className="object-contain mt-16 mr-[-15px]" alt="" />

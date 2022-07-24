@@ -243,7 +243,7 @@ function Home() {
         modules={[Mousewheel, Pagination, Scrollbar, EffectCube ]}
         className="mySwiper"
       >
-        <SwiperSlide  ><Home1 /></SwiperSlide>
+        <SwiperSlide  ><MobHomeThree homeThreeDisplay={true} /></SwiperSlide>
         <SwiperSlide > {homeTwoDisplay?<MobHomeTwo homeTwoDisplay={homeTwoDisplay}/>:'loading..'} </SwiperSlide>
         <SwiperSlide> {homeThreeDisplay?<MobHomeThree homeThreeDisplay={homeThreeDisplay} />:'loading..'} </SwiperSlide>
          

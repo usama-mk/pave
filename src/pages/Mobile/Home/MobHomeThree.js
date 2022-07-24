@@ -10,32 +10,32 @@ import MobHeader from '../../../components/MobHeader';
 import { useNavigate } from 'react-router-dom';
 
 function MobHomeThree({homeThreeDisplay}) {
-  const [showHeading, setShowHeading] = useState(false);
+  const [showHeading, setShowHeading] = useState(true);
   const [isHomeTwo, setIsHomeTwo] = useState(false);
-  const [showSubHeading, setSubShowHeading] = useState(false);
-  const [showButtons, setShowButtons] = useState(false);
-  const [showNavBar, setShowNavBar] = useState(false);
+  const [showSubHeading, setSubShowHeading] = useState(true);
+  const [showButtons, setShowButtons] = useState(true);
+  const [showNavBar, setShowNavBar] = useState(true);
   const navigate = useNavigate();
 
   const handleWorkWithUs = () => {
     navigate("/a-z");
   };
-
+ 
   useEffect(() => {
-    setTimeout(() => {
-      setShowNavBar(true);
-    }, 1500);
-    setTimeout(() => {
-      setShowHeading(true);
-      setShowNavBar(true);
-    }, 1500);
-    setTimeout(() => {
-      setSubShowHeading(true);
-    }, 2000);
-    setTimeout(() => {
-      setShowButtons(true);
-    }, 2800);
-  }, [homeThreeDisplay]);
+    // setTimeout(() => {
+    //   setShowNavBar(true);
+    // }, 1500);
+    // setTimeout(() => {
+    //   setShowHeading(true);
+    //   setShowNavBar(true);
+    // }, 1500);
+    // setTimeout(() => {
+    //   setSubShowHeading(true);
+    // }, 2000);
+    // setTimeout(() => {
+    //   setShowButtons(true);
+    // }, 2800);
+  }, []);
   const handleOnHomeClick = () => {
     setIsHomeTwo(true);
     setTimeout(() => {
@@ -46,11 +46,11 @@ if(homeThreeDisplay){
 
 
   return (
-    <div onClick={handleOnHomeClick} className=' max-h-[93vh] w-[100vw]  bg-[#410D7F] overflow-x-clip sec' >
-       <div className="homeTop absolute top-0 z-10 h-[356px] w-[100vw]  flex justify-center ">
+    <div onClick={handleOnHomeClick} className=' flex flex-col  max-h-[93vh] w-[100vw]  bg-[#410D7F] overflow-x-clip sec' >
+       <div className="homeTop absolute top-0 visible z-10 h-[356px] w-[100vw]  flex justify-center ">
           <MobHeader />
         </div>
-       <div className='bg-[#FD4C3C] h-[40%] flex flex-col justify-between  animate__animated animate__fadeInDownBig ' >
+       <div className='bg-[#FD4C3C] h-[40%] flex flex-col justify-between  cssanimation sequence  fadeInBottom' >
        <div className={`
       
 
@@ -58,13 +58,13 @@ if(homeThreeDisplay){
        <img src={rings} className={`
         ${
           showHeading && !isHomeTwo
-            ? "visible animate__animated animate__fadeInDownBig":'invisible'}
+            ? "visible cssanimation sequence  fadeInBottom":'invisible'}
        object-contain mt-28 mr-8 ml-[-10px] `} alt="" />
 
 <img src={homeThreeMovies} className={`
  ${
   showButtons && !isHomeTwo
-    ? "visible animate__animated animate__fadeInDownBig":'invisible'}
+    ? `visible cssanimation sequence  fadeInBottom`:'invisible'}
 object-cover mt-[-70px] max-h-52 `}  alt="" />
        </div>
            
@@ -72,12 +72,12 @@ object-cover mt-[-70px] max-h-52 `}  alt="" />
            <h1 className={`
            ${
             showHeading && !isHomeTwo
-              ? "visible animate__animated animate__fadeIn"
+              ? "visible cssanimation sequence slideInUpz  "
               : isHomeTwo
-              ? "visible animate__animated animate__fadeOut"
+              ? "visible animate__animated  fadeOut"
               : "invisible"
           }
-           text-[60px] font-bold leading-[66px] text-[white] text-center `} >Performance 
+           text-[60px] font-bold leading-[66px] text-[white] text-center  `} >Performance 
            </h1>
            </div>
        </div>
@@ -87,9 +87,9 @@ object-cover mt-[-70px] max-h-52 `}  alt="" />
            <h1 className={`
             ${
               showHeading && !isHomeTwo
-                ? "visible animate__animated animate__fadeIn"
+                ? "visible cssanimation sequence  fadeInBottom"
                 : isHomeTwo
-                ? "visible animate__animated animate__fadeOut"
+                ? "visible animate__animated fadeOut"
                 : "invisible"
             }
            text-[70px] font-bold leading-[66px] text-[white] `} >
@@ -98,9 +98,9 @@ object-cover mt-[-70px] max-h-52 `}  alt="" />
            <h4 className={`
             ${
               showSubHeading && !isHomeTwo
-                ? "visible animate__animated animate__fadeInUp"
+                ? "visible cssanimation sequence  fadeInBottom"
                 : isHomeTwo
-                ? "visible animate__animated animate__fadeOut"
+                ? "visible animate__animated fadeOut"
                 : "invisible"
             }
            text-[16px] mt-5 font-medium leading-[25px] text-white  `} >Marketing agency that focuses on your
@@ -112,7 +112,7 @@ object-cover mt-[-70px] max-h-52 `}  alt="" />
 <div className={`
 ${
   showButtons && !isHomeTwo
-    ? "visible animate__animated animate__fadeIn"
+    ? "visible cssanimation sequence slideInUpz"
     : isHomeTwo
     ? "visible animate__animated animate__fadeOut"
     : "invisible"
@@ -135,7 +135,7 @@ homeMidButtons mt-5 flex justify-center`}>
       <img src={homeThreeMovies} className={`
        ${
         showSubHeading && !isHomeTwo
-          ? "visible animate__animated animate__fadeInUpBig":'invisible'}
+          ? "visible cssanimation sequence slideInUpz":'invisible'}
       object-cover ml-[-40%] mt-[-50px] `}  alt="" />
       </div>
       {/* bottom image end */}
@@ -148,7 +148,7 @@ homeMidButtons mt-5 flex justify-center`}>
          <div
         className={`${
           showNavBar
-            ? "visible animate__animated animate__fadeInUpBig"
+            ? "visible cssanimation sequence slideInUpz"
             : "invisible"
         }     flex justify-center w-[100%] fixed bottom-0 left-0 z-30 `}
       >
