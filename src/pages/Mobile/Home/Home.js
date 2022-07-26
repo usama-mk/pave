@@ -25,36 +25,36 @@ import "swiper/css/pagination";
 
 // import required modules
 import { EffectCube, FreeMode, Mousewheel, Pagination, Scrollbar } from "swiper";
-import "animate.css";
+// import "animate.css";
 
 
 function Home1() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [showHeading, setShowHeading] = useState(false);
+  const [showHeading, setShowHeading] = useState(true);
   const [isHomeTwo, setIsHomeTwo] = useState(false);
-  const [showSubHeading, setSubShowHeading] = useState(false);
-  const [showButtons, setShowButtons] = useState(false);
-  const [showNavBar, setShowNavBar] = useState(false);
+  const [showSubHeading, setSubShowHeading] = useState(true);
+  const [showButtons, setShowButtons] = useState(true);
+  const [showNavBar, setShowNavBar] = useState(true);
   const handleWorkWithUs = () => {
     navigate("/a-z");
   };
 
 
   useEffect(() => {
-    setTimeout(() => {
-      setShowNavBar(true);
-    }, 1500);
-    setTimeout(() => {
-      setShowHeading(true);
-      setShowNavBar(true);
-    }, 1500);
-    setTimeout(() => {
-      setSubShowHeading(true);
-    }, 2000);
-    setTimeout(() => {
-      setShowButtons(true);
-    }, 2800);
+    // setTimeout(() => {
+    //   setShowNavBar(true);
+    // }, 1500);
+    // setTimeout(() => {
+    //   setShowHeading(true);
+    //   setShowNavBar(true);
+    // }, 1500);
+    // setTimeout(() => {
+    //   setSubShowHeading(true);
+    // }, 2000);
+    // setTimeout(() => {
+    //   setShowButtons(true);
+    // }, 2800);
   }, []);
 
   const handleOnHomeClick = () => {
@@ -66,15 +66,16 @@ function Home1() {
 
   return (
     <div
-      onClick={handleOnHomeClick}
+    style={{height: '93vh', overflowY: 'scroll'}}
+      onClick={()=>{}}
       className={`${
         isHomeTwo ? "transitionH2Bg bg-[#410D7F]" : ""
-      }  flex flex-col items-center overflow-x-clip bg-[#EFEFEF] w-[100%] max-h-[93vh] home1    `}
+      }  flex flex-col items-center overflow-x-clip bg-[#EFEFEF] w-[100%] overflow-y-scroll  home1    `}
     >
       <img
         className={`
         ${isHomeTwo ? "animate__animated animate__fadeOutUpBig " : ""}
-        w-[336px] h-[170px] animate__animated animate__fadeInDownBig `}
+        w-[336px] h-[170px] cssanimation fadeInBottom `}
         src={homeTopBG}
         alt=""
       />
@@ -95,9 +96,9 @@ function Home1() {
           <h1
             className={` ${
               showHeading && !isHomeTwo
-                ? "visible animate__animated animate__fadeIn"
+                ? "visible cssanimation fadeInBottom "
                 : isHomeTwo
-                ? "visible animate__animated animate__fadeOut"
+                ? "visible cssanimation fadeOut"
                 : "invisible"
             } font-bold font-sans text-center text-[85px] leading-[65px] `}
           >
@@ -106,9 +107,9 @@ function Home1() {
           <h5
             className={`${
               showSubHeading && !isHomeTwo
-                ? "visible animate__animated animate__fadeInUp"
+                ? "visible cssanimation fadeInBottom   "
                 : isHomeTwo
-                ? "visible animate__animated animate__fadeOut"
+                ? "visible cssanimation fadeOut"
                 : "invisible"
             } text-lg font-sans text-center mt-6 leading-[20px] `}
           >
@@ -117,7 +118,7 @@ function Home1() {
             <br /> range of marketing services{" "}
           </h5>
         </div>
-        {/* <div style={{height: '340px', overflowY:'scroll'}} >
+        {/* <div style={{height: '140px', overflowY:'scroll'}} >
        <div style={{height: '40px', overflowY:'scroll'}}>
        hi <br />
         hi <br />
@@ -133,9 +134,9 @@ function Home1() {
         <div
           className={`${
             showButtons && !isHomeTwo
-              ? "visible animate__animated animate__fadeIn"
+              ? "visible cssanimation fadeInBottom "
               : isHomeTwo
-              ? "visible animate__animated animate__fadeOut"
+              ? "visible cssanimation fadeOut"
               : "invisible"
           } homeMidButtons mt-3 flex justify-center `}
         >
@@ -158,7 +159,7 @@ function Home1() {
       {/* mouse cont */}
       <div
         className={` ${
-          isHomeTwo ? "animate__animated animate__fadeOut" : ""
+          isHomeTwo ? " cssanimation fadeOut" : ""
         } mouseCont flex justify-center my-3`}
       >
         <img src={`https://clipex.com.au/wp-content/uploads/2020/05/swipe-1.gif`} width={60} className="object-contain mr-5" alt="" />
@@ -166,27 +167,13 @@ function Home1() {
       {/* mouse cont ends */}
       <img
         className={` ${
-          isHomeTwo ? "animate__animated animate__fadeOutDownBig " : ""
-        } w-[336px] animate__animated animate__fadeInUpBig`}
+          isHomeTwo ? " cssanimation fadeOutDownBig " : ""
+        } w-[336px] cssanimation fadeInBottom `}
         src={homeBottomBG}
         alt=""
       />
      
-        
       
-      <div
-        className={`${
-          showNavBar
-            ? "visible animate__animated animate__fadeInUpBig"
-            : "invisible"
-        }     flex justify-center w-[100vw] fixed bottom-0 left-0 z-30  `}
-      >
-        
-       
-      <MobNavBar showNavBar={showNavBar} />
-        
-      </div>
-     
         
 
       {/* bottom ends */}
@@ -202,8 +189,8 @@ function Home() {
   const [homeTwoDisplay, setHomeTwoDisplay]= useState(false)
   const [homeThreeDisplay, setHomeThreeDisplay]= useState(false)
   return (
-    
-    <Swiper
+    <div className="max-h-[92vh]" >
+        <Swiper
         direction={"horizontal"}
         slidesPerView={1}
         spaceBetween={30}
@@ -243,11 +230,27 @@ function Home() {
         modules={[Mousewheel, Pagination, Scrollbar, EffectCube ]}
         className="mySwiper"
       >
-        <SwiperSlide  ><MobHomeThree homeThreeDisplay={true} /></SwiperSlide>
-        <SwiperSlide > {homeTwoDisplay?<MobHomeTwo homeTwoDisplay={homeTwoDisplay}/>:'loading..'} </SwiperSlide>
-        <SwiperSlide> {homeThreeDisplay?<MobHomeThree homeThreeDisplay={homeThreeDisplay} />:'loading..'} </SwiperSlide>
+        <SwiperSlide  ><Home1/></SwiperSlide>
+        <SwiperSlide > {<MobHomeTwo homeTwoDisplay={homeTwoDisplay}/>} </SwiperSlide>
+        <SwiperSlide> <MobHomeThree homeThreeDisplay={homeThreeDisplay} /> </SwiperSlide>
          
       </Swiper>
+      
+        <div
+        className={`${
+          true
+            ? "visible cssanimation fadeInBottom "
+            : "invisible"
+        }     flex justify-center w-[100vw] fixed bottom-0 z-30  `}
+      >
+        
+       
+      <MobNavBar showNavBar={true} />
+        
+      </div>
+     
+    </div>
+    
      
       
   )

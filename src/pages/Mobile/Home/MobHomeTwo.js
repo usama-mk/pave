@@ -13,11 +13,11 @@ import { useNavigate } from "react-router-dom";
 import MobHeader from "../../../components/MobHeader";
 
 function MobHomeTwo({homeTwoDisplay}) {
-  const [showHeading, setShowHeading] = useState(false);
+  const [showHeading, setShowHeading] = useState(true);
   const [isHomeTwo, setIsHomeTwo] = useState(false);
-  const [showSubHeading, setSubShowHeading] = useState(false);
-  const [showButtons, setShowButtons] = useState(false);
-  const [showNavBar, setShowNavBar] = useState(false);
+  const [showSubHeading, setSubShowHeading] = useState(true);
+  const [showButtons, setShowButtons] = useState(true);
+  const [showNavBar, setShowNavBar] = useState(true);
   const navigate = useNavigate();
 
   const handleWorkWithUs = () => {
@@ -29,20 +29,20 @@ function MobHomeTwo({homeTwoDisplay}) {
 
 
   useEffect(() => {
-    setTimeout(() => {
-      setShowNavBar(true);
-    }, 1500);
-    setTimeout(() => {
-      setShowHeading(true);
-      setShowNavBar(true);
-    }, 1500);
-    setTimeout(() => {
-      setSubShowHeading(true);
-    }, 2000);
-    setTimeout(() => {
-      setShowButtons(true);
-    }, 2800);
-  }, [homeTwoDisplay]);
+    // setTimeout(() => {
+    //   setShowNavBar(true);
+    // }, 1500);
+    // setTimeout(() => {
+    //   setShowHeading(true);
+    //   setShowNavBar(true);
+    // }, 1500);
+    // setTimeout(() => {
+    //   setSubShowHeading(true);
+    // }, 2000);
+    // setTimeout(() => {
+    //   setShowButtons(true);
+    // }, 2800);
+  }, []);
   const handleOnHomeClick = (address) => {
     setIsHomeTwo(true);
     setTimeout(() => {
@@ -53,12 +53,12 @@ if(homeTwoDisplay){
 
 
   return (
-    <div ref={ref} autoFocus    onClick={()=> handleOnHomeClick('/home3')} className="  w-[100vw] overflow-x-clip max-h-[93vh]  ">
-      <div className=" bg-[#410D7F]">
-        <div className="homeTop absolute top-0 z-10 h-[356px] w-[100vw]  flex justify-center ">
+    <div ref={ref} autoFocus    onClick={()=> {}} className=" w-[100vw] overflow-x-clip   ">
+      <div className=" bg-[#410D7F] cssanimation  fadeInBottom` ">
+        <div className="homeTop absolute top-0 z-10 h-[356px] w-[100vw] max-h-[93vh]  flex justify-center ">
           <MobHeader />
         </div>
-        <div className={` ${isHomeTwo ? "animate__animated animate__fadeOutUpBig " : ""} flex justify-center animate__animated animate__fadeIn`}>
+        <div className={` ${isHomeTwo ? "animate__animated animate__fadeOutUpBig " : ""} flex justify-center cssanimation  fadeInBottom`}>
           <img src={A1} className="object-contain mt-16 ml-[-15px]" alt="" />
           <img src={A2} className="object-contain mx-10 mt-[-30px]" alt="" />
           <img src={A3} className="object-contain mt-16 mr-[-15px]" alt="" />
@@ -68,7 +68,7 @@ if(homeTwoDisplay){
             className={`
            ${
              showHeading && !isHomeTwo
-               ? "visible animate__animated animate__fadeIn"
+               ? "visible cssanimation  fadeInBottom"
                : isHomeTwo
                ? "visible animate__animated animate__fadeOut"
                : "invisible"
@@ -82,7 +82,7 @@ if(homeTwoDisplay){
             className={`
            ${
              showSubHeading && !isHomeTwo
-               ? "visible animate__animated animate__fadeIn"
+               ? "visible cssanimation  fadeInBottom"
                : isHomeTwo
                ? "visible animate__animated animate__fadeOut"
                : "invisible"
@@ -98,7 +98,7 @@ if(homeTwoDisplay){
             className={`
 ${
   showButtons && !isHomeTwo
-    ? "visible animate__animated animate__fadeIn"
+    ? "visible cssanimation  fadeInBottom"
     : isHomeTwo
     ? "visible animate__animated animate__fadeOut"
     : "invisible"
@@ -120,7 +120,7 @@ homeMidButtons mt-5 flex justify-center `}
           {/* btns end */}
         </div>
 
-        <div style={{}} className={`  ${isHomeTwo ? " animate__fadeOutDownBig " : ""} flex justify-center animate__animated animate__fadeInUpBig `}>
+        <div style={{}} className={`  ${isHomeTwo ? " animate__fadeOutDownBig " : ""} flex justify-center cssanimation  fadeInBottom `}>
           <img src={A4} className="object-contain mt-16 ml-[-15px]" alt="" />
           <img src={A5} className="object-contain mx-10 mt-[-30px]" alt="" />
           <img src={A6} className="object-contain mt-16 mr-[-15px]" alt="" />
@@ -129,18 +129,18 @@ homeMidButtons mt-5 flex justify-center `}
       </div>
 
       
-      <div
+      {/* <div
         className={`${
           showNavBar
-            ? "visible animate__animated animate__fadeInUpBig"
+            ? "visible cssanimation sequence  fadeInBottom"
             : "invisible"
-        }     flex justify-center w-[100%]  fixed bottom-0 left-0 z-30 `}
+        }     flex justify-center w-[100vw]  fixed bottom-0   z-30 `}
       >
         
        
       <MobNavBar showNavBar={showNavBar} />
         
-      </div>
+      </div> */}
     </div>
   );
       }

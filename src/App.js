@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from './pages/Mobile/Home/Home';
 import About from './pages/Mobile/About/About';
 import Services from './pages/Mobile/Services/Services';
-import 'animate.css';
+// import 'animate.css';
 import MobHomeTwo from './pages/Mobile/Home/MobHomeTwo';
 import MobHomeThree from './pages/Mobile/Home/MobHomeThree';
 function App() {
