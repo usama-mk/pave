@@ -42,7 +42,7 @@ function MobHomeThree({homeThreeDisplay}) {
       navigate("/");
     }, 2000);
   };
-if(homeThreeDisplay){
+if(true){
 
 
   return (
@@ -59,13 +59,13 @@ if(homeThreeDisplay){
        <img src={rings} className={`
         ${
           showHeading && !isHomeTwo
-            ? "visible cssanimation sequence  fadeInBottom":'invisible'}
+            ? "visible cssanimation   fadeInBottom":'invisible'}
        object-contain mt-28 mr-8 ml-[-10px] `} alt="" />
 
 <img src={homeThreeMovies} className={`
  ${
   showButtons && !isHomeTwo
-    ? `visible cssanimation sequence  fadeInBottom`:'invisible'}
+    ? `visible cssanimation   fadeInBottom`:'invisible'}
 object-cover mt-[-70px] max-h-52 `}  alt="" />
        </div>
            
@@ -73,9 +73,9 @@ object-cover mt-[-70px] max-h-52 `}  alt="" />
            <h1 className={`
            ${
             showHeading && !isHomeTwo
-              ? "visible cssanimation sequence fadeInBottom  "
+              ? "visible cssanimation  fadeInBottom  "
               : isHomeTwo
-              ? "visible animate__animated  fadeOut"
+              ? "visible  fadeOut"
               : "invisible"
           }
            text-6xl font-bold leading-[66px] text-[white] text-center  `} >Performance 
@@ -88,9 +88,9 @@ object-cover mt-[-70px] max-h-52 `}  alt="" />
            <h1 className={`
             ${
               showHeading && !isHomeTwo
-                ? "visible cssanimation sequence  fadeInBottom"
+                ? "visible cssanimation   fadeInBottom"
                 : isHomeTwo
-                ? "visible animate__animated fadeOut"
+                ? "visible "
                 : "invisible"
             }
            text-[70px] font-bold leading-[66px] text-[white] `} >
@@ -99,9 +99,9 @@ object-cover mt-[-70px] max-h-52 `}  alt="" />
            <h4 className={`
             ${
               showSubHeading && !isHomeTwo
-                ? "visible cssanimation sequence  fadeInBottom"
+                ? "visible cssanimation   fadeInBottom"
                 : isHomeTwo
-                ? "visible animate__animated fadeOut"
+                ? "visible  "
                 : "invisible"
             }
            text-[16px] mt-5 font-medium leading-[25px] text-white  `} >Marketing agency that focuses on your
@@ -113,9 +113,9 @@ object-cover mt-[-70px] max-h-52 `}  alt="" />
 <div className={`
 ${
   showButtons && !isHomeTwo
-    ? "visible cssanimation sequence fadeInBottom"
+    ? "visible cssanimation  fadeInBottom"
     : isHomeTwo
-    ? "visible animate__animated animate__fadeOut"
+    ? "visible "
     : "invisible"
 }
 homeMidButtons mt-5 flex justify-center`}>
@@ -136,7 +136,7 @@ homeMidButtons mt-5 flex justify-center`}>
       <img src={homeThreeMovies} className={`
        ${
         showSubHeading && !isHomeTwo
-          ? "visible cssanimation sequence fadeInBottom":'invisible'}
+          ? "visible cssanimation  fadeInBottom":'invisible'}
       object-cover ml-[-40%] mt-[-50px] `}  alt="" />
       </div>
       {/* bottom image end */}

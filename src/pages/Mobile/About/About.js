@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import MobHeader from '../../../components/MobHeader'
 import WorkButton from '../../../components/WorkButton'
 import PlayVideoButton from '../../../components/PlayVideoButton'
@@ -7,45 +7,118 @@ import MobNavBar from '../../../components/MobNavBar'
 import ExperiencesMob from './ExperiencesMob'
 import { useDispatch } from 'react-redux'
 import { goToAbout } from '../../../store/actions/navOptionsActions'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCube, Mousewheel, Pagination, Scrollbar } from "swiper";
 
 function About() {
   const dispatch= useDispatch()
   useEffect(()=>{
    dispatch(goToAbout())
   },[])
+  const [homeTwoDisplay, setHomeTwoDisplay]= useState(false)
+  const [homeThreeDisplay, setHomeThreeDisplay]= useState(false)
   return (
-    <div className='flex flex-col items-center h-[100vh] sec ' >
-        <div className="  w-[100vw]  flex justify-center mb-6 ">
-        <MobHeader />
+    <div className="max-h-[92vh]" >
+      <Swiper
+        direction={"horizontal"}
+        slidesPerView={1}
+        spaceBetween={30}
+        
+        // mousewheel={true}
+        pagination={{
+          clickable: true,
+          
+          
+        }}
+        // pagination={{
+        //   clickable: true,
+        // }}
+      zoom={true}
+      effect={"cube"}
+      grabCursor={true}
+      cubeEffect={{
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      }}
+        
+        // freeModeSticky={ false}
+        // freeMode={true}
+        
+        onSlideChange={(swiper)=> {
+            if(swiper.activeIndex===1){
+                setHomeTwoDisplay(true)
+            }
+            else if(swiper.activeIndex===2){
+                setHomeThreeDisplay(true)
+            }
+        }}
+         
+        // onScroll={()=> setHomeTwoDisplay(true)}
+        modules={[Mousewheel, Pagination, Scrollbar, EffectCube ]}
+        className="mySwiper"
+      >
+        <SwiperSlide  ><AboutOne/></SwiperSlide>
+        {/* <SwiperSlide > {<MobHomeTwo homeTwoDisplay={homeTwoDisplay}/>} </SwiperSlide> */}
+        {/* <SwiperSlide> <MobHomeThree homeThreeDisplay={homeThreeDisplay} /> </SwiperSlide> */}
+         
+      </Swiper>
+     
+    {/* navbar */}
+    <div
+        className={`${
+          true
+            ? "visible cssanimation fadeInBottom "
+            : "invisible"
+        }     flex justify-center w-[100vw] fixed bottom-0 z-30  `}
+      >
+        
+       
+      <MobNavBar showNavBar={true} />
+        
       </div>
+    </div>
+  )
+}
 
-      <div className="px-5">
-      <h2 className='text-[22px] font-bold leading-[29px] text-left ml-8 mr-8' >
-      We create value for your 
+export default About
+
+const AboutOne=()=>{
+  return(
+     
+    <div style={{height: '93vh', overflowY: 'scroll'}} className='flex flex-col items-center mb-[100px] ' >
+    <div className="homeTop relative top-0 mb-5 w-[100vw]  flex justify-center ">
+    <MobHeader />
+  </div>
+
+  <div style={{overflow: 'auto'}} className="px-5 pb-40">
+  <h2 className='text-[22px] font-bold leading-[29px] text-left ml-8 mr-8' >
+  We create value for your 
 business by creating value 
 for your customers.
-      </h2>
-      <h4 className='text-left text-[14px] leading-[20px] mt-8 ml-8 mr-8 ' >
-      PAVE Creative Marketing Agency is a 
+  </h2>
+  <h4 className='text-left text-[14px] leading-[20px] mt-8 ml-8 mr-8 ' >
+  PAVE Creative Marketing Agency is a 
 <span className='font-bold'> team of overachievers</span>. <span className='underline text-[13px] text-[#969696] ' >Read More</span>
-      </h4>
-      <div className="homeMidButtons mt-10 mb-10 flex justify-center">
-          {/* btn 1 */}
-          <WorkButton
-            handleWorkWithUs={()=>{}}
-            textColor={"black"}
-            bg={"#FEB92B"}
-            p4={true}
-            text={"Read Testimonials"}
-          />
-          {/* btn1 ends */}
+  </h4>
+  <div className="homeMidButtons mt-10 mb-10 flex justify-center">
+      {/* btn 1 */}
+      <WorkButton
+        handleWorkWithUs={()=>{}}
+        textColor={"black"}
+        bg={"#FEB92B"}
+        p4={true}
+        text={"Read Testimonials"}
+      />
+      {/* btn1 ends */}
 
-          {/* btn 2 */}
-          <PlayVideoButton textColor={"white"} bg={"#363636"} />
-          {/* btn 2  ends */}
-        </div>
-        <div className='overflow-auto h-[28vh] ml-4 mr-4 ' >
-        <FAQs title={`Collaborate on
+      {/* btn 2 */}
+      <PlayVideoButton textColor={"white"} bg={"#363636"} />
+      {/* btn 2  ends */}
+    </div>
+    <div style={{overflowY: 'scroll'}} className='overflow-auto h-[28vh] ml-4 mr-4 ' >
+    <FAQs title={`Collaborate on
 Strategic Planning`} explanation={`Before we speak, we must hear. Our agency will listen to every detail of your concerns and truly analyze your priorities. Together, we will come up with the perfect strategic plan.`} />
 
 <FAQs title={`Maximum Conversion
@@ -61,17 +134,12 @@ Strategic Planning`} explanation={`Before we speak, we must hear. Our agency wil
 agency in Southern California”
 </h2>
 <h5 className='text-[12px] text-left ml-5 ' >-Marketwatch</h5>
-<div className="homeBottom  w-[321px] h-[348px] ">
 
-<MobNavBar/>
-      </div>
-      <ExperiencesMob/>
-      </div>
-      {/* page con ends */}
-      
 
-    </div>
+  </div>
+  {/* page con ends */}
+  
+
+</div>
   )
 }
-
-export default About

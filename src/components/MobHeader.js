@@ -18,8 +18,8 @@ function MobHeader({purpleTheme}) {
         agency </h3>
     </div>
 
-    <div style={{backgroundColor: purpleTheme?purpleTheme:'', color:purpleTheme?'white':'', borderColor:purpleTheme?'white':''}} className="letsTalk bg-[white] px-4 py-3 h-fit border-2 border-black rounded-[10px] text-sm font-bold text-center flex items-center justify-center  ">
-       <span> Lets Talk</span>
+    <div style={{backgroundColor: purpleTheme?purpleTheme:'white', color:purpleTheme?'white':'', borderColor:purpleTheme?'white':''}} className="letsTalk bg-[white] px-4 py-3 h-fit border-2 border-black rounded-[10px] text-sm font-bold text-center flex items-center justify-center  ">
+       <span > Lets Talk</span>
     </div>
 </div>
   )

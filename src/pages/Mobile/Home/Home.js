@@ -100,7 +100,7 @@ function Home1() {
                 : isHomeTwo
                 ? "visible cssanimation fadeOut"
                 : "invisible"
-            } font-bold font-sans text-center text-[85px] leading-[65px] `}
+            } font-bold font-sans text-center text-[67px] leading-[67px] `}
           >
             Award <br /> Winning
           </h1>
@@ -111,7 +111,7 @@ function Home1() {
                 : isHomeTwo
                 ? "visible cssanimation fadeOut"
                 : "invisible"
-            } text-lg font-sans text-center mt-6 leading-[20px] `}
+            } text-lg font-sans text-center mt-6 leading-[28px] `}
           >
             Creative agency that provides{" "}
             <span className="font-bold">a full</span>
