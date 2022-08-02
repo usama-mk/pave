@@ -6,18 +6,18 @@ function ExperiencesMob() {
     const NumbersItem=({subTitle, value})=>{
         return(
             <div className='text-left' >
-                <h3 className='text-[30px] font-bold  text-[#410D81] ' >{value}</h3>
-                <h5 className='text-[10px] text-[#410D81] ' >{subTitle}</h5>
+                <h3 className='text-[36px] font-bold  text-[#410D81] ' >{value}</h3>
+                <h5 className='text-[12px]  text-[#410D81] ' >{subTitle}</h5>
             </div>
         )
     }
   return (
-    <div  className='flex flex-col  h-[100vh] w-[100vw] sec ' >
+    <div   style={{height: '93vh', overflowY: 'scroll'}}  className='flex flex-col w-[100vw] ' >
         <div className="flex flex-col  bg-[#FD4C3C] h-[55%]  ">
         <div className="  w-[100vw]  flex justify-center mb-12 ">
         <MobHeader />
       </div>
-      <h2 className='text-[25px] font-bold text-[white] text-left ml-8 mb-2 leading-[35px] ' >Experiences</h2>
+      <h2 className='text-[30px] font-bold text-[white] text-left ml-8 mb-2 leading-[39px] ' >Experiences</h2>
       <div className='overflow-auto h-[28vh] ml-4 mr-4 ' >
         <FAQs color='white' title={`Customer Experience`} explanation={`Focusing on the customer, we design your customer’s journey, optimizing every touchpoint for convenience and delight.`} />
 
@@ -34,18 +34,21 @@ function ExperiencesMob() {
         </div>
 
         {/* numbers */}
-        <div className='mt-8 ml-8' >
-        <h2 className='text-[25px] font-bold text-[#410D81] text-left leading-[35px] ' >Numbers</h2>
-       <div className="flex space-x-8 mt-4 ">
+        <div style={{overflow: 'scroll', height:'100%'}}  className='mt-8 ml-8' >
+        <h2 className='text-[30px] font-bold text-[#410D81] text-left leading-[40px] ' >Numbers</h2>
+      <div className='flex space-x-8 ' >
+      <div className="flex flex-col mt-4  space-y-4">
        <NumbersItem value={`1400+`} subTitle={`Lifetime Projects`} />
-       <NumbersItem value={`4M`} subTitle={`Users Impacted`} />
+       <NumbersItem value={`740+`} subTitle={`Monthly Subscriptions`} />
+      
        </div>
 
-       <div className="flex space-x-8 mt-4">
-       <NumbersItem value={`740+`} subTitle={`Monthly Subscriptions`} />
+       <div className="flex flex-col  mt-4 space-y-4">
+       <NumbersItem value={`4M`} subTitle={`Users Impacted`} />
        <NumbersItem value={`93%`} subTitle={`Client Satisfaction Rate
 `} />
        </div>
+      </div>
         </div>
     </div>
   )

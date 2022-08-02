@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux'
 import { goToAbout } from '../../../store/actions/navOptionsActions'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCube, Mousewheel, Pagination, Scrollbar } from "swiper";
+import TeamMembers from './TeamMembers'
 
 function About() {
   const dispatch= useDispatch()
@@ -60,8 +61,9 @@ function About() {
         className="mySwiper"
       >
         <SwiperSlide  ><AboutOne/></SwiperSlide>
-        {/* <SwiperSlide > {<MobHomeTwo homeTwoDisplay={homeTwoDisplay}/>} </SwiperSlide> */}
-        {/* <SwiperSlide> <MobHomeThree homeThreeDisplay={homeThreeDisplay} /> </SwiperSlide> */}
+        <SwiperSlide  ><ExperiencesMob/></SwiperSlide>
+        <SwiperSlide  ><TeamMembers/></SwiperSlide>
+        
          
       </Swiper>
      
@@ -93,12 +95,12 @@ const AboutOne=()=>{
   </div>
 
   <div style={{overflow: 'auto'}} className="px-5 pb-40">
-  <h2 className='text-[22px] font-bold leading-[29px] text-left ml-8 mr-8' >
+  <h2 className='text-[27px] font-bold leading-[33px] text-left ml-8 mr-8' >
   We create value for your 
 business by creating value 
 for your customers.
   </h2>
-  <h4 className='text-left text-[14px] leading-[20px] mt-8 ml-8 mr-8 ' >
+  <h4 className='text-left text-[17px] leading-[23px] mt-8 ml-8 mr-8 ' >
   PAVE Creative Marketing Agency is a 
 <span className='font-bold'> team of overachievers</span>. <span className='underline text-[13px] text-[#969696] ' >Read More</span>
   </h4>
