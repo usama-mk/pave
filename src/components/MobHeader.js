@@ -1,6 +1,7 @@
 import React from 'react'
 import mobile_logo from '../assets/images/mobile_logo.png'
 import mobile_logo_white from '../assets/images/mobile_logo_white.png'
+import servicesHeader from '../assets/images/servicesHeader.png'
 
 
 function MobHeader({purpleTheme}) {
@@ -17,10 +18,15 @@ function MobHeader({purpleTheme}) {
         marketing <br />
         agency </h3>
     </div>
+{
+  purpleTheme?
+  <img src={servicesHeader} className='object-contain' alt="" />
+  :
 
-    <div style={{backgroundColor: purpleTheme?purpleTheme:'white', color:purpleTheme?'white':'', borderColor:purpleTheme?'white':''}} className="letsTalk bg-[white] px-4 py-3 h-fit border-2 border-black rounded-[10px] text-sm font-bold text-center flex items-center justify-center  ">
-       <span > Lets Talk</span>
-    </div>
+  <div style={{backgroundColor: purpleTheme?purpleTheme:'white', color:purpleTheme?'white':'', borderColor:purpleTheme?'white':''}} className="letsTalk bg-[white] px-4 py-3 h-fit border-2 border-black rounded-[10px] text-sm font-bold text-center flex items-center justify-center  ">
+  <span > Lets Talk</span>
+</div>
+}
 </div>
   )
 }
