@@ -35,24 +35,51 @@ function Services() {
       </p>
       <WorkButton text={`Work With Us`} bg={'white'} textColor={'black'}  />
 
-      <div className="mt-5">
+      <div id='scroll-blur' style={{direction: 'rtl'}} className="mt-5 h-52 overflow-auto csa scroll-box relative ">
+       
+      <ServiceItem title={`Digital Marketing`} selected={true} />
+
+      <ServiceItem title={`Talent & Entertainment`} selected={true} />
+      <ServiceItem title={`Paid Advertising (PPC)`} selected={true} />
+      <ServiceItem title={`Future Technology`} selected={true} />
+      <ServiceItem title={`Search Engine Optimization`} selected={true} />
+      <ServiceItem title={`Web Design & Development`} selected={true} />
+      <ServiceItem title={`App Design & Development`} selected={true} />
+      <ServiceItem title={`Data Analytics & Data Science`} selected={true} />
+      <ServiceItem title={`eCommerce & Amazon`} selected={true} />
+      <ServiceItem title={`Social Media & PR`} selected={true} />
       <ServiceItem title={`Digital  Marketing`} selected={true} />
-      <ServiceItem title={`Paid Advertising (PPC)`}  />
-      <ServiceItem title={`Search Engine Optimization`}  />
-      <ServiceItem title={`Web/App Design & Development`}  />
+      <ServiceItem title={`Brick & Mortar & Local Visibility`} selected={true}  />
+      <ServiceItem title={`Branding & Graphic Design`} selected={true} />
+      <ServiceItem title={`Photography & Video Production`} selected={true} />
+      <ServiceItem title={`Brand Activation`} selected={true} />
+      <ServiceItem title={`Lead Generation & Growth Marketing
+`} selected={true} />
+      <ServiceItem title={`Experiential Marketing`} selected={true} />
+ 
       </div>
-      <div className="homeBottom  w-[321px] h-[348px] "> 
-        <MobNavBar />
-      </div>
+      
 
       </div>
-      <ServicesTwo/>
+      {/* <ServicesTwo/>
       <ServicesThree/>
       <ServicesFour/>
       <ServicesFive/>
       <ServicesSix/>
-      <ServicesSeven/>
+      <ServicesSeven/> */}
 
+      </div>
+      <div
+        className={`${
+          true
+            ? "visible cssanimation fadeInBottom "
+            : "invisible"
+        }     flex justify-center w-[100vw] fixed bottom-0 z-30  `}
+      >
+        
+       
+      <MobNavBar showNavBar={true} />
+        
       </div>
 
     </div>

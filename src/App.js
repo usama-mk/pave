@@ -6,6 +6,7 @@ import Services from './pages/Mobile/Services/Services';
 // import 'animate.css';
 import MobHomeTwo from './pages/Mobile/Home/MobHomeTwo';
 import MobHomeThree from './pages/Mobile/Home/MobHomeThree';
+import ServicesFour from './pages/Mobile/Services/ServicesFour';
 function App() {
 
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/servicesFour" element={<ServicesFour />} />
         <Route path="/home2" element={<MobHomeTwo />} />
         <Route path="/home3" element={<MobHomeThree />} />
       </Routes>

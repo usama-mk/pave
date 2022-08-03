@@ -7,7 +7,7 @@ function TeamHeader({title}) {
    
   return (
     <div className='flex justify-between items-center m-5 ' >
-         <h1 className='text-[25px] font-semibold leading-[28px]text-black' >{title}</h1>
+         <h1 className='text-[25px] font-semibold leading-[28px] text-left text-black' >{title}</h1>
 
     <img src={blackLuArrow} className='object-contain  ml-5 ' alt="" />
    
