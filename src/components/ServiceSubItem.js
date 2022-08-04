@@ -2,7 +2,7 @@ import React from 'react'
 
 function ServiceSubItem({name}) {
   return (
-    <h5 className='text-[15px] text-white' >{name}</h5>
+    <h5 className='text-[17px] leading-[36px] text-white' >{name}</h5>
   )
 }
 

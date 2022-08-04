@@ -24,29 +24,29 @@ function App() {
 
         <Route path="/services/FutureTechnology" element={<DMService title={`Future Technology`} subItems={['Blockchain','NFT', 'Virtual Reality (VR)', 'Augmented Reality (AR)','Mixed Reality (MR)', 'Extended Reality (XR)', 'space']} />} />
 
-        <Route path="/services/Talent&Entertainment" element={<DMService title={`Talent & Entertainment`} subItems={['s','w']} />} />
+        <Route path="/services/SearchEngineOptimization" element={<DMService title={`Search Engine Optimization`} subItems={['Keywords Mapping, Analysis, & Research','White Hat SEO', 'Google SEO', 'Bing SEO', 'Foreign Language SEO', 'On-site SEO', 'Off-site SEO']} />} />
 
-        <Route path="/services/Talent&Entertainment" element={<DMService title={`Talent & Entertainment`} subItems={['s','w']} />} />
+        <Route path="/services/WebDesign&Dev" element={<DMService title={`Web Design & Dev`} subItems={['Web Design','Web Development', 'Multiple Tech Stack', 'API & ERP Development', 'eCommerce Website']} />} />
 
-        <Route path="/services/Talent&Entertainment" element={<DMService title={`Talent & Entertainment`} subItems={['s','w']} />} />
+        <Route path="/services/AppDesign&Dev" element={<DMService title={`App Design & Dev`} subItems={['iOS App Design & Development','Android App Design & Development', 'Tablet Design & Development', 'Game Design & Development']} />} />
 
-        <Route path="/services/Talent&Entertainment" element={<DMService title={`Talent & Entertainment`} subItems={['s','w']} />} />
+        <Route path="/services/DataAnalytics&Science" element={<DMService title={`Data Analytics & Science`} subItems={['Web Analysis','Conversion Analysis', 'Risk Analysis', 'Advertising and Marketing', 'Enterprise Decision Making', 'Marketing Optimization', 'Marketing Models']} />} />
 
-        <Route path="/services/Talent&Entertainment" element={<DMService title={`Talent & Entertainment`} subItems={['s','w']} />} />
+        <Route path="/services/eCommerce&Amazon" element={<DMService title={`eCommerce & Amazon`} subItems={['eCommerce Design & Development','eCommerce SEO', 'eCommerce Paid Ads', 'eCommerce Visual Enhancement', 'eCommerce Lifetime Value Increase', 'Amazon Account Management', 'Amazon SEO & PPC', 'Amazon Analytics', 'Amazon Visual Enhancement']} />} />
 
-        <Route path="/services/Talent&Entertainment" element={<DMService title={`Talent & Entertainment`} subItems={['s','w']} />} />
+        <Route path="/services/SocialMedia&PR" element={<DMService title={`Social Media & PR`} subItems={['Facebook Optimization','Instagram Optimization', 'Twitter Management', 'Social Media Visual Enhancement', 'Corporate PR Management', 'Press Outreach & Coverage', 'Recommended Website Outreach']} />} />
 
-        <Route path="/services/Talent&Entertainment" element={<DMService title={`Talent & Entertainment`} subItems={['s','w']} />} />
+        <Route path="/services/Brick&Mortar/Local" element={<DMService title={`Brick & Mortar / Local`} subItems={['Foot Traffic Increase','Market & Competitor', 'Research / Analysis', 'Restaurant Enhancement', 'Real Estate Marketing', 'Small Business Marketing','Life Time Value Increase', 'Local Visibility Increase', 'Social Media Management']} />} />
 
-        <Route path="/services/Talent&Entertainment" element={<DMService title={`Talent & Entertainment`} subItems={['s','w']} />} />
+        <Route path="/services/Branding&GraphicDesign" element={<DMService title={`Branding & Graphic Design`} subItems={['Content Creation','Graphic Design', 'Branding', 'Social Media', 'Print Graphics', 'Brand Book', 'Branding Guidelines', 'Logo Exploration', 'Color Explorations']} />} />
 
-        <Route path="/services/Talent&Entertainment" element={<DMService title={`Talent & Entertainment`} subItems={['s','w']} />} />
+        <Route path="/services/Photo&VideoProduction" element={<DMService title={`Photo & Video Production`} subItems={['Photography','Product Photography', 'Video Production', 'Video Editing', 'Short Films', 'Commercial Shoots']} />} />
 
-        <Route path="/services/Talent&Entertainment" element={<DMService title={`Talent & Entertainment`} subItems={['s','w']} />} />
+        <Route path="/services/BrandActivation" element={<DMService title={`Brand Activation`} subItems={['Promotional Marketing','Experiential Marketing', 'Brand Engagement', 'Digital Enablement', 'Live & Virtual Events', 'Workshops & Pop-ups', 'Digital Marketing', 'Public Relations (PR)', 'Sponsorship & Partnership Activation']} />} />
 
-        <Route path="/services/Talent&Entertainment" element={<DMService title={`Talent & Entertainment`} subItems={['s','w']} />} />
+        <Route path="/services/LeadGeneration" element={<DMService title={`Lead Generation`} subItems={['B2B Lead Generation','SaaS Lead Generation', 'Growth Marketing', 'Cross Channel Marketing', 'Sales Data Solutions', 'CRM Software Application']} />} />
 
-        <Route path="/services/Talent&Entertainment" element={<DMService title={`Talent & Entertainment`} subItems={['s','w']} />} />
+        <Route path="/services/ExperientialMarketing" element={<DMService title={`Experiential Marketing`} subItems={['Brand Awareness Campaign','Lead Generation', 'Experiential Funnel', 'Branding & Prospecting', 'Customer Loyalty Increase']} />} />
         <Route path="/home2" element={<MobHomeTwo />} />
         <Route path="/home3" element={<MobHomeThree />} />
       </Routes>

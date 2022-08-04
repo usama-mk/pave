@@ -34,7 +34,7 @@ function DMService({title, video, subItems}) {
     </div>
 
     <div className='flex items-center ml-8 mb-5' >     
-        <div style={{direction: 'rtl'}} className=' csb pl-5 text-left space-y-1 overflow-auto h-[100px] ' >
+        <div style={{direction: 'rtl'}} className=' csb pl-5 text-left space-y-1 overflow-auto h-[160px] pb-[100px] ' >
 
         {
             subItems.map(subItem=>

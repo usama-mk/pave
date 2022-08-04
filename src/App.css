@@ -73,6 +73,7 @@ transform-origin: center;
 /* width */
 .csb::-webkit-scrollbar {
   width: 2px;
+
 }
 
 /* Track */
