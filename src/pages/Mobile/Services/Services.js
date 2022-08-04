@@ -30,10 +30,10 @@ function Services() {
       </div>
       <div>
         <div className="px-5  ml-6 mr-6">
-          <h2 className="text-[22px] font-bold leading-[29px] text-left ">
+          <h2 className="text-[28px] font-bold leading-[35px] text-left ">
             We partner with our clients to help solve their business challenges
           </h2>
-          <p className="text-[14px] text-left mt-5 mb-5 ">
+          <p className="text-[16px] leading-[27px] text-left mt-5 mb-5 ">
             Pave can help you throughout your digital journey. We partner with
             marketing, product and board level leaders to help you understand
             your customers better – and then build the right products and

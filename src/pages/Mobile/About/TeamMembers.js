@@ -12,7 +12,7 @@ function TeamMembers() {
   <TeamHeader title={`Just some of our
 core team members`} />
 
-<div className='grid grid-cols-2 gap-12 overflow-auto mb-[100px] align-middle ' >
+<div className='grid grid-cols-2 gap-2 gap-y-4 overflow-auto mb-[100px] align-middle ' >
 <TeamMember name="Peter L." heading={"Chief Marketing Officer"} subHeading={"Marketing Partner"} />
 <TeamMember name="Thomas P." heading={"Chief Of Operations"} subHeading={"Marketing Partner"}/>
 <TeamMember name="Nathan T." heading={"Chief Of Entertainment"} subHeading={"Marketing Partner"}/>
