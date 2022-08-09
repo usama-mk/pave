@@ -189,7 +189,7 @@ function Home() {
   const [homeTwoDisplay, setHomeTwoDisplay]= useState(false)
   const [homeThreeDisplay, setHomeThreeDisplay]= useState(false)
   return (
-    <div className="max-h-[92vh]" >
+    <div className="max-h-[93vh]" >
         <Swiper
         direction={"horizontal"}
         slidesPerView={1}

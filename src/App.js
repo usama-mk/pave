@@ -8,6 +8,7 @@ import MobHomeTwo from './pages/Mobile/Home/MobHomeTwo';
 import MobHomeThree from './pages/Mobile/Home/MobHomeThree';
 import ServicesFour from './pages/Mobile/Services/ServicesFour';
 import DMService from './pages/Mobile/Services/DMService';
+import MobNavBar from './components/MobNavBar';
 function App() {
 
   return (
@@ -26,9 +27,9 @@ function App() {
 
         <Route path="/services/SearchEngineOptimization" element={<DMService title={`Search Engine Optimization`} subItems={['Keywords Mapping, Analysis, & Research','White Hat SEO', 'Google SEO', 'Bing SEO', 'Foreign Language SEO', 'On-site SEO', 'Off-site SEO']} />} />
 
-        <Route path="/services/WebDesign&Dev" element={<DMService title={`Web Design & Dev`} subItems={['Web Design','Web Development', 'Multiple Tech Stack', 'API & ERP Development', 'eCommerce Website']} />} />
+        <Route path="/services/WebDesign&Development" element={<DMService title={`Web Design & Dev`} subItems={['Web Design','Web Development', 'Multiple Tech Stack', 'API & ERP Development', 'eCommerce Website']} />} />
 
-        <Route path="/services/AppDesign&Dev" element={<DMService title={`App Design & Dev`} subItems={['iOS App Design & Development','Android App Design & Development', 'Tablet Design & Development', 'Game Design & Development']} />} />
+        <Route path="/services/AppDesign&Development" element={<DMService title={`App Design & Dev`} subItems={['iOS App Design & Development','Android App Design & Development', 'Tablet Design & Development', 'Game Design & Development']} />} />
 
         <Route path="/services/DataAnalytics&Science" element={<DMService title={`Data Analytics & Science`} subItems={['Web Analysis','Conversion Analysis', 'Risk Analysis', 'Advertising and Marketing', 'Enterprise Decision Making', 'Marketing Optimization', 'Marketing Models']} />} />
 
@@ -50,6 +51,19 @@ function App() {
         <Route path="/home2" element={<MobHomeTwo />} />
         <Route path="/home3" element={<MobHomeThree />} />
       </Routes>
+      {/* <div
+        className={`${
+          true
+            ? "visible cssanimation fadeInBottom "
+            : "invisible"
+        }     flex justify-center w-[100vw] fixed bottom-0 z-30  `}
+      >
+        
+       
+      <MobNavBar showNavBar={true} />
+        
+      </div> */}
+     
     </div>
   );
 }

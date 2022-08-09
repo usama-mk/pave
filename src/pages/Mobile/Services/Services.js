@@ -24,11 +24,11 @@ function Services() {
     navigate(path);
   };
   return (
-    <div className="flex flex-col h-[100vh] sec">
+    <div style={{height: '93vh', overflowY: 'scroll'}} className="flex flex-col h-[100vh] sec">
       <div className="  w-[100vw]  flex justify-center mb-12 ">
         <MobHeader />
       </div>
-      <div>
+      <div >
         <div className="px-5  ml-6 mr-6">
           <h2 className="text-[28px] font-bold leading-[35px] text-left ">
             We partner with our clients to help solve their business challenges
@@ -45,7 +45,7 @@ function Services() {
           <div
             id="scroll-blur"
             style={{ direction: "rtl" }}
-            className="mt-5 h-52 overflow-auto csa scroll-box relative "
+            className="mt-5 h-52 overflow-auto csa scroll-box relative mb-[100px]"
           >
             <ServiceItem
               handleServiceClick={handleServiceClick}

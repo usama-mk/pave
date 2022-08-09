@@ -20,7 +20,7 @@ function DMService({title, video, subItems}) {
 
      
   return (
-    <div className='flex flex-col h-[100vh] bg-[#410D7F] sec' >
+    <div style={{height: '93vh', overflowY: 'scroll'}} className='flex flex-col h-[100vh] bg-[#410D7F] sec' >
     <div className="  w-[100vw]  flex justify-center mb-6 ">
     <MobHeader purpleTheme={`#410D7F`} />
   </div>

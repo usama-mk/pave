@@ -1,6 +1,7 @@
 import React from 'react'
 import FAQs from '../../../components/FAQs'
 import MobHeader from '../../../components/MobHeader'
+import MobNavBar from '../../../components/MobNavBar'
 
 function ExperiencesMob() {
     const NumbersItem=({subTitle, value})=>{
@@ -50,6 +51,19 @@ function ExperiencesMob() {
        </div>
       </div>
         </div>
+         
+    <div
+        className={`${
+          true
+            ? "visible cssanimation fadeInBottom "
+            : "invisible"
+        }     flex justify-center w-[100vw] fixed bottom-0 z-30  `}
+      >
+        
+       
+      <MobNavBar showNavBar={true} />
+        
+      </div>
     </div>
   )
 }

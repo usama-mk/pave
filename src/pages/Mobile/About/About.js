@@ -19,67 +19,9 @@ function About() {
   const [homeTwoDisplay, setHomeTwoDisplay]= useState(false)
   const [homeThreeDisplay, setHomeThreeDisplay]= useState(false)
   return (
-    <div className="max-h-[92vh]" >
-      <Swiper
-        direction={"horizontal"}
-        slidesPerView={1}
-        spaceBetween={30}
-        
-        // mousewheel={true}
-        pagination={{
-          clickable: true,
-          
-          
-        }}
-        // pagination={{
-        //   clickable: true,
-        // }}
-      zoom={true}
-      effect={"cube"}
-      grabCursor={true}
-      cubeEffect={{
-        shadow: true,
-        slideShadows: true,
-        shadowOffset: 20,
-        shadowScale: 0.94,
-      }}
-        
-        // freeModeSticky={ false}
-        // freeMode={true}
-        
-        onSlideChange={(swiper)=> {
-            if(swiper.activeIndex===1){
-                setHomeTwoDisplay(true)
-            }
-            else if(swiper.activeIndex===2){
-                setHomeThreeDisplay(true)
-            }
-        }}
-         
-        // onScroll={()=> setHomeTwoDisplay(true)}
-        modules={[Mousewheel, Pagination, Scrollbar, EffectCube ]}
-        className="mySwiper"
-      >
-        <SwiperSlide  ><AboutOne/></SwiperSlide>
-        <SwiperSlide  ><ExperiencesMob/></SwiperSlide>
-        <SwiperSlide  ><TeamMembers/></SwiperSlide>
-        
-         
-      </Swiper>
-     
-    {/* navbar */}
-    <div
-        className={`${
-          true
-            ? "visible cssanimation fadeInBottom "
-            : "invisible"
-        }     flex justify-center w-[100vw] fixed bottom-0 z-30  `}
-      >
-        
-       
-      <MobNavBar showNavBar={true} />
-        
-      </div>
+    <div className="max-h-[93vh]" >
+       <AboutOne/>
+   
     </div>
   )
 }
@@ -89,8 +31,8 @@ export default About
 const AboutOne=()=>{
   return(
      
-    <div style={{height: '93vh', overflowY: 'scroll'}} className='flex flex-col items-center mb-[100px] ' >
-    <div className="homeTop relative top-0 mb-5 w-[100vw]  flex justify-center ">
+    <div  style={{height: '93vh', overflowY: 'scroll'}}className='flex flex-col items-center  ' >
+    <div className=" mb-5 w-[100vw]  flex justify-center ">
     <MobHeader />
   </div>
 
@@ -141,7 +83,18 @@ agency in Southern California”
   </div>
   {/* page con ends */}
   
-
+  <div
+        className={`${
+          true
+            ? "visible cssanimation fadeInBottom "
+            : "invisible"
+        }     flex justify-center w-[100vw] fixed bottom-0 z-30  `}
+      >
+        
+       
+      <MobNavBar showNavBar={true} />
+        
+      </div>
 </div>
   )
 }
