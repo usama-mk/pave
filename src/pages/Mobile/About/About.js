@@ -31,7 +31,7 @@ export default About
 const AboutOne=()=>{
   return(
      
-    <div  style={{height: '93vh', overflowY: 'scroll'}}className='flex flex-col items-center  ' >
+    <div  style={{height: '93vh', overflowY: 'scroll'}} className='flex flex-col items-center  ' >
     <div className=" mb-5 w-[100vw]  flex justify-center ">
     <MobHeader />
   </div>

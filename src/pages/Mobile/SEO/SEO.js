@@ -19,7 +19,7 @@ function SEO() {
     navigate(path);
   };
   return (
-    <div  className="flex flex-col">
+    <div style={{height: '93vh', overflowY: 'scroll'}}  className="flex flex-col">
       <div className="  w-[100vw]  flex justify-center mb-12 ">
         <MobHeader />
       </div>
