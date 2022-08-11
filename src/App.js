@@ -9,6 +9,7 @@ import MobHomeThree from './pages/Mobile/Home/MobHomeThree';
 import ServicesFour from './pages/Mobile/Services/ServicesFour';
 import DMService from './pages/Mobile/Services/DMService';
 import MobNavBar from './components/MobNavBar';
+import SEO from './pages/Mobile/SEO/SEO';
 function App() {
 
   return (
@@ -45,11 +46,13 @@ function App() {
 
         <Route path="/services/BrandActivation" element={<DMService title={`Brand Activation`} subItems={['Promotional Marketing','Experiential Marketing', 'Brand Engagement', 'Digital Enablement', 'Live & Virtual Events', 'Workshops & Pop-ups', 'Digital Marketing', 'Public Relations (PR)', 'Sponsorship & Partnership Activation']} />} />
 
-        <Route path="/services/LeadGeneration" element={<DMService title={`Lead Generation`} subItems={['B2B Lead Generation','SaaS Lead Generation', 'Growth Marketing', 'Cross Channel Marketing', 'Sales Data Solutions', 'CRM Software Application']} />} />
+        <Route path="/services/LeadGeneration&GrowthMarketing" element={<DMService title={`Lead Generation`} subItems={['B2B Lead Generation','SaaS Lead Generation', 'Growth Marketing', 'Cross Channel Marketing', 'Sales Data Solutions', 'CRM Software Application']} />} />
 
         <Route path="/services/ExperientialMarketing" element={<DMService title={`Experiential Marketing`} subItems={['Brand Awareness Campaign','Lead Generation', 'Experiential Funnel', 'Branding & Prospecting', 'Customer Loyalty Increase']} />} />
         <Route path="/home2" element={<MobHomeTwo />} />
         <Route path="/home3" element={<MobHomeThree />} />
+
+        <Route path='/seo' element={<SEO/>} />
       </Routes>
       {/* <div
         className={`${
