@@ -12,6 +12,7 @@ import MobNavBar from './components/MobNavBar';
 import SEO from './pages/Mobile/SEO/SEO';
 import SeoProposal from './pages/Mobile/SEO/SeoProposal';
 import MMCompaign from './pages/Mobile/SEO/MMCompaign';
+import SEOPricing from './pages/Mobile/SEO/SEOPricing';
 function App() {
 
   return (
@@ -57,6 +58,7 @@ function App() {
 
         <Route path='/seoproposal' element={<SeoProposal/>} />
         <Route path='/mmcompaign' element={<MMCompaign/>} />
+        <Route path='/seopricing' element={<SEOPricing/>} />
 
         <Route path="/home2" element={<MobHomeTwo />} />
         <Route path="/home3" element={<MobHomeThree />} />
