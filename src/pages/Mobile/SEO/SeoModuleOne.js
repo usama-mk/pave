@@ -30,9 +30,10 @@ function SeoModuleOne() {
           />
           <div className="text-left ml-[4%] ">
             <h1 className=" text-[28px] font-bold leading-[35px] ">
-              Month to Month Compaign Activities
+              Module 1: <br />
+              Competition Research
             </h1>
-            <h3 className="text-[23px] font-semibold leading-[30px] mt-3 " >Identify your potential SEO 
+            <h3 className="text-[23px] font-semibold leading-[30px] mt-5 " >Identify your potential SEO 
 Competitors</h3>
 
             <div className="mt-5">
