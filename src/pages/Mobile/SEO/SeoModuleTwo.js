@@ -49,7 +49,50 @@ function SeoModuleTwo() {
             <img src={work} className="object-contain w-[309px] mt-4" alt="" />
 
             <div className="mt-5">
-              <div className="flex items-start mt-8">
+            <div className="grid grid-cols-3" >
+             
+ 
+            <div className="col-span-3" >
+            <div>
+                    {one.map((keyword, key) => (
+                      <div className="flex relative " >
+                         <hr style={{marginTop:key===0?'12px':'0px'}} className=" h-[30px] w-[4px] border-2 border-black " />
+                         {
+                            key===0?
+                            <hr style={{width:key===0?'45px':'45px'}} className=" w-[45px] border-2 border-black mt-3 absolute left-0 " />
+                            :''
+                         }
+                        <h4 className="text-[18px] text-left ml-16 font-semibold leaeding-[29px] ">
+                        {keyword}
+                      </h4>
+
+                      </div>
+                    ))}
+                  </div>
+            </div>
+            {/*  */}
+            <div className="col-span-3  " >
+            <div>
+                    {one.map((keyword, key) => (
+                      <div className="flex relative " >
+                         <hr style={{marginTop:key===0?'0px':'0px'}} className=" h-[30px] w-[4px] border-2 border-black " />
+                         {
+                            key===0?
+                            <hr style={{width:key===0?'45px':'45px'}} className=" w-[45px] border-2 border-black mt-3 absolute left-0 " />
+                            :''
+                         }
+                        <h4 className="text-[18px] text-left ml-16 font-semibold leaeding-[29px] ">
+                        {keyword}
+                      </h4>
+
+                      </div>
+                    ))}
+                  </div>
+            </div>
+            </div>
+
+
+              {/* <div className="flex items-start mt-8">
                 <hr className=" h-[392px] w-[4px] border-2 border-black mt-3" />
                 <hr className=" w-[45px] border-2 border-black mt-3" />
                 <div>
@@ -60,30 +103,9 @@ function SeoModuleTwo() {
                       </h4>
                     ))}
                   </div>
-
-                  <div className="flex items-start mt-8 relative ">
-                    <hr className=" w-[30px] border-2 border-black mt-3 absolute  left-[-27px]" />
-                    <div>
-                      {two.map((keyword) => (
-                        <h4 className="text-[18px] text-left ml-6 font-semibold leaeding-[29px] ">
-                          {keyword}
-                        </h4>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="flex items-start mt-8 relative ">
-                    <hr className=" w-[100%] border-2 border-black mt-3 absolute  left-[-27px]" />
-                    <div>
-                      {three.map((keyword) => (
-                        <h4 className="text-[18px] text-left ml-6 font-semibold leaeding-[29px] ">
-                          {keyword}
-                        </h4>
-                      ))}
-                    </div>
-                  </div>
+ 
                 </div>
-              </div>
+              </div> */}
 
               <div className="flex items-start mt-8 ">
                 <img
