@@ -2,13 +2,29 @@ import React from "react";
 import MobHeader from "../../../components/MobHeader";
 import MobNavBar from "../../../components/MobNavBar";
 import blackLuArrow from "../../../assets/images/black-lu-arrow.png";
-import magnify from "../../../assets/images/magnify.png";
+import work from "../../../assets/images/work.png";
 import magnifyTwo from "../../../assets/images/magnifyTwo.png";
 import code from "../../../assets/images/code.png";
 import redPath from "../../../assets/images/redPath.png";
 import MainTitleCheck from "../../../components/MainTitleCheck";
+import { useState } from "react";
 
-function SeoModuleOne() {
+function SeoModuleTwo() {
+  const [one, setOne] = useState([
+    "Keyword data",
+    "Budget",
+    "Conversion Potential",
+    "Strategy",
+    "Legal Issues",
+    "Competition Level",
+    "Traffic Potential",
+    "Site Content",
+  ]);
+  const [two, setTwo] = useState([
+    "Analysis",
+    "Analyze the factors and generate a final keyword list.",
+  ]);
+  const [three, setThree] = useState(["Final Keyword list"]);
   return (
     <div
       style={{ height: "93vh", overflowY: "scroll" }}
@@ -27,38 +43,46 @@ function SeoModuleOne() {
           />
           <div className="text-left ml-[4%] ">
             <h1 className=" text-[28px] font-bold leading-[35px] ">
-              Module 1: <br />
-              Competition Research
+              Module 2: <br />
+              Keyword Research
             </h1>
-            <h3 className="text-[23px] font-semibold leading-[30px] mt-5 ">
-              Identify your potential SEO Competitors
-            </h3>
+            <img src={work} className="object-contain w-[309px] mt-4" alt="" />
 
             <div className="mt-5">
-              <div className="flex items-start ">
-                <img
-                  src={magnify}
-                  className="object-contain w-[49px] mt-1 "
-                  alt=""
-                />
-                <h4 className="text-[18px] text-left ml-6 font-medium leaeding-[18px] ">
-                  Your long-time <br /> industry <br />
-                  competitors sites
-                </h4>
-              </div>
-
               <div className="flex items-start mt-8">
-                <img
-                  src={code}
-                  className="object-contain w-[49px] mt-1 "
-                  alt=""
-                />
-                <h4 className="text-[18px] text-left ml-6 font-medium leaeding-[18px] ">
-                  The top sites in your
-                  <br /> industry from
-                  <br />
-                  Alexa & Similar Web
-                </h4>
+                <hr className=" h-[392px] w-[4px] border-2 border-black mt-3" />
+                <hr className=" w-[45px] border-2 border-black mt-3" />
+                <div>
+                  <div>
+                    {one.map((keyword) => (
+                      <h4 className="text-[18px] text-left ml-6 font-semibold leaeding-[29px] ">
+                        {keyword}
+                      </h4>
+                    ))}
+                  </div>
+
+                  <div className="flex items-start mt-8 relative ">
+                    <hr className=" w-[30px] border-2 border-black mt-3 absolute  left-[-27px]" />
+                    <div>
+                      {two.map((keyword) => (
+                        <h4 className="text-[18px] text-left ml-6 font-semibold leaeding-[29px] ">
+                          {keyword}
+                        </h4>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex items-start mt-8 relative ">
+                    <hr className=" w-[100%] border-2 border-black mt-3 absolute  left-[-27px]" />
+                    <div>
+                      {three.map((keyword) => (
+                        <h4 className="text-[18px] text-left ml-6 font-semibold leaeding-[29px] ">
+                          {keyword}
+                        </h4>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="flex items-start mt-8 ">
@@ -145,4 +169,4 @@ function SeoModuleOne() {
   );
 }
 
-export default SeoModuleOne;
+export default SeoModuleTwo;
