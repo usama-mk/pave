@@ -14,6 +14,7 @@ import SeoProposal from './pages/Mobile/SEO/SeoProposal';
 import MMCompaign from './pages/Mobile/SEO/MMCompaign';
 import SEOPricing from './pages/Mobile/SEO/SEOPricing';
 import SeoCompare from './pages/Mobile/SEO/SeoCompare';
+import SeoModuleOne from './pages/Mobile/SEO/SeoModuleOne';
 function App() {
 
   return (
@@ -61,6 +62,7 @@ function App() {
         <Route path='/mmcompaign' element={<MMCompaign/>} />
         <Route path='/seopricing' element={<SEOPricing/>} />
         <Route path='/seocompare' element={<SeoCompare/>} />
+        <Route path='/seomoduleone' element={<SeoModuleOne/>} />
 
         <Route path="/home2" element={<MobHomeTwo />} />
         <Route path="/home3" element={<MobHomeThree />} />

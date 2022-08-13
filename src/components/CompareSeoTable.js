@@ -4,7 +4,7 @@ import cross from '../assets/images/cross.png'
 
 function CompareSeoTable({ first, stage, features, starter, visiblity, performance, booster }) {
   return (
-    <div className="ml-[20%] mr-[2%] mt-10 ">
+    <div className="ml-[20%] mr-[2%] ">
      
 
       <div className="grid grid-flow-col  gap-16 overflow-x-scroll ">
@@ -12,7 +12,9 @@ function CompareSeoTable({ first, stage, features, starter, visiblity, performan
          {
             first ?  <h1 className="text-left text-[14px] font-semibold leading-[43px] mb-5">
             FEATURES
-          </h1> :''
+          </h1> :<h1 className="text-left text-[14px] invisible font-semibold leading-[43px] mb-5">
+            FEATURES
+          </h1>
          }
           <h1 className="text-left text-[#FD4C3C] text-[12px] font-medium leading-[14px] mb-4  ">{stage}</h1>
           {
@@ -27,7 +29,9 @@ function CompareSeoTable({ first, stage, features, starter, visiblity, performan
         {
             first ?  <h1 className="text-center text-[14px] font-semibold leading-[43px] mb-5">
             Starter
-          </h1> :''
+          </h1> :<h1 className="text-center text-[14px] font-semibold leading-[43px] invisible mb-5">
+            Starter
+          </h1>
          }
 
 <h1 className="text-center invisible  text-[#FD4C3C] text-[12px] font-medium leading-[14px] mb-4  ">{'stage'}</h1>
@@ -44,7 +48,9 @@ function CompareSeoTable({ first, stage, features, starter, visiblity, performan
         {
             first ?  <h1 className="text-left text-[14px] font-semibold leading-[43px] mb-5">
             Visibility
-          </h1> :''
+          </h1> :<h1 className="text-left text-[14px] invisible font-semibold leading-[43px] mb-5">
+            Visibility
+          </h1>
          }
 
 
@@ -62,7 +68,9 @@ function CompareSeoTable({ first, stage, features, starter, visiblity, performan
         {
             first ?  <h1 className="text-left text-[14px] font-semibold leading-[43px] mb-5">
             Performance
-          </h1> :''
+          </h1> : <h1 className="text-left text-[14px] font-semibold leading-[43px] invisible mb-5">
+            Performance
+          </h1>
          }
 
 <h1 className="text-center invisible  text-[#FD4C3C] text-[12px] font-medium leading-[14px] mb-4  ">{'stage'}</h1>
@@ -79,7 +87,9 @@ function CompareSeoTable({ first, stage, features, starter, visiblity, performan
         {
             first ?  <h1 className="text-left text-[14px] font-semibold leading-[43px] mb-5">
             Booster
-          </h1> :''
+          </h1> :<h1 className="text-left text-[14px] font-semibold invisible leading-[43px] mb-5">
+            Booster
+          </h1>
          }
 
 

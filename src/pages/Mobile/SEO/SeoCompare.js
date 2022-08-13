@@ -28,7 +28,7 @@ function SeoCompare() {
 </div>
       </div>
 
- <CompareSeoTable first={true} stage="Initial Analysis" features={['In-depth Website Analysis', 'Initial Website Audit Report', 'nitial Backlinks Analysis', 'Competition Analysis', 'Relevant Keyword Research', 'Duplicate Content Check', 'Technical Advice on Website', 'Technical Advice on Website']} starter={[true, true, true, false, true, false, true]} visiblity={[true, true, true, true, true, true, true]} performance={[true, true, true, true, true, true, true]} booster={[true, true, true, true, true, true, true]}  />
+ <CompareSeoTable first={true} stage="Initial Analysis" features={['In-depth Website Analysis', 'Initial Website Audit Report', 'nitial Backlinks Analysis', 'Competition Analysis', 'Relevant Keyword Research', 'Duplicate Content Check', 'Technical Advice on Website']} starter={[true, true, true, false, true, false, true]} visiblity={[true, true, true, true, true, true, true]} performance={[true, true, true, true, true, true, true]} booster={[true, true, true, true, true, true, true]}  />
 
 
 
