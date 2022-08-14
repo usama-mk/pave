@@ -17,6 +17,7 @@ import SeoCompare from './pages/Mobile/SEO/SeoCompare';
 import SeoModuleOne from './pages/Mobile/SEO/SeoModuleOne';
 import SeoModuleTwo from './pages/Mobile/SEO/SeoModuleTwo';
 import SeoModuleThree from './pages/Mobile/SEO/SeoModuleThree';
+import SeoModuleFour from './pages/Mobile/SEO/SeoModuleFour';
 function App() {
 
   return (
@@ -67,6 +68,7 @@ function App() {
         <Route path='/seomoduleone' element={<SeoModuleOne/>} />
         <Route path='/seomoduletwo' element={<SeoModuleTwo/>} />
         <Route path='/seomodulethree' element={<SeoModuleThree/>} />
+        <Route path='/seomodulefour' element={<SeoModuleFour/>} />
 
         <Route path="/home2" element={<MobHomeTwo />} />
         <Route path="/home3" element={<MobHomeThree />} />
