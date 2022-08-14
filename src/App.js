@@ -18,6 +18,9 @@ import SeoModuleOne from './pages/Mobile/SEO/SeoModuleOne';
 import SeoModuleTwo from './pages/Mobile/SEO/SeoModuleTwo';
 import SeoModuleThree from './pages/Mobile/SEO/SeoModuleThree';
 import SeoModuleFour from './pages/Mobile/SEO/SeoModuleFour';
+import SeoModuleFive from './pages/Mobile/SEO/SeoModuleFive';
+import SeoModuleSix from './pages/Mobile/SEO/SeoModuleSix';
+import SeoModuleSeven from './pages/Mobile/SEO/SeoModuleSeven';
 function App() {
 
   return (
@@ -69,6 +72,9 @@ function App() {
         <Route path='/seomoduletwo' element={<SeoModuleTwo/>} />
         <Route path='/seomodulethree' element={<SeoModuleThree/>} />
         <Route path='/seomodulefour' element={<SeoModuleFour/>} />
+        <Route path='/seomodulefive' element={<SeoModuleFive/>} />
+        <Route path='/seomodulesix' element={<SeoModuleSix/>} />
+        <Route path='/seomoduleseven' element={<SeoModuleSeven/>} />
 
         <Route path="/home2" element={<MobHomeTwo />} />
         <Route path="/home3" element={<MobHomeThree />} />
