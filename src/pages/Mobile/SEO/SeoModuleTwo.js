@@ -62,7 +62,7 @@ function SeoModuleTwo() {
                             <hr style={{width:key===0?'45px':'45px'}} className=" w-[45px] border-2 border-black mt-3 absolute left-0 " />
                             :''
                          }
-                        <h4 className="text-[18px] text-left ml-16 font-semibold leaeding-[29px] ">
+                        <h4 className="text-[18px] text-left ml-16 font-semibold leading-[29px] ">
                         {keyword}
                       </h4>
 
@@ -71,17 +71,17 @@ function SeoModuleTwo() {
                   </div>
             </div>
             {/*  */}
-            <div className="col-span-3  " >
+            <div className="col-span-3 mt-5  " >
             <div>
-                    {one.map((keyword, key) => (
+                    {two.map((keyword, key) => (
                       <div className="flex relative " >
-                         <hr style={{marginTop:key===0?'0px':'0px'}} className=" h-[30px] w-[4px] border-2 border-black " />
+                         <hr style={{marginTop:key===0?'12px':'0px'}} className=" h-[30px] w-[4px] border-2 border-black " />
                          {
                             key===0?
                             <hr style={{width:key===0?'45px':'45px'}} className=" w-[45px] border-2 border-black mt-3 absolute left-0 " />
                             :''
                          }
-                        <h4 className="text-[18px] text-left ml-16 font-semibold leaeding-[29px] ">
+                        <h4  className="text-[18px] text-left ml-16 font-semibold leading-[29px] ">
                         {keyword}
                       </h4>
 
@@ -89,6 +89,28 @@ function SeoModuleTwo() {
                     ))}
                   </div>
             </div>
+            {/*  */}
+            <div className="col-span-3 mt-5  " >
+            <div>
+                    {three.map((keyword, key) => (
+                      <div className="flex relative  " >
+                         <hr style={{marginTop:key===0?'12px':'0px'}} className=" h-[30px] w-[4px] border-2 border-black  " />
+                         {
+                            key===0?
+                            <hr style={{width:key===0?'45px':'45px'}} className=" w-[45px] border-2 border-black mt-3 absolute left-0 " />
+                            :''
+                         }
+                        <h4  className="text-[18px] text-left ml-16 font-semibold leading-[29px] ">
+                        {keyword}
+                      </h4>
+
+                      </div>
+                    ))}
+                  </div>
+            </div>
+
+
+            
             </div>
 
 
