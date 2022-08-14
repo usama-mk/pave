@@ -21,6 +21,8 @@ import SeoModuleFour from './pages/Mobile/SEO/SeoModuleFour';
 import SeoModuleFive from './pages/Mobile/SEO/SeoModuleFive';
 import SeoModuleSix from './pages/Mobile/SEO/SeoModuleSix';
 import SeoModuleSeven from './pages/Mobile/SEO/SeoModuleSeven';
+import SeoCaseStudies from './pages/Mobile/SEO/SeoCaseStudies';
+import SeoClientOne from './pages/Mobile/SEO/SeoClientOne';
 function App() {
 
   return (
@@ -75,6 +77,8 @@ function App() {
         <Route path='/seomodulefive' element={<SeoModuleFive/>} />
         <Route path='/seomodulesix' element={<SeoModuleSix/>} />
         <Route path='/seomoduleseven' element={<SeoModuleSeven/>} />
+        <Route path='/seocasestudies' element={<SeoCaseStudies/>} />
+        <Route path='/seoclientone' element={<SeoClientOne/>} />
 
         <Route path="/home2" element={<MobHomeTwo />} />
         <Route path="/home3" element={<MobHomeThree />} />
