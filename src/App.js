@@ -23,6 +23,10 @@ import SeoModuleSix from './pages/Mobile/SEO/SeoModuleSix';
 import SeoModuleSeven from './pages/Mobile/SEO/SeoModuleSeven';
 import SeoCaseStudies from './pages/Mobile/SEO/SeoCaseStudies';
 import SeoClientOne from './pages/Mobile/SEO/SeoClientOne';
+import SeoClientTwo from './pages/Mobile/SEO/SeoClientTwo';
+import SeoClientThree from './pages/Mobile/SEO/SeoClientThree';
+import SeoClientFour from './pages/Mobile/SEO/SeoClientFour';
+import AccelerateAndgrow from './pages/Mobile/PaveLead/AccelerateAndgrow';
 function App() {
 
   return (
@@ -79,6 +83,10 @@ function App() {
         <Route path='/seomoduleseven' element={<SeoModuleSeven/>} />
         <Route path='/seocasestudies' element={<SeoCaseStudies/>} />
         <Route path='/seoclientone' element={<SeoClientOne/>} />
+        <Route path='/seoclienttwo' element={<SeoClientTwo/>} />
+        <Route path='/seoclientthree' element={<SeoClientThree/>} />
+        <Route path='/seoclientfour' element={<SeoClientFour/>} />
+        <Route path='/accelerateandgrow' element={<AccelerateAndgrow/>} />
 
         <Route path="/home2" element={<MobHomeTwo />} />
         <Route path="/home3" element={<MobHomeThree />} />

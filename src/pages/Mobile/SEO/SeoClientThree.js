@@ -2,9 +2,9 @@ import React from "react";
 import MobHeader from "../../../components/MobHeader";
 import MobNavBar from "../../../components/MobNavBar";
 import blackLuArrow from "../../../assets/images/black-lu-arrow.png";
-import clientOne from "../../../assets/images/clientOne.png";
+import clientThree from "../../../assets/images/clientThree.png";
 
-function SeoClientOne() {
+function SeoClientThree() {
   return (
     <div
       style={{ height: "93vh", overflowY: "scroll" }}
@@ -26,12 +26,12 @@ function SeoClientOne() {
               Case Studies
             </h1>
            <h1 className="text-[20px] font-medium leading-[25px] mt-2  " >
-            Client #1
+            Client #3
            </h1>
           </div>
         </div>
        <div className="pl-[6%]" >
-       <img src={clientOne} className="object-contain w-[369px] mt-4" alt="" />
+       <img src={clientThree} className="object-contain w-[369px] mt-4" alt="" />
 
       <div className="flex justify-between my-5 " >
         <ClientTitle title={'Challenges'} />
@@ -39,12 +39,20 @@ function SeoClientOne() {
         <ClientTitle title={'results'} />
       </div>
 
-      <h5 className="text-[14px] leading-[25px] text-left mb-5 " >Starting with a new website we knew we have to face limitations, as it had 'little to no traffic', low domain authority and Trust Flow. </h5>
-
-      <h5 className="text-[14px] leading-[25px] text-left mb-5 " >The Client was in a hustle to drive improved results leaving us with a time-bound approach  (approx two months). The vertical was competitive so generating conversions was a daunting task in the beginning. 
+      <h5 className="text-[14px] leading-[25px] text-left mb-5 " >Existing domain authority of the website was quite low in the beginning of the campaign. 
 </h5>
 
-      <h5 className="text-[14px] leading-[25px] text-left mb-5 " >Huge loading time was immensely impeding the website reputation. Hence, it was no easy task to increase the crawling rate and fix the error reports. Next thing was the poor mobile experience that affected the users increasing the bounce rate. 
+      <h5 className="text-[14px] leading-[25px] text-left mb-5 " >Keywords chosen for the campaign have decent search volume and medium competition. 
+
+</h5>
+
+      <h5 className="text-[14px] leading-[25px] text-left mb-5 " >We had to compete with government and educational websites in SERP as these were among our top competitors. Website had a lot of onsite bugs which needed to be 
+analyzed and fixed for improving rankings in SERP.
+
+</h5>
+
+<h5 className="text-[14px] leading-[25px] text-left mb-5 " >Bounce rate of the website was also high due to front end of site. <br />
+Website had a simple informational layout rather than one which can get conversions.
 </h5>
        
 
@@ -64,7 +72,7 @@ function SeoClientOne() {
   );
 }
 
-export default SeoClientOne;
+export default SeoClientThree;
 
 const ClientTitle=({title})=>{
 return(
