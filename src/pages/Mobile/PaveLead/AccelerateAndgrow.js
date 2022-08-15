@@ -44,7 +44,7 @@ Our work lives at the intersection of account-based and inbound marketing; creat
 We believe websites have a job to do. When we design and build websites, we focus on both design and performance--not just making a pretty brochure. From lead generation to customer retention, we create the right tools and manage campaigns that measurably improve business outcomes.
 </h5>
 
-<div className="mt-10" >
+<div className="my-10" >
 
 <ServiceItem
       marginLNo={true}
@@ -83,16 +83,3 @@ acquisition engaged buyers`} selected={'two'}  />
 
 export default AccelerateAndgrow;
 
-const ClientTitle = ({ title }) => {
-  return (
-    <div className="flex items-center ">
-      <div className="rounded-full w-[6.5px] h-[6.5px] bg-[#FD4C3C] mr-1  "></div>
-      <h3
-        style={{ color: title === "Challenges" ? "#FD4C3C" : "" }}
-        className="text-[18px] font-bold leading-[15px] "
-      >
-        {title}
-      </h3>
-    </div>
-  );
-};

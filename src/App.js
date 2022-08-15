@@ -27,6 +27,7 @@ import SeoClientTwo from './pages/Mobile/SEO/SeoClientTwo';
 import SeoClientThree from './pages/Mobile/SEO/SeoClientThree';
 import SeoClientFour from './pages/Mobile/SEO/SeoClientFour';
 import AccelerateAndgrow from './pages/Mobile/PaveLead/AccelerateAndgrow';
+import SalesPipeline from './pages/Mobile/PaveLead/SalesPipeline';
 function App() {
 
   return (
@@ -87,6 +88,7 @@ function App() {
         <Route path='/seoclientthree' element={<SeoClientThree/>} />
         <Route path='/seoclientfour' element={<SeoClientFour/>} />
         <Route path='/accelerateandgrow' element={<AccelerateAndgrow/>} />
+        <Route path='/salespipeline' element={<SalesPipeline/>} />
 
         <Route path="/home2" element={<MobHomeTwo />} />
         <Route path="/home3" element={<MobHomeThree />} />
