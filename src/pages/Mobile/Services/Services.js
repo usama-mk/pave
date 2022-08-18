@@ -44,8 +44,8 @@ function Services() {
 
           <div
             id="scroll-blur"
-            style={{ direction: "rtl" }}
-            className="mt-5 h-52 overflow-auto csa scroll-box relative mb-[100px]"
+            
+            className="mt-5 h-52 overflow-scroll csa scroll-box relative mb-[100px]"
           >
             <ServiceItem
               handleServiceClick={handleServiceClick}

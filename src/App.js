@@ -29,6 +29,12 @@ import SeoClientFour from './pages/Mobile/SEO/SeoClientFour';
 import AccelerateAndgrow from './pages/Mobile/PaveLead/AccelerateAndgrow';
 import SalesPipeline from './pages/Mobile/PaveLead/SalesPipeline';
 import StagesSalesPipeline from './pages/Mobile/PaveLead/StagesSalesPipeline';
+import AccelerateB2B from './pages/Mobile/PaveLead/AccelerateB2B';
+import GrowOpportunity from './pages/Mobile/PaveLead/GrowOpportunity';
+import IncreaseQualified from './pages/Mobile/PaveLead/IncreaseQualified';
+import AcquireEngage from './pages/Mobile/PaveLead/AcquireEngage';
+import BuyersJourney from './pages/Mobile/PaveLead/BuyersJourney';
+import CollectData from './pages/Mobile/PaveLead/CollectData';
 function App() {
 
   return (
@@ -36,7 +42,6 @@ function App() {
     <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/DigitalMarketing" element={<DMService title={`Digital Marketing`} subItems={['Search Engine Marketing', 'Pay-Per-Click Advertising','Social Media Marketing', 'Content Marketing', 'Affiliate Marketing', 'Influencer Marketing', 'Email Marketing', 'Viral Marketing', 'Mobile Marketing']} />} />
         <Route path="/services/Talent&Entertainment" element={<DMService title={`Talent & Entertainment`} subItems={['Talent, Artist & DJ Bookings','Celebrity & VIP Relations', 'Mega & Giga Influencer Relations', 'Private, Live & Corporate Events', 'Charity & Non Profit Activations', 'Virtual Entertainment', 'Production & Creatives', 'Talent Branding', 'Partnership Development']} />} />
@@ -91,6 +96,13 @@ function App() {
         <Route path='/accelerateandgrow' element={<AccelerateAndgrow/>} />
         <Route path='/salespipeline' element={<SalesPipeline/>} />
         <Route path='/stagessalespipeline' element={<StagesSalesPipeline/>} />
+        <Route path='/accelerateb2b' element={<AccelerateB2B/>} />
+        <Route path='/growopportunity' element={<GrowOpportunity/>} />
+        <Route path='/increasequalified' element={<IncreaseQualified/>} />
+        <Route path='/acquireengage' element={<AcquireEngage/>} />
+        <Route path='/buyersjourney' element={<BuyersJourney/>} />
+        <Route path='/collectdata' element={<CollectData/>} />
+        
 
         <Route path="/home2" element={<MobHomeTwo />} />
         <Route path="/home3" element={<MobHomeThree />} />
