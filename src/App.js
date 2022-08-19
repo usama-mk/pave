@@ -35,6 +35,11 @@ import IncreaseQualified from './pages/Mobile/PaveLead/IncreaseQualified';
 import AcquireEngage from './pages/Mobile/PaveLead/AcquireEngage';
 import BuyersJourney from './pages/Mobile/PaveLead/BuyersJourney';
 import CollectData from './pages/Mobile/PaveLead/CollectData';
+import StrategyExecution from './pages/Mobile/PaveLead/StrategyExecution';
+import MarketingMeasured from './pages/Mobile/PaveLead/MarketingMeasured';
+import LeadGeneration from './pages/Mobile/PaveLead/LeadGeneration';
+import AlignMarketing from './pages/Mobile/PaveLead/AlignMarketing';
+import HowItWorks from './pages/Mobile/PaveLead/HowItWorks';
 function App() {
 
   return (
@@ -99,9 +104,14 @@ function App() {
         <Route path='/accelerateb2b' element={<AccelerateB2B/>} />
         <Route path='/growopportunity' element={<GrowOpportunity/>} />
         <Route path='/increasequalified' element={<IncreaseQualified/>} />
+        <Route path='/marketingmeasured' element={<MarketingMeasured/>} />
         <Route path='/acquireengage' element={<AcquireEngage/>} />
         <Route path='/buyersjourney' element={<BuyersJourney/>} />
         <Route path='/collectdata' element={<CollectData/>} />
+        <Route path='/strategyexecution' element={<StrategyExecution/>} />
+        <Route path='/leadgeneration' element={<LeadGeneration/>} />
+        <Route path='/alignmarketing' element={<AlignMarketing/>} />
+        <Route path='/howitworks' element={<HowItWorks/>} />
         
 
         <Route path="/home2" element={<MobHomeTwo />} />

@@ -8,7 +8,8 @@ import blackLuArrow from "../../../assets/images/black-lu-arrow.png";
 import increaseQualified from "../../../assets/images/increaseQualified.png";
 import ServiceItem from "../../../components/ServiceItem";
 
-function IncreaseQualified() {
+
+function StrategyExecution() {
   return (
     <div
       style={{ height: "93vh", overflowY: "scroll" }}
@@ -20,16 +21,13 @@ function IncreaseQualified() {
 
       <div className="mb-[100px] px-[6%] ">
         <div className="flex justify-between ">
-          <div className="flex items-start ">
-            <img
-              src={blackLuArrow}
-              className="object-contain mr-2 mt-2  "
-              alt=""
-            />
+          
             <h1 className="text-[25px] font-bold leading-[25px] text-left ">
-              Increase qualified lead acquisition engaged buyers
+            Strategy and 
+execution for qualified 
+lead generation
             </h1>
-          </div>
+         
           <div className="flex items-start w-[30%] ">
             <span className="text-[12px] font-bold leading-[22px] text-[#FD4C3C] underline w-[100px] ">
               Book Meeting
@@ -42,53 +40,41 @@ function IncreaseQualified() {
           </div>
         </div>
 
-        <div className="mt-5 ">
-          <h5 className="text-[12px] font-semibold leading-[18px] text-left my-8 ">
-            Target the right prospects. Align marketing action with your ideal
-            buyer's needs. <br />
-            Too many marketers focus on metrics that have little significance to
-            business growth. Ironpaper focuses on outcomes, specifically
-            creating and engaging qualified leads. To do this, our work crosses
-            boundaries.
-          </h5>
-        </div>
+        <div className="mt-5 " >
+        
 
-        <div className="my-10">
+        <h5 className="text-[12px] font-semibold leading-[18px] text-left my-8 " >Lead generation marketing solutions that are designed to convert customers, engage existing ones, and build brand value. We focus on generating qualified leads and engaging them throughout their decision process. 
+
+        </h5>
+  
+     </div>
+
+     <div className="my-10">
           <ServiceItem
             marginLNo={true}
-            title={`Marketing, measured by qualified leads generated`}
+            title={`Improve conversion rates for lead generation`}
             selected={true}
             handleServiceClick={() => {}}
           />
 
           <ServiceItem
             marginLNo={true}
-            title={`The buyer’s journey stages`}
+            title={`Align your marketing strategy to growth goals`}
             selected={true}
             handleServiceClick={() => {}}
           />
-          <ServiceItem
-            marginLNo={true}
-            title={`Acquire, nurture, and engage`}
-            selected={true}
-            handleServiceClick={() => {}}
-          />
-          <ServiceItem
-            marginLNo={true}
-            title={` We Collect any Data you need`}
-            selected={true}
-            handleServiceClick={() => {}}
-          />
+           
         </div>
+ 
         <LeadAccelerateAutomate
-          tabOne={`How it works
-Automate lead generation`}
-          tabTwo={` Accelerate and grow
-your opportunity pipeline`}
-          tabThree={` Grow your opportunity
-With collect data`}
+          tabOne={`Increase qualified lead 
+          acquisition engaged buyers`}
+          tabTwo={`Strategy and execution for
+          qualified lead generation`}
+          tabThree={`Grow your opportunity
+          With collect data`}
           tabFour={`Workflow & Process -
-Frequently Asked Questions`}
+          Frequently Asked Questions`}
           selected={"two"}
         />
       </div>
@@ -104,4 +90,4 @@ Frequently Asked Questions`}
   );
 }
 
-export default IncreaseQualified;
+export default StrategyExecution;

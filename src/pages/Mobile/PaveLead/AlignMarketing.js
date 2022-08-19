@@ -5,10 +5,10 @@ import redRightArrow from "../../../assets/images/redRightArrow.png";
 import LeadAccelerateAutomate from "../../../components/LeadAccelerateAutomate";
 import blackLuArrow from "../../../assets/images/black-lu-arrow.png";
 
-import increaseQualified from "../../../assets/images/increaseQualified.png";
-import ServiceItem from "../../../components/ServiceItem";
+import alignMarketing from "../../../assets/images/alignMarketing.png";
 
-function IncreaseQualified() {
+
+function AlignMarketing() {
   return (
     <div
       style={{ height: "93vh", overflowY: "scroll" }}
@@ -21,13 +21,10 @@ function IncreaseQualified() {
       <div className="mb-[100px] px-[6%] ">
         <div className="flex justify-between ">
           <div className="flex items-start ">
-            <img
-              src={blackLuArrow}
-              className="object-contain mr-2 mt-2  "
-              alt=""
-            />
+          <img src={blackLuArrow} className='object-contain mr-2 mt-2  ' alt="" />
             <h1 className="text-[25px] font-bold leading-[25px] text-left ">
-              Increase qualified lead acquisition engaged buyers
+            Increase qualified 
+lead acquisition engaged buyers
             </h1>
           </div>
           <div className="flex items-start w-[30%] ">
@@ -41,45 +38,23 @@ function IncreaseQualified() {
             />
           </div>
         </div>
+        <img src={alignMarketing} className='object-contain w-[344px] mt-5 '  alt="" />
 
-        <div className="mt-5 ">
-          <h5 className="text-[12px] font-semibold leading-[18px] text-left my-8 ">
-            Target the right prospects. Align marketing action with your ideal
-            buyer's needs. <br />
-            Too many marketers focus on metrics that have little significance to
-            business growth. Ironpaper focuses on outcomes, specifically
-            creating and engaging qualified leads. To do this, our work crosses
-            boundaries.
-          </h5>
-        </div>
+        <div className="mt-2 px-[6%]  " >
+       
 
-        <div className="my-10">
-          <ServiceItem
-            marginLNo={true}
-            title={`Marketing, measured by qualified leads generated`}
-            selected={true}
-            handleServiceClick={() => {}}
-          />
+     <h5 className="text-[16px] font-semibold leading-[24px] text-left my-8 " >Many organizations build marketing strategies to appease internal business stakeholders merely. The risk with this approach is that no tangible results get delivered through that strategy.
 
-          <ServiceItem
-            marginLNo={true}
-            title={`The buyer’s journey stages`}
-            selected={true}
-            handleServiceClick={() => {}}
-          />
-          <ServiceItem
-            marginLNo={true}
-            title={`Acquire, nurture, and engage`}
-            selected={true}
-            handleServiceClick={() => {}}
-          />
-          <ServiceItem
-            marginLNo={true}
-            title={` We Collect any Data you need`}
-            selected={true}
-            handleServiceClick={() => {}}
-          />
-        </div>
+</h5>
+
+<h5 className="text-[16px] font-semibold leading-[24px] text-left my-8 " >We build adaptive strategies that focus on marketing outcomes and buyer needs. We focus on results that matter to the business. We cut the clutter from marketing strategies, and we build programs to generate qualified leads that can become sales opportunities. 
+
+</h5>
+     
+     </div>
+
+
+ 
         <LeadAccelerateAutomate
           tabOne={`How it works
 Automate lead generation`}
@@ -104,4 +79,4 @@ Frequently Asked Questions`}
   );
 }
 
-export default IncreaseQualified;
+export default AlignMarketing;

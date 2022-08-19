@@ -6,9 +6,9 @@ import LeadAccelerateAutomate from "../../../components/LeadAccelerateAutomate";
 import blackLuArrow from "../../../assets/images/black-lu-arrow.png";
 
 import increaseQualified from "../../../assets/images/increaseQualified.png";
-import ServiceItem from "../../../components/ServiceItem";
 
-function IncreaseQualified() {
+
+function MarketingMeasured() {
   return (
     <div
       style={{ height: "93vh", overflowY: "scroll" }}
@@ -21,13 +21,10 @@ function IncreaseQualified() {
       <div className="mb-[100px] px-[6%] ">
         <div className="flex justify-between ">
           <div className="flex items-start ">
-            <img
-              src={blackLuArrow}
-              className="object-contain mr-2 mt-2  "
-              alt=""
-            />
+          <img src={blackLuArrow} className='object-contain mr-2 mt-2  ' alt="" />
             <h1 className="text-[25px] font-bold leading-[25px] text-left ">
-              Increase qualified lead acquisition engaged buyers
+            Increase qualified 
+lead acquisition engaged buyers
             </h1>
           </div>
           <div className="flex items-start w-[30%] ">
@@ -42,44 +39,24 @@ function IncreaseQualified() {
           </div>
         </div>
 
-        <div className="mt-5 ">
-          <h5 className="text-[12px] font-semibold leading-[18px] text-left my-8 ">
-            Target the right prospects. Align marketing action with your ideal
-            buyer's needs. <br />
-            Too many marketers focus on metrics that have little significance to
-            business growth. Ironpaper focuses on outcomes, specifically
-            creating and engaging qualified leads. To do this, our work crosses
-            boundaries.
-          </h5>
-        </div>
+        <div className="mt-5 " >
+        <img src={increaseQualified} className='object-contain w-[326px] '  alt="" />
 
-        <div className="my-10">
-          <ServiceItem
-            marginLNo={true}
-            title={`Marketing, measured by qualified leads generated`}
-            selected={true}
-            handleServiceClick={() => {}}
-          />
+        <h5 className="text-[12px] font-semibold leading-[18px] text-left my-8 " >Target the right prospects. Align marketing action with your ideal buyer's needs. <br />
+Too many marketers focus on metrics that have little significance to business growth. Ironpaper focuses on outcomes, specifically creating and engaging qualified leads. To do this, our work crosses boundaries.
 
-          <ServiceItem
-            marginLNo={true}
-            title={`The buyer’s journey stages`}
-            selected={true}
-            handleServiceClick={() => {}}
-          />
-          <ServiceItem
-            marginLNo={true}
-            title={`Acquire, nurture, and engage`}
-            selected={true}
-            handleServiceClick={() => {}}
-          />
-          <ServiceItem
-            marginLNo={true}
-            title={` We Collect any Data you need`}
-            selected={true}
-            handleServiceClick={() => {}}
-          />
-        </div>
+        </h5>
+
+        <h5 className="text-[12px] font-semibold leading-[18px] text-left my-8 " >Our work lives at the intersection of account-based and inbound marketing; creative decision making and data-driven analysis.
+        </h5>
+
+        <h5 className="text-[12px] font-semibold leading-[18px] text-left my-8 " >We believe websites have a job to do. When we design and build websites, we focus on both design and performance--not just making a pretty brochure. From lead generation to customer retention, we create the right tools and manage campaigns that measurably improve business outcomes.
+        </h5>
+
+      
+       
+     </div>
+ 
         <LeadAccelerateAutomate
           tabOne={`How it works
 Automate lead generation`}
@@ -104,4 +81,4 @@ Frequently Asked Questions`}
   );
 }
 
-export default IncreaseQualified;
+export default MarketingMeasured;
