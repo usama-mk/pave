@@ -40,6 +40,7 @@ import MarketingMeasured from './pages/Mobile/PaveLead/MarketingMeasured';
 import LeadGeneration from './pages/Mobile/PaveLead/LeadGeneration';
 import AlignMarketing from './pages/Mobile/PaveLead/AlignMarketing';
 import HowItWorks from './pages/Mobile/PaveLead/HowItWorks';
+import BookMeeting from './pages/Mobile/PaveLead/BookMeeting';
 function App() {
 
   return (
@@ -112,6 +113,7 @@ function App() {
         <Route path='/leadgeneration' element={<LeadGeneration/>} />
         <Route path='/alignmarketing' element={<AlignMarketing/>} />
         <Route path='/howitworks' element={<HowItWorks/>} />
+        <Route path='/bookmeeting' element={<BookMeeting/>} />
         
 
         <Route path="/home2" element={<MobHomeTwo />} />
