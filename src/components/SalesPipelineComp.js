@@ -4,7 +4,7 @@ function SalesPipelineComp({img, title, subTitle}) {
   return (
     <div className='grid grid-col-12 gap-2 grid-flow-col my-10' >
         <div className='col-span-2' >
-<img src={img} className={`object-contain w-[25px] mt-[6px] ${title==='Measure team performance'?'border-2 border-[#FFB91D]':''}  ` }alt="" />
+<img src={img} className={`object-contain w-[25px] mt-[6px] ${title==='Measure team performance' ||title==='Background'?'border-2 border-[#FFB91D]':''}  ` }alt="" />
         </div>
 
         <div className='col-span-10 justify-self-start text-left ' >

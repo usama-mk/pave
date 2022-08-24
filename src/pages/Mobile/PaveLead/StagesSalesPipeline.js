@@ -4,9 +4,10 @@ import MobNavBar from "../../../components/MobNavBar";
 import redRightArrow from "../../../assets/images/redRightArrow.png";
 import LeadAccelerateAutomate from "../../../components/LeadAccelerateAutomate";
 import blackLuArrow from '../../../assets/images/black-lu-arrow.png'
-import blueRightArrow from '../../../assets/images/blueRightArrow.png'
+
 
 import stagesPipeline from '../../../assets/images/stagesPipeline.png'
+import { ArrowTitle } from "../../../components/ArrowTitle";
 
 
 function StagesSalesPipeline() {
@@ -46,16 +47,16 @@ function StagesSalesPipeline() {
 
      <div className="grid grid-cols-2 gap-2 " >
 <div className="mb-5" >
-<ImgTitle   title={`Lead generation`}   />
-<ImgTitle   title={`Lead qualification`}   />
-<ImgTitle   title={`Initiate contact`}   />
+<ArrowTitle   title={`Lead generation`}   />
+<ArrowTitle   title={`Lead qualification`}   />
+<ArrowTitle   title={`Initiate contact`}   />
 </div>
 
 <div>
-<ImgTitle title={`Schedule meeting or demo`}   />
-<ImgTitle   title={`Negotiation`}   />
+<ArrowTitle title={`Schedule meeting or demo`}   />
+<ArrowTitle   title={`Negotiation`}   />
 
-<ImgTitle   title={`Closing the deal`}   />
+<ArrowTitle   title={`Closing the deal`}   />
 
 </div>
      </div>
@@ -83,12 +84,3 @@ Frequently Asked Questions`} selected={'two'}  />
 
 export default StagesSalesPipeline;
 
-
-const ImgTitle=({title})=>{
-    return(
-        <div className="flex items-center mb-3 " >
-            <img src={blueRightArrow} className='w-[7px] object-contain ' alt="" />
-            <h5 className="text-[9px] leading-[14px] ml-2 " >{title}</h5>
-        </div>
-    )
-}
