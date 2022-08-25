@@ -54,6 +54,12 @@ import ElCamino from './pages/Mobile/Projects/ElCamino';
 import Vigor from './pages/Mobile/Projects/Vigor';
 import Porto from './pages/Mobile/Projects/Porto';
 import Main from './pages/Mobile/Learn/Main';
+import PrintMarketing from './pages/Mobile/Learn/PrintMarketing';
+import KillerCopy from './pages/Mobile/Learn/KillerCopy';
+import DMSecrets from './pages/Mobile/Learn/DMSecrets';
+import PsyColors from './pages/Mobile/Learn/PsyColors';
+import GraphicAndImg from './pages/Mobile/Learn/GraphicAndImg';
+import WebGlossary from './pages/Mobile/Learn/WebGlossary';
 function App() {
 
   return (
@@ -140,6 +146,12 @@ function App() {
         <Route path='/vigor' element={<Vigor/>} />
         <Route path='/porto' element={<Porto/>} />
         <Route path='/learn/main' element={<Main/>} />
+        <Route path='/learn/printmarketing' element={<PrintMarketing/>} />
+        <Route path='/learn/killercopy' element={<KillerCopy/>} />
+        <Route path='/learn/dmsecrets' element={<DMSecrets/>} />
+        <Route path='/learn/colorspsy' element={<PsyColors/>} />
+        <Route path='/learn/graphicandimg' element={<GraphicAndImg/>} />
+        <Route path='/learn/webglossary' element={<WebGlossary/>} />
         
 
         <Route path="/home2" element={<MobHomeTwo />} />
