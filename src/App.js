@@ -45,6 +45,14 @@ import MainPage from './pages/Mobile/Projects/MainPage';
 import OchaOne from './pages/Mobile/Projects/OchaOne';
 import OchaTwo from './pages/Mobile/Projects/OchaTwo';
 import OchaThree from './pages/Mobile/Projects/OchaThree';
+import CloudLab from './pages/Mobile/Projects/CloudLab';
+import Coway from './pages/Mobile/Projects/Coway';
+import Jetsmarter from './pages/Mobile/Projects/Jetsmarter';
+import Lavage from './pages/Mobile/Projects/Lavage';
+import Philip from './pages/Mobile/Projects/Philip';
+import ElCamino from './pages/Mobile/Projects/ElCamino';
+import Vigor from './pages/Mobile/Projects/Vigor';
+import Porto from './pages/Mobile/Projects/Porto';
 function App() {
 
   return (
@@ -122,6 +130,14 @@ function App() {
         <Route path='/ochaone' element={<OchaOne/>} />
         <Route path='/ochatwo' element={<OchaTwo/>} />
         <Route path='/ochathree' element={<OchaThree/>} />
+        <Route path='/cloudlab' element={<CloudLab/>} />
+        <Route path='/coway' element={<Coway/>} />
+        <Route path='/jetsmarter' element={<Jetsmarter/>} />
+        <Route path='/lavage' element={<Lavage/>} />
+        <Route path='/philip' element={<Philip/>} />
+        <Route path='/elcamino' element={<ElCamino/>} />
+        <Route path='/vigor' element={<Vigor/>} />
+        <Route path='/porto' element={<Porto/>} />
         
 
         <Route path="/home2" element={<MobHomeTwo />} />
