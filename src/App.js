@@ -53,6 +53,7 @@ import Philip from './pages/Mobile/Projects/Philip';
 import ElCamino from './pages/Mobile/Projects/ElCamino';
 import Vigor from './pages/Mobile/Projects/Vigor';
 import Porto from './pages/Mobile/Projects/Porto';
+import Main from './pages/Mobile/Learn/Main';
 function App() {
 
   return (
@@ -138,6 +139,7 @@ function App() {
         <Route path='/elcamino' element={<ElCamino/>} />
         <Route path='/vigor' element={<Vigor/>} />
         <Route path='/porto' element={<Porto/>} />
+        <Route path='/learn/main' element={<Main/>} />
         
 
         <Route path="/home2" element={<MobHomeTwo />} />
