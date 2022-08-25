@@ -60,6 +60,7 @@ import DMSecrets from './pages/Mobile/Learn/DMSecrets';
 import PsyColors from './pages/Mobile/Learn/PsyColors';
 import GraphicAndImg from './pages/Mobile/Learn/GraphicAndImg';
 import WebGlossary from './pages/Mobile/Learn/WebGlossary';
+import ContactUs from './pages/Mobile/Contact/ContactUs';
 function App() {
 
   return (
@@ -152,6 +153,7 @@ function App() {
         <Route path='/learn/colorspsy' element={<PsyColors/>} />
         <Route path='/learn/graphicandimg' element={<GraphicAndImg/>} />
         <Route path='/learn/webglossary' element={<WebGlossary/>} />
+        <Route path='/contactus' element={<ContactUs/>} />
         
 
         <Route path="/home2" element={<MobHomeTwo />} />
