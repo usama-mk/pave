@@ -1,12 +1,19 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import mobile_logo from '../assets/images/mobile_logo.png'
 import mobile_logo_white from '../assets/images/mobile_logo_white.png'
 import servicesHeader from '../assets/images/servicesHeader.png'
+import { openLeadPopUp } from '../store/actions/leadPopupACtions'
+
 
 
 function MobHeader({purpleTheme, redTheme}) {
+ 
+
+  const dispatch= useDispatch()
+
   return (
-    <div style={{backgroundColor: purpleTheme?`#410D7F`:redTheme?'#FD4C3C':'', opacity:purpleTheme?1:'', opacity: redTheme?'100%':'' }} className="topHeader pt-[20px] pb-[10px] pl-[6%] pr-[6%] flex justify-between w-[100%] bg-[#EFEFEF] opacity-80 h-fit">
+    <div onClick={()=>  dispatch(openLeadPopUp())} style={{backgroundColor: purpleTheme?`#410D7F`:redTheme?'#FD4C3C':'', opacity:purpleTheme?1:'', opacity: redTheme?'100%':'' }} className="topHeader pt-[20px] pb-[10px] pl-[6%] pr-[6%] flex justify-between w-[100%] bg-[#EFEFEF] opacity-80 h-fit">
     <div className="logoCont flex">
         {
           purpleTheme || redTheme?

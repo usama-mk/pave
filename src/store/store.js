@@ -1,10 +1,12 @@
 import { legacy_createStore as createStore, combineReducers, applyMiddleware } from 'redux'
 import { navOptionsReducer } from './reducers/navOptionsReducer'
 import thunk from 'redux-thunk'
+import { leadPopUpReducer } from './reducers/leadPopUpReducer'
 
 
 const reducer = combineReducers({
-    navOptions: navOptionsReducer
+    navOptions: navOptionsReducer,
+    leadPopUp: leadPopUpReducer,
 })
 const initialState = {
     navOptions: {
