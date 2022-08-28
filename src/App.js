@@ -61,6 +61,8 @@ import PsyColors from './pages/Mobile/Learn/PsyColors';
 import GraphicAndImg from './pages/Mobile/Learn/GraphicAndImg';
 import WebGlossary from './pages/Mobile/Learn/WebGlossary';
 import ContactUs from './pages/Mobile/Contact/ContactUs';
+import Careers from './pages/Mobile/Contact/Careers';
+import FAQs from './pages/Mobile/Contact/FAQs';
 function App() {
 
   return (
@@ -154,6 +156,8 @@ function App() {
         <Route path='/learn/graphicandimg' element={<GraphicAndImg/>} />
         <Route path='/learn/webglossary' element={<WebGlossary/>} />
         <Route path='/contactus' element={<ContactUs/>} />
+        <Route path='/careers' element={<Careers/>} />
+        <Route path='/faqs' element={<FAQs/>} />
         
 
         <Route path="/home2" element={<MobHomeTwo />} />

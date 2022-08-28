@@ -4,15 +4,13 @@ import MobNavBar from "../../../components/MobNavBar";
 import arrowBlack from "../../../assets/images/arrowBlack.png";
 import arrowYellow from "../../../assets/images/arrowYellow.png";
 import arrowWhite from "../../../assets/images/arrowWhite.png";
-import cross2x from "../../../assets/images/cross2x.png";
-import Modal from "react-modal";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import {
   closeLeadPopUp,
   openLeadPopUp,
 } from "../../../store/actions/leadPopupACtions";
-import Recaptcha from "../../../components/Recaptcha";
+import LetsTalkModal from "../../../components/LetsTalkModal";
 
 function ContactUs() {
   const [name, setName] = useState("");
@@ -111,81 +109,7 @@ function ContactUs() {
           </h5>
         </div>
       </div>
-      <Modal
-        isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <div>
-          <div
-            onClick={() => dispatch(closeLeadPopUp())}
-            className="flex justify-end"
-          >
-            <img src={cross2x} className="object-contain w-[25px]" alt="" />
-          </div>
-          <h1 className="text-[23px] font-bold leading-[21px]  " >
-          Want a Free Business
-& Marketing Consultation?
-          </h1>
-          <form
-            className="mt-5"
-            onSubmit={(e) => {
-              e.preventDefault();
-            }}
-          >
-            <PopInput
-              label={`Name`}
-              type="text"
-              value={name}
-              onChange={setName}
-              placeholder={"Enter your full name here"}
-            />
-            <PopInput
-              label={`Company Name`}
-              type="text"
-              value={companyName}
-              onChange={setCompanyName}
-              placeholder={"PAVE Creative Agency"}
-            />
-            <PopInput
-              label={`Work Email`}
-              type="email"
-              value={workEmail}
-              onChange={setWorkEmail}
-              placeholder={"pave@company.com"}
-            />
-            <PopInput
-              label={`Phone Number`}
-              type="tel"
-              value={phNum}
-              onChange={setPhNum}
-              placeholder={"000000"}
-            />
-            <PopInput
-              label={`Website URL`}
-              type="text"
-              value={budget}
-              onChange={setBudget}
-              placeholder={"https:/example.com"}
-            />
-
-            <h2 className="text-[20px] font-bold leading-[33px] text-left my-5  ">
-              Tell us about your needs
-            </h2>
-            <Recaptcha />
-            <div className="mt-1.5 flex ">
-              <FormButton
-                text={`Submit`}
-                bg={"#FEB52B"}
-                textColor={"black"}
-                p4={true}
-              />
-            </div>
-          </form>
-        </div>
-      </Modal>
+      <LetsTalkModal/>
       <div
         className={`${
           true ? "visible cssanimation fadeInBottom " : "invisible"
@@ -248,34 +172,4 @@ function FormButton({ textColor, bg, handleClick, p4, text, sendMessage }) {
     </div>
   );
 }
-
-const PopInput = ({ label, value, onChange, placeholder, type }) => {
-  return (
-    <div className="text-left mb-8 leading-[10px]  ">
-      <label className="text-[13px] font-bold leading-[21px]  ">{label}</label>
-
-      <div className="leading-[23px] ">
-        <input
-          className="bg-transparent leading-[30px] border-b-[1px] border-[#828282] placeholder:text-[12px] placeholder:leading-[21px]  w-[100%] focus:outline-none mt-2 "
-          type={type}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          placeholder={placeholder}
-        />
-      </div>
-    </div>
-  );
-};
-
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    width: "90%",
-    backgroundColor: "#EFEFEF",
-  },
-};
+ 
