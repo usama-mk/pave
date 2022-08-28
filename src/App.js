@@ -67,6 +67,7 @@ import PrivacyPolicy from './pages/Mobile/PrivacyPolicy/PrivacyPolicy';
 import TermsOfService from './pages/Mobile/PrivacyPolicy/TermsOfService';
 import ContactNavigation from './pages/Mobile/Contact/ContactNavigation';
 import BlogMain from './pages/Mobile/Blog/BlogMain';
+import LitePackages from './pages/Mobile/Projects/LitePackages';
 function App() {
 
   return (
@@ -166,6 +167,7 @@ function App() {
         <Route path='/termsofservice' element={<TermsOfService/>} />
         <Route path='/contactnav' element={<ContactNavigation/>} />
         <Route path='/blog' element={<BlogMain/>} />
+        <Route path='/litepackages' element={<LitePackages/>} />
         
         
         <Route path="/home2" element={<MobHomeTwo />} />

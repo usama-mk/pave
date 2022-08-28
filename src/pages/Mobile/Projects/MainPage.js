@@ -15,7 +15,6 @@ import PlayVideoButton from "../../../components/PlayVideoButton";
 import RecentProjects from "../../../components/RecentProjects";
 
 function MainPage() {
- 
   return (
     <div
       style={{ height: "93vh", overflowY: "scroll" }}
@@ -28,28 +27,29 @@ function MainPage() {
         <h1 className="text-left text-[25px] font-bold leading-[35px]  ">
           Get more qualified B2B sales leads. Book a free consultation!
         </h1>
-          <div className="mt-5 flex" >
+        <div className="mt-5 flex">
           <WorkButton
-            handleWorkWithUs={()=>{}}
+            handleWorkWithUs={() => {}}
             textColor={"black"}
             bg={"white"}
             text={"Work With Us"}
           />
           <PlayVideoButton textColor={"white"} bg={"#363636"} />
-          </div>
+        </div>
 
-          <h1 className="text-[23px] font-bold leading-[35px] text-left my-5 " >
-            Recent on going projects:
-          </h1>
-          {/* recent projects */}
-          <RecentProjects projects={[p1, p2, p3, p4, p5, p6]} />
+        <h1 className="text-[23px] font-bold leading-[35px] text-left my-5 ">
+          Recent on going projects:
+        </h1>
+        {/* recent projects */}
+        <RecentProjects projects={[p1, p2, p3, p4, p5, p6]} />
 
-          <h1 className="text-[23px] font-bold leading-[35px] text-left my-5" >Globally, our team has worked with:</h1>
-          <div className="w-[320px] overflow-x-scroll " >
-          <img src={bl} className='w-[2592px]'  alt="" />
-
-          </div>
-       </div>
+        <h1 className="text-[23px] font-bold leading-[35px] text-left my-5">
+          Globally, our team has worked with:
+        </h1>
+        <div className="w-[320px] overflow-x-scroll ">
+          <img src={bl} className="w-[2592px]" alt="" />
+        </div>
+      </div>
       <div
         className={`${
           true ? "visible cssanimation fadeInBottom " : "invisible"
