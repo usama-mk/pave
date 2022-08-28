@@ -11,7 +11,7 @@ function PrivacyPolicy() {
         <MobHeader  purpleTheme={true} />
       </div>
         <div className='pb-[100px] text-left px-[6%] text-white bg-[#410D7F] mt-[-10px]  '  >
-            <h1 className='text-[27px] font-bold leading-[31px] mt-12 ' >Privacy Policy</h1>
+            <h1 className='text-[27px] font-bold leading-[31px] mt-12 flex flex-col flex-1 ' >Privacy Policy</h1>
 
             <h5 className='text-[20px] leading-[30px] mt-8 ' >
             By Viewing the Site, You Agree to the Following:

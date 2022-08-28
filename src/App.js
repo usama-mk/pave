@@ -64,6 +64,9 @@ import ContactUs from './pages/Mobile/Contact/ContactUs';
 import Careers from './pages/Mobile/Contact/Careers';
 import FAQs from './pages/Mobile/Contact/FAQs';
 import PrivacyPolicy from './pages/Mobile/PrivacyPolicy/PrivacyPolicy';
+import TermsOfService from './pages/Mobile/PrivacyPolicy/TermsOfService';
+import ContactNavigation from './pages/Mobile/Contact/ContactNavigation';
+import BlogMain from './pages/Mobile/Blog/BlogMain';
 function App() {
 
   return (
@@ -159,9 +162,12 @@ function App() {
         <Route path='/contactus' element={<ContactUs/>} />
         <Route path='/careers' element={<Careers/>} />
         <Route path='/faqs' element={<FAQs/>} />
-        <Route path='/privacypolicy' element={<PrivacyPolicy/>} />
+        <Route path='/privacy' element={<PrivacyPolicy/>} />
+        <Route path='/termsofservice' element={<TermsOfService/>} />
+        <Route path='/contactnav' element={<ContactNavigation/>} />
+        <Route path='/blog' element={<BlogMain/>} />
         
-
+        
         <Route path="/home2" element={<MobHomeTwo />} />
         <Route path="/home3" element={<MobHomeThree />} />
 
