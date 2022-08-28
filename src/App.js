@@ -63,6 +63,7 @@ import WebGlossary from './pages/Mobile/Learn/WebGlossary';
 import ContactUs from './pages/Mobile/Contact/ContactUs';
 import Careers from './pages/Mobile/Contact/Careers';
 import FAQs from './pages/Mobile/Contact/FAQs';
+import PrivacyPolicy from './pages/Mobile/PrivacyPolicy/PrivacyPolicy';
 function App() {
 
   return (
@@ -158,6 +159,7 @@ function App() {
         <Route path='/contactus' element={<ContactUs/>} />
         <Route path='/careers' element={<Careers/>} />
         <Route path='/faqs' element={<FAQs/>} />
+        <Route path='/privacypolicy' element={<PrivacyPolicy/>} />
         
 
         <Route path="/home2" element={<MobHomeTwo />} />
