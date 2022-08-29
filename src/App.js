@@ -69,6 +69,8 @@ import ContactNavigation from './pages/Mobile/Contact/ContactNavigation';
 import BlogMain from './pages/Mobile/Blog/BlogMain';
 import LitePackages from './pages/Mobile/Projects/LitePackages';
 import LitePackagesTwo from './pages/Mobile/Projects/LitePackagesTwo';
+import WorkFlowAndProcess from './pages/Mobile/WorkFlowAndProcess/WorkFlowAndProcess';
+import WorkFlowFaqs from './pages/Mobile/WorkFlowAndProcess/WorkFlowFaqs';
 function App() {
 
   return (
@@ -170,6 +172,8 @@ function App() {
         <Route path='/blog' element={<BlogMain/>} />
         <Route path='/litepackages' element={<LitePackages/>} />
         <Route path='/litepackagestwo' element={<LitePackagesTwo/>} />
+        <Route path='/workflow' element={<WorkFlowAndProcess/>} />
+        <Route path='/workflowfaqs' element={<WorkFlowFaqs/>} />
         
         
         <Route path="/home2" element={<MobHomeTwo />} />
