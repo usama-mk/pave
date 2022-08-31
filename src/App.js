@@ -71,6 +71,9 @@ import LitePackages from './pages/Mobile/Projects/LitePackages';
 import LitePackagesTwo from './pages/Mobile/Projects/LitePackagesTwo';
 import WorkFlowAndProcess from './pages/Mobile/WorkFlowAndProcess/WorkFlowAndProcess';
 import WorkFlowFaqs from './pages/Mobile/WorkFlowAndProcess/WorkFlowFaqs';
+import WorkflowAndProcessTwo from './pages/Mobile/WorkFlowAndProcess/WorkflowAndProcessTwo';
+import DataAnalysis from './pages/Mobile/WorkFlowAndProcess/DataAnalysis';
+import DataAnalysisTwo from './pages/Mobile/WorkFlowAndProcess/DataAnalysisTwo';
 function App() {
 
   return (
@@ -174,6 +177,9 @@ function App() {
         <Route path='/litepackagestwo' element={<LitePackagesTwo/>} />
         <Route path='/workflow' element={<WorkFlowAndProcess/>} />
         <Route path='/workflowfaqs' element={<WorkFlowFaqs/>} />
+        <Route path='/workflowprocess' element={<WorkflowAndProcessTwo/>} />
+        <Route path='/dataanalysis' element={<DataAnalysis/>} />
+        <Route path='/dataanalysistwo' element={<DataAnalysisTwo/>} />
         
         
         <Route path="/home2" element={<MobHomeTwo />} />
