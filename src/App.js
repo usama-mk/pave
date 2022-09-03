@@ -1,6 +1,7 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom";
 import Home from './pages/Mobile/Home/Home';
+import HomeDesktop from './pages/Desktop/Home/Home';
 import About from './pages/Mobile/About/About';
 import Services from './pages/Mobile/Services/Services';
 // import 'animate.css';
@@ -74,7 +75,135 @@ import WorkFlowFaqs from './pages/Mobile/WorkFlowAndProcess/WorkFlowFaqs';
 import WorkflowAndProcessTwo from './pages/Mobile/WorkFlowAndProcess/WorkflowAndProcessTwo';
 import DataAnalysis from './pages/Mobile/WorkFlowAndProcess/DataAnalysis';
 import DataAnalysisTwo from './pages/Mobile/WorkFlowAndProcess/DataAnalysisTwo';
+import { useMediaQuery } from 'react-responsive'
+
+
 function App() {
+
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-width: 960px)'
+  })
+  const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
+  const isTablet = useMediaQuery({ query: '(max-width: 960px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 520px)' })
+  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
+  const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
+
+
+  if(isDesktopOrLaptop){
+
+    return (
+      <div className="App bg-[#EFEFEF]  ">
+      <Routes>
+          <Route path="/" element={<HomeDesktop />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/DigitalMarketing" element={<DMService title={`Digital Marketing`} subItems={['Search Engine Marketing', 'Pay-Per-Click Advertising','Social Media Marketing', 'Content Marketing', 'Affiliate Marketing', 'Influencer Marketing', 'Email Marketing', 'Viral Marketing', 'Mobile Marketing']} />} />
+          <Route path="/services/Talent&Entertainment" element={<DMService title={`Talent & Entertainment`} subItems={['Talent, Artist & DJ Bookings','Celebrity & VIP Relations', 'Mega & Giga Influencer Relations', 'Private, Live & Corporate Events', 'Charity & Non Profit Activations', 'Virtual Entertainment', 'Production & Creatives', 'Talent Branding', 'Partnership Development']} />} />
+  
+          <Route path="/services/PaidAdvertising(PPC)" element={<DMService title={`Paid Advertising (PPC)`} subItems={['Google Adwords','Social Media Ads', 'Bing Ads', 'Local Service Ads', 'Shopping Ads', 'Retargeting Ads', 'Retention Marketing', 'Life Time Value Boost']} />} />
+  
+          <Route path="/services/FutureTechnology" element={<DMService title={`Future Technology`} subItems={['Blockchain','NFT', 'Virtual Reality (VR)', 'Augmented Reality (AR)','Mixed Reality (MR)', 'Extended Reality (XR)', 'space']} />} />
+  
+          <Route path="/services/SearchEngineOptimization" element={<DMService title={`Search Engine Optimization`} subItems={['Keywords Mapping, Analysis, & Research','White Hat SEO', 'Google SEO', 'Bing SEO', 'Foreign Language SEO', 'On-site SEO', 'Off-site SEO']} />} />
+  
+          <Route path="/services/WebDesign&Development" element={<DMService title={`Web Design & Dev`} subItems={['Web Design','Web Development', 'Multiple Tech Stack', 'API & ERP Development', 'eCommerce Website']} />} />
+  
+          <Route path="/services/AppDesign&Development" element={<DMService title={`App Design & Dev`} subItems={['iOS App Design & Development','Android App Design & Development', 'Tablet Design & Development', 'Game Design & Development']} />} />
+  
+          <Route path="/services/DataAnalytics&Science" element={<DMService title={`Data Analytics & Science`} subItems={['Web Analysis','Conversion Analysis', 'Risk Analysis', 'Advertising and Marketing', 'Enterprise Decision Making', 'Marketing Optimization', 'Marketing Models']} />} />
+  
+          <Route path="/services/eCommerce&Amazon" element={<DMService title={`eCommerce & Amazon`} subItems={['eCommerce Design & Development','eCommerce SEO', 'eCommerce Paid Ads', 'eCommerce Visual Enhancement', 'eCommerce Lifetime Value Increase', 'Amazon Account Management', 'Amazon SEO & PPC', 'Amazon Analytics', 'Amazon Visual Enhancement']} />} />
+  
+          <Route path="/services/SocialMedia&PR" element={<DMService title={`Social Media & PR`} subItems={['Facebook Optimization','Instagram Optimization', 'Twitter Management', 'Social Media Visual Enhancement', 'Corporate PR Management', 'Press Outreach & Coverage', 'Recommended Website Outreach']} />} />
+  
+          <Route path="/services/Brick&Mortar/Local" element={<DMService title={`Brick & Mortar / Local`} subItems={['Foot Traffic Increase','Market & Competitor', 'Research / Analysis', 'Restaurant Enhancement', 'Real Estate Marketing', 'Small Business Marketing','Life Time Value Increase', 'Local Visibility Increase', 'Social Media Management']} />} />
+  
+          <Route path="/services/Branding&GraphicDesign" element={<DMService title={`Branding & Graphic Design`} subItems={['Content Creation','Graphic Design', 'Branding', 'Social Media', 'Print Graphics', 'Brand Book', 'Branding Guidelines', 'Logo Exploration', 'Color Explorations']} />} />
+  
+          <Route path="/services/Photo&VideoProduction" element={<DMService title={`Photo & Video Production`} subItems={['Photography','Product Photography', 'Video Production', 'Video Editing', 'Short Films', 'Commercial Shoots']} />} />
+  
+          <Route path="/services/BrandActivation" element={<DMService title={`Brand Activation`} subItems={['Promotional Marketing','Experiential Marketing', 'Brand Engagement', 'Digital Enablement', 'Live & Virtual Events', 'Workshops & Pop-ups', 'Digital Marketing', 'Public Relations (PR)', 'Sponsorship & Partnership Activation']} />} />
+  
+          <Route path="/services/LeadGeneration&GrowthMarketing" element={<DMService title={`Lead Generation`} subItems={['B2B Lead Generation','SaaS Lead Generation', 'Growth Marketing', 'Cross Channel Marketing', 'Sales Data Solutions', 'CRM Software Application']} />} />
+  
+          <Route path="/services/ExperientialMarketing" element={<DMService title={`Experiential Marketing`} subItems={['Brand Awareness Campaign','Lead Generation', 'Experiential Funnel', 'Branding & Prospecting', 'Customer Loyalty Increase']} />} />
+  
+          <Route path='/seo' element={<SEO/>} />
+  
+  
+          <Route path='/seoproposal' element={<SeoProposal/>} />
+          <Route path='/mmcompaign' element={<MMCompaign/>} />
+          <Route path='/seopricing' element={<SEOPricing/>} />
+          <Route path='/seocompare' element={<SeoCompare/>} />
+          <Route path='/seomoduleone' element={<SeoModuleOne/>} />
+          <Route path='/seomoduletwo' element={<SeoModuleTwo/>} />
+          <Route path='/seomodulethree' element={<SeoModuleThree/>} />
+          <Route path='/seomodulefour' element={<SeoModuleFour/>} />
+          <Route path='/seomodulefive' element={<SeoModuleFive/>} />
+          <Route path='/seomodulesix' element={<SeoModuleSix/>} />
+          <Route path='/seomoduleseven' element={<SeoModuleSeven/>} />
+          <Route path='/seocasestudies' element={<SeoCaseStudies/>} />
+          <Route path='/seoclientone' element={<SeoClientOne/>} />
+          <Route path='/seoclienttwo' element={<SeoClientTwo/>} />
+          <Route path='/seoclientthree' element={<SeoClientThree/>} />
+          <Route path='/seoclientfour' element={<SeoClientFour/>} />
+          <Route path='/accelerateandgrow' element={<AccelerateAndgrow/>} />
+          <Route path='/salespipeline' element={<SalesPipeline/>} />
+          <Route path='/stagessalespipeline' element={<StagesSalesPipeline/>} />
+          <Route path='/accelerateb2b' element={<AccelerateB2B/>} />
+          <Route path='/growopportunity' element={<GrowOpportunity/>} />
+          <Route path='/increasequalified' element={<IncreaseQualified/>} />
+          <Route path='/marketingmeasured' element={<MarketingMeasured/>} />
+          <Route path='/acquireengage' element={<AcquireEngage/>} />
+          <Route path='/buyersjourney' element={<BuyersJourney/>} />
+          <Route path='/collectdata' element={<CollectData/>} />
+          <Route path='/strategyexecution' element={<StrategyExecution/>} />
+          <Route path='/leadgeneration' element={<LeadGeneration/>} />
+          <Route path='/alignmarketing' element={<AlignMarketing/>} />
+          <Route path='/howitworks' element={<HowItWorks/>} />
+          <Route path='/bookmeeting' element={<BookMeeting/>} />
+          <Route path='/main' element={<MainPage/>} />
+          <Route path='/ochaone' element={<OchaOne/>} />
+          <Route path='/ochatwo' element={<OchaTwo/>} />
+          <Route path='/ochathree' element={<OchaThree/>} />
+          <Route path='/cloudlab' element={<CloudLab/>} />
+          <Route path='/coway' element={<Coway/>} />
+          <Route path='/jetsmarter' element={<Jetsmarter/>} />
+          <Route path='/lavage' element={<Lavage/>} />
+          <Route path='/philip' element={<Philip/>} />
+          <Route path='/elcamino' element={<ElCamino/>} />
+          <Route path='/vigor' element={<Vigor/>} />
+          <Route path='/porto' element={<Porto/>} />
+          <Route path='/learn/main' element={<Main/>} />
+          <Route path='/learn/printmarketing' element={<PrintMarketing/>} />
+          <Route path='/learn/killercopy' element={<KillerCopy/>} />
+          <Route path='/learn/dmsecrets' element={<DMSecrets/>} />
+          <Route path='/learn/colorspsy' element={<PsyColors/>} />
+          <Route path='/learn/graphicandimg' element={<GraphicAndImg/>} />
+          <Route path='/learn/webglossary' element={<WebGlossary/>} />
+          <Route path='/contactus' element={<ContactUs/>} />
+          <Route path='/careers' element={<Careers/>} />
+          <Route path='/faqs' element={<FAQs/>} />
+          <Route path='/privacy' element={<PrivacyPolicy/>} />
+          <Route path='/termsofservice' element={<TermsOfService/>} />
+          <Route path='/contactnav' element={<ContactNavigation/>} />
+          <Route path='/blog' element={<BlogMain/>} />
+          <Route path='/litepackages' element={<LitePackages/>} />
+          <Route path='/litepackagestwo' element={<LitePackagesTwo/>} />
+          <Route path='/workflow' element={<WorkFlowAndProcess/>} />
+          <Route path='/workflowfaqs' element={<WorkFlowFaqs/>} />
+          <Route path='/workflowprocess' element={<WorkflowAndProcessTwo/>} />
+          <Route path='/dataanalysis' element={<DataAnalysis/>} />
+          <Route path='/dataanalysistwo' element={<DataAnalysisTwo/>} />
+          
+        </Routes>
+       
+      </div>
+    );
+  }
+
+if(isMobile){
 
   return (
     <div className="App bg-[#EFEFEF]  ">
@@ -201,6 +330,7 @@ function App() {
      
     </div>
   );
+}
 }
 
 export default App;

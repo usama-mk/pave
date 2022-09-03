@@ -15,6 +15,7 @@ const initialState = {
       services: false,
       projects: false,
       learn: false,
+      process: false,
       caseStudy: false
     }
   }

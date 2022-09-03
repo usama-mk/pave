@@ -59,6 +59,18 @@ export const goToHome = () =>  (dispatch) => {
     }
   }
 
+  export const goToProcess = () =>  (dispatch) => {
+    try {
+        
+      dispatch({
+        type: "PROCESS_SELECTED"
+      })
+  
+    } catch (error) {
+        alert(error)
+    }
+  }
+
   export const goToCaseStudy = () =>  (dispatch) => {
     try {
         

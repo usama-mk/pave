@@ -7,6 +7,7 @@ switch (action.type) {
             services: false,
             projects: false,
             learn: false,
+            process: false,
             caseStudy: false
         }
     case "ABOUT_SELECTED":
@@ -15,6 +16,7 @@ switch (action.type) {
             services: false,
             projects: false,
             learn: false,
+            process: false,
             caseStudy: false
         }
     case "SERVICES_SELECTED":
@@ -23,6 +25,7 @@ switch (action.type) {
             services: true,
             projects: false,
             learn: false,
+             process: false,
             caseStudy: false
         }
     case "PROJECTS_SELECTED":
@@ -31,6 +34,7 @@ switch (action.type) {
             services: false,
             projects: true,
             learn: false,
+             process: false,
             caseStudy: false
         }
     case "LEARN_SELECTED":
@@ -39,14 +43,26 @@ switch (action.type) {
             services: false,
             projects: false,
             learn: true,
+             process: false,
             caseStudy: false
         }
+
+        case "PROCESS_SELECTED":
+            return { home: false,
+                about: false,
+                services: false,
+                projects: false,
+                learn: false,
+                process: true,
+                caseStudy: false
+            }
     case "CASE_STUDY_SELECTED":
         return { home: false,
             about: false,
             services: false,
             projects: false,
             learn: false,
+             process: false,
             caseStudy: true
         }
       default:
