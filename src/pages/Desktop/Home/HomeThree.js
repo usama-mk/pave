@@ -4,10 +4,12 @@ import homeThreeMovies from "../../../assets/images/homeThreeMovies1.png";
 // import homeThreeMovies from "../../../assets/images/homeThreeMovies.png";
 import straight_arrow from "../../../assets/images/straight_arrow.png";
 import rings from "../../../assets/images/rings.png";
+import bottomRings from "../../../assets/images/bottomRings.png";
 import WorkButton from '../../../components/WorkButton'
 import MobNavBar from '../../../components/MobNavBar';
 import MobHeader from '../../../components/MobHeader';
 import { useNavigate } from 'react-router-dom';
+import DesktopHeader from '../../../components/DesktopHeader';
 
 function MobHomeThree({homeThreeDisplay}) {
   const [showHeading, setShowHeading] = useState(true);
@@ -17,59 +19,36 @@ function MobHomeThree({homeThreeDisplay}) {
   const [showNavBar, setShowNavBar] = useState(true);
   const navigate = useNavigate();
 
-  const handleWorkWithUs = () => {
-    navigate("/a-z");
-  };
- 
-  useEffect(() => {
-    // setTimeout(() => {
-    //   setShowNavBar(true);
-    // }, 1500);
-    // setTimeout(() => {
-    //   setShowHeading(true);
-    //   setShowNavBar(true);
-    // }, 1500);
-    // setTimeout(() => {
-    //   setSubShowHeading(true);
-    // }, 2000);
-    // setTimeout(() => {
-    //   setShowButtons(true);
-    // }, 2800);
-  }, []);
-  const handleOnHomeClick = () => {
-    setIsHomeTwo(true);
-    setTimeout(() => {
-      navigate("/");
-    }, 2000);
-  };
 if(true){
 
 
   return (
     <div onClick={()=>{}} className=' flex flex-col   w-[100vw]  bg-[#410D7F] max-h-[93vh] overflow-x-clip sec' >
-       <div className="homeTop absolute top-0 visible z-10 h-[356px] w-[100vw]  flex justify-center ">
-          <MobHeader />
-        </div>
+         <div className="homeTop absolute z-10 top-0 h-[356px] w-[100vw]  flex justify-start ">
+            <DesktopHeader redTheme={true} />
+          </div>
        <div className='bg-[#FD4C3C]  flex flex-col justify-between  cssanimation  fadeInBottom' >
        <div className={`
       
 
        flex justify-center items-center
        break-words `} >
-       <img src={rings} className={`
+      <div className='flex justify-between w-[50%] ' >
+      <img src={rings} className={`
         ${
           showHeading && !isHomeTwo
             ? "visible cssanimation   fadeInBottom":'invisible'}
-       object-contain mt-28 mr-8 ml-[-10px] `} alt="" />
+       object-contain mt-28  mr-24 `} alt="" />
 
 <img src={homeThreeMovies} className={`
  ${
   showButtons && !isHomeTwo
     ? `visible cssanimation   fadeInBottom`:'invisible'}
-object-cover mt-[-70px] max-h-52 `}  alt="" />
+object-cover mt-[-30rem] max-h-[45rem] `}  alt="" />
+      </div>
        </div>
            
-           <div className='flex justify-center items-end   ' >
+           <div className='flex justify-center items-end relative top-9  ' >
            <h1 className={`
            ${
             showHeading && !isHomeTwo
@@ -78,13 +57,8 @@ object-cover mt-[-70px] max-h-52 `}  alt="" />
               ? "visible  fadeOut"
               : "invisible"
           }
-           text-6xl font-bold leading-[66px] text-[white] text-center  `} >Performance 
+           text-[100px] font-bold leading-[100px] text-[white] text-center `} >Performance-
            </h1>
-           </div>
-       </div>
-       
-        <div className=' bg-[#410D7F] ' >
-        <div className=' flex flex-col items-center justify-center ' >
            <h1 className={`
             ${
               showHeading && !isHomeTwo
@@ -93,9 +67,15 @@ object-cover mt-[-70px] max-h-52 `}  alt="" />
                 ? "visible "
                 : "invisible"
             }
-           text-[70px] font-bold leading-[66px] text-[white] `} >
+           text-[100px] font-bold leading-[100px] text-[white] `} >
            Based
            </h1>
+           </div>
+       </div>
+       
+        <div className=' bg-[#410D7F] ' >
+        <div className=' flex flex-col items-center justify-center ' >
+          
            <h4 className={`
             ${
               showSubHeading && !isHomeTwo
@@ -104,9 +84,9 @@ object-cover mt-[-70px] max-h-52 `}  alt="" />
                 ? "visible  "
                 : "invisible"
             }
-           text-[16px] mt-5 font-medium leading-[25px] text-white  `} >Marketing agency that focuses on your
- <br />
- ROI and metrics that matter for <br /> your brand & business
+           text-[18px] mt-10 font-medium leading-[27px] text-white  `} >Marketing agency that focuses on your
+ 
+ ROI and metrics that matter for your brand & business
 </h4>
 
   {/* btns start */}
@@ -133,32 +113,24 @@ homeMidButtons mt-5 flex justify-center`}>
       </div>
       {/* bottom image */}
       <div>
+        
+      <div className="flex">
       <img src={homeThreeMovies} className={`
        ${
         showSubHeading && !isHomeTwo
           ? "visible cssanimation  fadeInBottom":'invisible'}
       object-cover ml-[-40%] mt-[-50px] `}  alt="" />
+      <img src={bottomRings} className={`
+      
+      object-contain w-[277px] relative left-[20%] top-[-8rem]  `}  alt="" />
+      </div>
+
+
       </div>
       {/* bottom image end */}
         </div>
         </div>
-         {/* mouse cont */}
-     
- 
-
-         {/* <div
-        className={`${
-          showNavBar
-            ? "visible cssanimation sequence fadeInBottom"
-            : "invisible"
-        }     flex justify-center w-[100vw] fixed bottom-0 z-30 `}
-      >
-        
-       
-      <MobNavBar showNavBar={showNavBar} />
-        
-      </div> */}
-       
+         
     </div>
   )
        }

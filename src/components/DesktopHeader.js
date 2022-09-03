@@ -32,6 +32,11 @@ function DesktopHeader({purpleTheme, redTheme, buttonTitle, yellowTheme, }) {
   <span > {buttonTitle?buttonTitle:'Lets Talk'}</span>
 </div>
   :
+  redTheme?
+  // <img src={servicesHeader} className='object-contain' alt="" />
+  <div style={{backgroundColor: redTheme?'#FD4C3C':'white', color:'white', borderColor:'white'}} className="letsTalk bg-[#FD4C3C] px-4 py-3 h-fit border-2 border-white rounded-[10px] text-sm font-bold text-center flex items-center justify-center ml-12 ">
+  <span > {buttonTitle?buttonTitle:'Lets Talk'}</span>
+</div>:
 
   <div style={{backgroundColor: purpleTheme?purpleTheme:yellowTheme?'#FEB52B':'white', color:purpleTheme?'white':'', borderColor:purpleTheme?'white':''}} className="letsTalk bg-[white] px-4 py-3 h-fit border-2 border-black rounded-[10px] text-sm font-bold text-center flex items-center justify-center ml-12 ">
   <span > {buttonTitle?buttonTitle:'Lets Talk'}</span>
