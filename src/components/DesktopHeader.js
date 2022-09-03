@@ -28,7 +28,7 @@ function DesktopHeader({purpleTheme, redTheme, buttonTitle, yellowTheme, }) {
 {
   purpleTheme?
   // <img src={servicesHeader} className='object-contain' alt="" />
-  <div style={{backgroundColor: purpleTheme?'white':yellowTheme?'#FEB52B':'white', color:purpleTheme?'black':'', borderColor:purpleTheme?'black':''}} className="letsTalk bg-[white] px-4 py-3 h-fit border-2 border-black rounded-[10px] text-sm font-bold text-center flex items-center justify-center ml-12 ">
+  <div style={{backgroundColor: purpleTheme?'#410D7F':yellowTheme?'#FEB52B':'white', color:purpleTheme?'white':'', borderColor:purpleTheme?'white':''}} className="letsTalk bg-[#410D7F] px-4 py-3 h-fit border-2 border-black rounded-[10px] text-sm font-bold text-center flex items-center justify-center ml-12 ">
   <span > {buttonTitle?buttonTitle:'Lets Talk'}</span>
 </div>
   :

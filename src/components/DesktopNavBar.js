@@ -53,7 +53,7 @@ function DesktopNavBar({showNavBar}) {
         }
     }
   return (
-    <div className={`${showNavBar? 'visible cssanimation   fadeInBottom' :'invisible'} w-[108px] grid grid-cols-3   pb-2 bg-[#EFEFEF]  
+    <div className={`${showNavBar? 'visible cssanimation   fadeInBottom' :'invisible'} w-[108px] grid grid-cols-3   pb-2 bg-transparent
              `}>
                 
                <div className='flex flex-col col-span-2 ' >
