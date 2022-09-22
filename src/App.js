@@ -2,6 +2,7 @@ import './App.css';
 import { Routes, Route } from "react-router-dom";
 import Home from './pages/Mobile/Home/Home';
 import HomeDesktop from './pages/Desktop/Home/Home';
+import AboutDesktop from './pages/Desktop/About/About';
 import About from './pages/Mobile/About/About';
 import Services from './pages/Mobile/Services/Services';
 // import 'animate.css';
@@ -96,7 +97,7 @@ function App() {
       <div className="App bg-[#EFEFEF]  ">
       <Routes>
           <Route path="/" element={<HomeDesktop />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<AboutDesktop />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/DigitalMarketing" element={<DMService title={`Digital Marketing`} subItems={['Search Engine Marketing', 'Pay-Per-Click Advertising','Social Media Marketing', 'Content Marketing', 'Affiliate Marketing', 'Influencer Marketing', 'Email Marketing', 'Viral Marketing', 'Mobile Marketing']} />} />
           <Route path="/services/Talent&Entertainment" element={<DMService title={`Talent & Entertainment`} subItems={['Talent, Artist & DJ Bookings','Celebrity & VIP Relations', 'Mega & Giga Influencer Relations', 'Private, Live & Corporate Events', 'Charity & Non Profit Activations', 'Virtual Entertainment', 'Production & Creatives', 'Talent Branding', 'Partnership Development']} />} />

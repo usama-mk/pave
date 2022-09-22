@@ -127,7 +127,8 @@ function Home1() {
           isHomeTwo ? " cssanimation fadeOut" : ""
         } mouseCont flex justify-center my-3`}
       >
-        <img src={`https://clipex.com.au/wp-content/uploads/2020/05/swipe-1.gif`} width={60} className="object-contain mr-5" alt="" />
+        {/* <img src={`https://clipex.com.au/wp-content/uploads/2020/05/swipe-1.gif`} width={60} className="object-contain mr-5" alt="" /> */}
+        <h5>Swipe Up!</h5>
       </div>
       {/* mouse cont ends */}
       <img
