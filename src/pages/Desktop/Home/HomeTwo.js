@@ -31,10 +31,10 @@ function MobHomeTwo({ homeTwoDisplay }) {
         ref={ref}
         autoFocus
         onClick={() => {}}
-        className=" w-[100vw] overflow-x-clip h-[100vh] bg-[#410D7F]   "
+        className=" w-[100vw] overflow-x-clip overflow-y-clip bg-[#410D7F] snap-start  "
       >
         <div className=" bg-[#410D7F] cssanimation  fadeInBottom` ">
-          <div className="homeTop absolute z-10 top-0 h-[356px] w-[100vw]  flex justify-start ">
+          <div className="homeTop relative z-10 top-0 w-[100vw]  flex justify-start ">
             <DesktopHeader purpleTheme={true} />
           </div>
           <div

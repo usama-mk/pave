@@ -47,11 +47,11 @@ function Home1() {
 
   return (
     <div
-    style={{height: '100vh', overflowY: 'scroll'}}
+    // style={{height: '100vh', overflowY: 'scroll'}}
       onClick={()=>{}}
       className={`${
         isHomeTwo ? "transitionH2Bg bg-[#410D7F]" : ""
-      }  flex flex-col items-center overflow-x-clip bg-[#EFEFEF] w-[100%] overflow-y-scroll  home1    `}
+      }  flex flex-col items-center overflow-x-clip bg-[#EFEFEF] w-[100%] overflow-y-scroll  home1 snap-start justify-center    `}
     >
       <img
         className={`
@@ -146,50 +146,15 @@ function Home1() {
 
 
 function Home() {
-  const [homeTwoDisplay, setHomeTwoDisplay]= useState(false)
-  const [homeThreeDisplay, setHomeThreeDisplay]= useState(false)
+  const [homeTwoDisplay, setHomeTwoDisplay]= useState(true)
+  const [homeThreeDisplay, setHomeThreeDisplay]= useState(true)
   return (
-    <div className="h-[100%]" >
-        <Swiper
-        direction={"horizontal"}
-        slidesPerView={1}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-          
-          
-        }}
-      
-      zoom={true}
-      effect={"cube"}
-      grabCursor={true}
-      cubeEffect={{
-        shadow: true,
-        slideShadows: true,
-        shadowOffset: 20,
-        shadowScale: 0.94,
-      }}
-     
-        onSlideChange={(swiper)=> {
-            if(swiper.activeIndex===1){
-                setHomeTwoDisplay(true)
-            }
-            else if(swiper.activeIndex===2){
-                setHomeThreeDisplay(true)
-            }
-        }}
-         
-        // onScroll={()=> setHomeTwoDisplay(true)}
-        modules={[Mousewheel, Pagination, Scrollbar, EffectCube ]}
-        className="mySwiper"
-      >
-        <SwiperSlide  ><Home1/></SwiperSlide>
-        <SwiperSlide > {<HomeTwo homeTwoDisplay={homeTwoDisplay}/>} </SwiperSlide>
-        <SwiperSlide> <HomeThree homeThreeDisplay={homeThreeDisplay} /> </SwiperSlide>
-         
-      </Swiper>
-      
-        <div
+    <div className="h-screen snap-y snap-mandatory overflow-scroll " >
+        
+      <Home1/>
+      <HomeTwo homeTwoDisplay={homeTwoDisplay}/>
+      <HomeThree homeThreeDisplay={homeThreeDisplay} />
+ <div
         className={`${
           true
             ? "visible cssanimation fadeInBottom "
