@@ -77,6 +77,7 @@ import WorkflowAndProcessTwo from './pages/Mobile/WorkFlowAndProcess/WorkflowAnd
 import DataAnalysis from './pages/Mobile/WorkFlowAndProcess/DataAnalysis';
 import DataAnalysisTwo from './pages/Mobile/WorkFlowAndProcess/DataAnalysisTwo';
 import { useMediaQuery } from 'react-responsive'
+import Details from './pages/Desktop/About/Details';
 
 
 function App() {
@@ -98,6 +99,7 @@ function App() {
       <Routes>
           <Route path="/" element={<HomeDesktop />} />
           <Route path="/about" element={<AboutDesktop />} />
+          <Route path="/about/details" element={<Details />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/DigitalMarketing" element={<DMService title={`Digital Marketing`} subItems={['Search Engine Marketing', 'Pay-Per-Click Advertising','Social Media Marketing', 'Content Marketing', 'Affiliate Marketing', 'Influencer Marketing', 'Email Marketing', 'Viral Marketing', 'Mobile Marketing']} />} />
           <Route path="/services/Talent&Entertainment" element={<DMService title={`Talent & Entertainment`} subItems={['Talent, Artist & DJ Bookings','Celebrity & VIP Relations', 'Mega & Giga Influencer Relations', 'Private, Live & Corporate Events', 'Charity & Non Profit Activations', 'Virtual Entertainment', 'Production & Creatives', 'Talent Branding', 'Partnership Development']} />} />

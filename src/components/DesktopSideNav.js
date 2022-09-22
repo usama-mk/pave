@@ -5,16 +5,22 @@ import mobile_logo_white from "../assets/images/mobile_logo_white.png";
 
 function DesktopSideNav({ name, purpleTheme, redTheme }) {
   return (
-    <div className="border-2 border-[#707070] mr-10 h-screen flex flex-col items-stretch ">
-      <div className="border-b-2 min-h-[105px] border-[#707070] flex justify-center items-center ">
-        <img
+    <div style={{backgroundColor: redTheme?'#FD4C3C':'', color:redTheme?'white':'',borderLeftColor:redTheme?'#FD4C3C':'', borderTopColor:redTheme?'#FD4C3C':'', borderBottomColor:redTheme?'#FD4C3C':'', borderRightColor:redTheme?'white':'', marginRight: redTheme?'0px':'' }} className="border-2 border-[#707070] mr-10 h-screen flex flex-col items-stretch ">
+      <div style={{borderColor:redTheme?'white':''}} className="border-b-2 min-h-[105px] border-[#707070] flex justify-center items-center ">
+       {redTheme?
+       <img
+       src={burgerButton}
+       className="object-contain w-[2.5rem] cursor-pointer "
+       alt=""
+     />
+       : <img
           src={burgerButton}
           className="object-contain w-[2.5rem] cursor-pointer "
           alt=""
-        />
+        />}
       </div>
 
-      <div className="border-b-2 border-[#707070] flex flex-1 justify-center items-center   ">
+      <div style={{borderColor:redTheme?'white':''}} className="border-b-2 border-[#707070] flex flex-1 justify-center items-center   ">
         <h2 className="rotate-90 ">{name}</h2>
       </div>
 
