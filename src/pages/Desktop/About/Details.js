@@ -1,12 +1,12 @@
 import React from 'react'
 import DesktopSideNav from '../../../components/DesktopSideNav'
-import homeThreeMovies from '../../../assets/images/homeThreeMovies1.png'
+import homeThreeDesktop from '../../../assets/images/homeThreeDesktop.png'
 
 function Details() {
   return (
     <div className='grid grid-cols-2 h-screen' >
        <div className='col-span-1' >
-       <div className="grid grid-cols-3">
+       <div className="flex">
        <DesktopSideNav name={`About`} redTheme={`true`} />
         <div className='bg-[#FD4C3C] col-span-2 gap-0 p-10 pt-7 flex flex-col items-start  ' >
         <div
@@ -34,7 +34,7 @@ function Details() {
         </div>
 {/* right */}
         <div className='col-span-1 flex flex-col items-stretch '>
-            <img src={homeThreeMovies} className='object-contain mt-[-200px] ' alt="" />
+            <img src={homeThreeDesktop} className='object-contain mt-[-160px] ml-[120px]' alt="" />
             <div className='flex flex-col items-start p-10 ' >
                <h3 className='text-[#410D81] text-[2.3rem] font-bold font-sfpro ' >Numbers</h3>
 
@@ -45,7 +45,7 @@ function Details() {
                     <NumberSub number={`2630+`} sub={`Lifetime Projects`} />
                </div>
             </div>
-            <img src={homeThreeMovies} className='object-contain' alt="" />
+            <img src={homeThreeDesktop} className='object-contain' alt="" />
 
             </div> 
     </div>

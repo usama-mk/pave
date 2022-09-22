@@ -1,6 +1,6 @@
 import React from 'react'
 
-function TeamMember({memImg, name, heading, subHeading}) {
+function TeamMember({memImg, name, heading, subHeading, desktop}) {
   return (
     <div className='flex flex-col  ' >
       {
@@ -9,7 +9,7 @@ function TeamMember({memImg, name, heading, subHeading}) {
 
       </div>
       }
-     <div className='ml-3' >
+     <div style={{textAlign: desktop?'left':""}} className='ml-3 ' >
      <h1 className='text-[18px] flex justify-start '>{name}</h1>
       <h2 className='text-[13px] flex justify-start '>{heading}</h2>
       <h3 className='text-[9px] flex justify-start '>{subHeading}</h3>

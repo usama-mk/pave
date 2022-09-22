@@ -6,7 +6,7 @@ import { goToAbout, goToCaseStudy, goToHome, goToLearn, goToProjects, goToServic
 const NavItem=({name, selected, handleNav})=>{
     return(
         <div className='grid grid-cols-2 gap-16 relative z-10' >
-             <h5 onClick={handleNav} className={`${selected?'font-bold text-[black] ':'font-normal text-[#B1B1B1]'} text-[12px] w-[50px] mr-5 text-right } `} >{name}</h5>
+             <h5 onClick={handleNav} className={`${selected?'font-bold text-[black] ':'font-normal text-[#B1B1B1]'} cursor-pointer text-[12px] w-[50px] mr-5 text-right } `} >{name}</h5>
 
             <div className={`${selected?'bg-[black] ':'bg-[#B1B1B1]'} h-[48px] mb-3  w-[10px] `} ></div>
            
